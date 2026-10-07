@@ -1,0 +1,2 @@
+# Jira/Confluence MCP server dependency.
+mcp-atlassian

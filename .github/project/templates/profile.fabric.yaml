@@ -1,0 +1,78 @@
+# Template: Microsoft Fabric, medallion lakehouse, Git-integrated workspace.
+# Copy to .github/project/profiles/<id>/project-profile.yaml (or run /init-project-profile) and replace <placeholders>.
+
+project:
+  id: <project-id>
+  name: <Project Name>
+  jira_project_keys: [<JIRA_KEY>]
+  jira_labels: [<JIRA_LABEL>]       # required when another profile shares the Jira key
+  confluence_spaces: [<SPACE_KEY>]
+  knowledge_file: .github/project/profiles/<project-id>/project-knowledge.md
+
+platform:
+  primary: fabric
+  secondary: []
+  compute: [spark, warehouse]
+  storage: onelake
+  sql_dialect: tsql_fabric_warehouse   # or spark_sql when gold is lakehouse-only
+
+repository:
+  artifact_root: <fabric_workspace_folder>
+  artifact_folders:
+    notebook: "<fabric_workspace_folder>/**/*.Notebook"
+    pipeline: "<fabric_workspace_folder>/**/*.DataPipeline"
+    lakehouse: "<fabric_workspace_folder>/**/*.Lakehouse"
+    warehouse: "<fabric_workspace_folder>/**/*.Warehouse"
+    semantic_model: "<fabric_workspace_folder>/**/*.SemanticModel"
+    dataflow: "<fabric_workspace_folder>/**/*.Dataflow"
+  index_dir: null
+  work_dir: null
+  commit_scope: ["<fabric_workspace_folder>/**"]
+  never_commit: [".github/", ".env"]
+  protected_branches: [main, master, develop]
+  default_pr_base: develop
+  pr_tool: az-repos
+
+tooling:
+  to_editable: null          # Fabric Git items are already source files
+  to_artifact: null
+  new_sql_artifact: null
+  build_index: null
+  validate: null             # e.g. "python -m fabric_cicd ..." dry-run, if the team uses fabric-cicd
+
+architecture:
+  pattern: medallion
+  layers:
+    - name: bronze
+      stage: ingest
+      description: Raw source data in the bronze lakehouse (Files/ and Delta tables).
+    - name: silver
+      stage: refine
+      description: Cleansed, conformed Delta tables in the silver lakehouse.
+    - name: gold
+      stage: model
+      description: Dimensional model (Warehouse or gold lakehouse).
+      scd_default: type1
+    - name: semantic
+      stage: serve
+      description: Semantic models, reporting views, Power BI.
+
+orchestration:
+  style: metadata-driven     # metadata-driven | code-first | dag
+  engine: fabric_pipelines
+  control_metadata_schema: <meta_schema_or_null>
+  reuse_before_create: true
+
+lineage:
+  sources:
+    - type: fabric_lineage_view
+    - type: purview
+      path: null
+
+schema_evidence:
+  - lakehouse table schema
+  - source contract / sample files
+
+approvals:
+  convert_or_publish: required
+  deploy: required

@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Onboard: list project candidates",
+      "type": "shell",
+      "command": "python tools/scan_project.py",
+      "problemMatcher": []
+    },
+    {
+      "label": "Onboard: scan project root",
+      "type": "shell",
+      "command": "python tools/scan_project.py --root \"${input:artifactRoot}\"",
+      "problemMatcher": []
+    },
+    {
+      "label": "Synapse: build project index",
+      "type": "shell",
+      "command": "python tools/build_synapse_index.py --root \"${input:artifactRoot}\" --out \".synapse_index/${input:profileId}\"",
+      "problemMatcher": []
+    },
+    {
+      "label": "Lineage: build table-level lineage PDF",
+      "type": "shell",
+      "command": "python tools/build_lineage.py --root \"${input:artifactRoot}\" --out \".lineage/${input:profileId}\" --layers \"${input:layers}\"",
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "artifactRoot",
+      "type": "promptString",
+      "description": "Folder of the cloned repo (e.g. Synapse-itf-Dev)"
+    },
+    {
+      "id": "profileId",
+      "type": "promptString",
+      "description": "Profile id (e.g. finance)"
+    },
+    {
+      "id": "layers",
+      "type": "promptString",
+      "description": "Ordered layers, see tooling.build_lineage in the profile",
+      "default": "raw;landing;curated;staging=dwh_stg,dwh;core=dbo;reporting=rpt;bronze;silver;gold;out_gold=out_gold"
+    }
+  ]
+}

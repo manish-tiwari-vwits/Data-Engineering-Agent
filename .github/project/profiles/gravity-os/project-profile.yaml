@@ -1,0 +1,87 @@
+project:
+  id: gravity-os
+  name: Gravity O&S
+  jira_project_keys: [GRAVITY]
+  jira_labels: [Gravity_Platform]                # selects this profile when the key is shared
+  confluence_spaces: []
+  knowledge_file: .github/project/profiles/gravity-os/project-knowledge.md
+
+platform:
+  primary: synapse            # synapse | fabric | databricks | aws
+  secondary: []               # extra platforms for hybrid projects, e.g. [aws]
+  compute: [dedicated_sql_pool, spark_pool]
+  storage: adls_gen2
+  sql_dialect: tsql_dedicated_pool   # tsql_dedicated_pool | tsql_fabric_warehouse | spark_sql | redshift | athena
+  sql_pool: itgz
+
+repository:
+  artifact_root: synapse_artifacts   # also used to auto-select this profile from a file path
+  artifact_folders:
+    sql: synapse_artifacts/sqlscript
+    notebook: synapse_artifacts/notebook
+    pipeline: synapse_artifacts/pipeline
+    dataset: synapse_artifacts/dataset
+    linked_service: synapse_artifacts/linkedService
+    trigger: synapse_artifacts/trigger
+  index_dir: .synapse_index
+  work_dir: .synapse_work
+  commit_scope: ["synapse_artifacts/**"]
+  never_commit: [".synapse_work/", ".synapse_index/", ".github/", "tools/", "scripts/", ".env", ".verify_env/"]
+  protected_branches: [main, master, develop, devlop, development]
+  default_pr_base: develop
+  pr_tool: gh                        # gh | az-repos | glab | manual
+
+tooling:
+  to_editable: python synapse_roundtrip.py --workdir .synapse_work to-editable --file <artifact.json>
+  to_artifact: python synapse_roundtrip.py --workdir .synapse_work to-json --file <editable-file>
+  new_sql_artifact: python synapse_roundtrip.py --workdir .synapse_work new-sqlscript --root synapse_artifacts --database itgz --pool itgz --name <artifact-name> --folder <folder-name>
+  build_index: python tools/build_synapse_index.py --root synapse_artifacts --out .synapse_index
+  validate: null
+
+architecture:
+  pattern: custom-layered            # medallion | custom-layered | kimball | data-vault | lakehouse
+  # Stage -> owning agent: ingest -> Ingestion | refine -> Transformation | model -> Data Modeling
+  #   serve -> Serving | orchestrate -> Orchestration
+  layers:
+    - name: landing
+      stage: ingest
+      description: Raw as-is source files in ADLS landing storage.
+    - name: curated
+      stage: refine
+      description: Landing files standardized into parquet with explicit schema.
+    - name: staging
+      stage: refine
+      description: Curated parquet loaded into dedicated SQL pool staging tables.
+    - name: core
+      stage: model
+      description: Dimensions/facts with SCD merge logic.
+      scd_default: type1
+    - name: reporting
+      stage: serve
+      description: Power BI/frontend-facing views on core tables.
+      target_schema: dwh_reporting
+      excluded_schemas: [dwh_selfservice_silver, dwh_selfservice_silver_finance]
+
+orchestration:
+  style: metadata-driven             # metadata-driven | code-first | dag
+  engine: synapse_pipelines
+  control_metadata_schema: dwh_meta
+  reuse_before_create: true
+
+lineage:
+  sources:
+    - type: pdf
+      path: .github/Data Lineage-v1-20260909_120038.pdf
+      sections:
+        source_to_staging: 0_Inbound Layer
+        staging_to_core: 1_Core layer
+        core_to_reporting: 2_Outbound Layer (Views)
+
+schema_evidence:
+  - docs/reference/*_schema.txt
+  - curated Spark schema / parquet schema
+  - source metadata rows
+
+approvals:
+  convert_or_publish: required       # human approval before editable -> artifact conversion
+  deploy: required                   # never deploy without explicit approval

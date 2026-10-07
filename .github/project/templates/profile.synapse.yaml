@@ -1,0 +1,79 @@
+# Template: Azure Synapse (Git-integrated JSON artifacts, dedicated SQL pool + Spark).
+# Copy to .github/project/profiles/<id>/project-profile.yaml (or run /init-project-profile) and replace <placeholders>.
+
+project:
+  id: <project-id>
+  name: <Project Name>
+  jira_project_keys: [<JIRA_KEY>]
+  jira_labels: [<JIRA_LABEL>]       # required when another profile shares the Jira key
+  confluence_spaces: [<SPACE_KEY>]
+  knowledge_file: .github/project/profiles/<project-id>/project-knowledge.md
+
+platform:
+  primary: synapse
+  secondary: []
+  compute: [dedicated_sql_pool, spark_pool]   # or serverless_sql_pool
+  storage: adls_gen2
+  sql_dialect: tsql_dedicated_pool
+  sql_pool: <sql_pool_name>
+
+repository:
+  artifact_root: <synapse_repo_folder>
+  artifact_folders:
+    sql: <synapse_repo_folder>/sqlscript
+    notebook: <synapse_repo_folder>/notebook
+    pipeline: <synapse_repo_folder>/pipeline
+    dataset: <synapse_repo_folder>/dataset
+    linked_service: <synapse_repo_folder>/linkedService
+    trigger: <synapse_repo_folder>/trigger
+  index_dir: .synapse_index/<project-id>
+  work_dir: .synapse_work/<project-id>
+  commit_scope: ["<synapse_repo_folder>/**"]
+  never_commit: [".synapse_work/", ".synapse_index/", ".project_scan/", ".lineage/", ".github/", "tools/", ".env"]
+  protected_branches: [main, master, develop]
+  default_pr_base: develop
+  pr_tool: az-repos
+
+tooling:
+  to_editable: python synapse_roundtrip.py --workdir .synapse_work/<project-id> to-editable --file <artifact.json>
+  to_artifact: python synapse_roundtrip.py --workdir .synapse_work/<project-id> to-json --file <editable-file>
+  new_sql_artifact: python synapse_roundtrip.py --workdir .synapse_work/<project-id> new-sqlscript --root <synapse_repo_folder> --database <sql_pool_name> --pool <sql_pool_name> --name <artifact-name> --folder <folder-name>
+  build_index: python tools/build_synapse_index.py --root <synapse_repo_folder> --out .synapse_index/<project-id>
+  build_lineage: python tools/build_lineage.py --root <synapse_repo_folder> --out .lineage/<project-id> --title "<Project Name>" --layers "<layer>=<schema,...>;<layer>;..."
+  validate: null
+
+architecture:
+  pattern: <medallion | custom-layered>
+  layers:
+    - name: <raw_layer>
+      stage: ingest
+      description: <...>
+    - name: <clean_layer>
+      stage: refine
+      description: <...>
+    - name: <model_layer>
+      stage: model
+      description: <...>
+      scd_default: type1
+    - name: <serving_layer>
+      stage: serve
+      description: <...>
+      target_schema: <reporting_schema>
+
+orchestration:
+  style: metadata-driven
+  engine: synapse_pipelines
+  control_metadata_schema: <meta_schema_or_null>
+  reuse_before_create: true
+
+lineage:
+  sources:
+    - type: <pdf | excel | purview>
+      path: <path_or_null>
+
+schema_evidence:
+  - <schema files / parquet schema / source metadata>
+
+approvals:
+  convert_or_publish: required
+  deploy: required

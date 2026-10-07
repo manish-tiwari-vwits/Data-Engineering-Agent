@@ -1,0 +1,90 @@
+# Active project profile. Every data engineering agent reads this file first.
+# To onboard another project, copy a file from .github/project/templates/ over this one
+# (or run /init-project-profile) and fill in the values. Agents contain no project names.
+
+project:
+  name: Gravity O&S
+  jira_project_keys: [GRAVITY]
+  confluence_spaces: []
+  knowledge_file: .github/project/project-knowledge.md   # project-specific rules, read by every agent
+
+platform:
+  primary: synapse            # synapse | fabric | databricks | aws
+  secondary: []               # extra platforms for hybrid projects, e.g. [aws]
+  compute: [dedicated_sql_pool, spark_pool]
+  storage: adls_gen2
+  sql_dialect: tsql_dedicated_pool   # tsql_dedicated_pool | tsql_fabric_warehouse | spark_sql | redshift | athena
+
+repository:
+  artifact_root: synapse_artifacts
+  artifact_folders:
+    sql: synapse_artifacts/sqlscript
+    notebook: synapse_artifacts/notebook
+    pipeline: synapse_artifacts/pipeline
+    dataset: synapse_artifacts/dataset
+    linked_service: synapse_artifacts/linkedService
+    trigger: synapse_artifacts/trigger
+  index_dir: .synapse_index          # optional lookup index; null if not used
+  work_dir: .synapse_work            # temporary editable files; never committed
+  commit_scope: ["synapse_artifacts/**"]
+  never_commit: [".synapse_work/", ".synapse_index/", ".github/", "tools/", "scripts/", ".env", ".verify_env/"]
+  protected_branches: [main, master, develop, devlop, development]
+  default_pr_base: develop
+  pr_tool: gh                        # gh | az-repos | glab | manual
+
+tooling:
+  to_editable: python synapse_roundtrip.py to-editable --file <artifact.json>
+  to_artifact: python synapse_roundtrip.py to-json --file <editable-file>
+  new_sql_artifact: python synapse_roundtrip.py new-sqlscript --name <artifact-name> --folder <folder-name>
+  build_index: python tools/build_synapse_index.py
+  validate: null                     # e.g. "databricks bundle validate -t dev", "terraform validate"
+
+architecture:
+  pattern: custom-layered            # medallion | custom-layered | kimball | data-vault | lakehouse
+  # Each project layer maps to exactly one logical stage. Stage -> owning agent:
+  #   ingest -> Ingestion Agent | refine -> Transformation Agent | model -> Data Modeling Agent
+  #   serve  -> Serving Agent   | orchestrate -> Orchestration Agent
+  layers:
+    - name: landing
+      stage: ingest
+      description: Raw as-is source files in ADLS landing storage.
+      platform: synapse              # optional per-layer override for hybrid projects
+    - name: curated
+      stage: refine
+      description: Landing files standardized into parquet with explicit schema.
+    - name: staging
+      stage: refine
+      description: Curated parquet loaded into dedicated SQL pool staging tables.
+    - name: core
+      stage: model
+      description: Dimensions/facts with SCD merge logic.
+      scd_default: type1
+    - name: reporting
+      stage: serve
+      description: Power BI/frontend-facing views on core tables.
+      target_schema: dwh_reporting
+      excluded_schemas: [dwh_selfservice_silver, dwh_selfservice_silver_finance]
+
+orchestration:
+  style: metadata-driven             # metadata-driven | code-first | dag
+  engine: synapse_pipelines          # synapse_pipelines | fabric_pipelines | databricks_jobs | step_functions | airflow | glue_workflows
+  control_metadata_schema: dwh_meta
+  reuse_before_create: true
+
+lineage:
+  sources:
+    - type: pdf
+      path: .github/Data Lineage-v1-20260909_120038.pdf
+      sections:
+        source_to_staging: 0_Inbound Layer
+        staging_to_core: 1_Core layer
+        core_to_reporting: 2_Outbound Layer (Views)
+
+schema_evidence:
+  - docs/reference/*_schema.txt
+  - curated Spark schema / parquet schema
+  - source metadata rows
+
+approvals:
+  convert_or_publish: required       # human approval before editable -> artifact conversion
+  deploy: required                   # never deploy without explicit approval

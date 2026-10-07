@@ -1,0 +1,54 @@
+{
+  "chat.agentSkillsLocations": {
+    ".agents/skills": true,
+    ".github/skills": true,
+    ".claude/skills": true,
+    "~/.agents/skills": true,
+    "~/.copilot/skills": true,
+    "~/.claude/skills": true,
+    "~/.vscode/extensions/synapsevscode.synapse-1.25.0/copilot": true,
+    "~/.vscode/extensions/synapsevscode.synapse-1.25.0/copilot/skills": true,
+    "~/.vscode/extensions/synapsevscode.synapse-1.26.0/copilot/skills": true
+  },
+
+  // Ensure terminal auto-approval is enabled.
+  "chat.tools.terminal.enableAutoApprove": true,
+
+  // Approve common command variations used by your agent.
+  "chat.tools.terminal.autoApprove": {
+    "python": true,
+    "python3": true,
+    "py": true,
+    "git": true,
+    "pip": true,
+    "pip3": true,
+    "pwsh": true,
+    "powershell": true,
+
+    "/^&\\s*[\"']?.*python(?:\\.exe)?[\"']?/i": true,
+    "/^[\"']?.*python(?:\\.exe)?[\"']?/i": true,
+    "/^&\\s*[\"']?.*pwsh(?:\\.exe)?[\"']?/i": true,
+    "/^[\"']?.*pwsh(?:\\.exe)?[\"']?/i": true,
+    "/^git\\s+/i": true
+  },
+
+  // Allow agents to read these external folders.
+  "github.copilot.chat.additionalReadAccessFolders": [
+    "~/.agents",
+    "~/.copilot",
+    "~/.claude",
+    "~/.vscode/extensions/synapsevscode.synapse-1.25.0"
+  ],
+
+  // Automatically approve ordinary workspace edits.
+  "chat.tools.edits.autoApprove": {
+    "**/*": true
+  },
+
+  // Prevent repeated approval for external reads.
+  // File writes outside the workspace can still be security-sensitive.
+  "chat.tools.terminal.blockDetectedFileWrites": "off",
+
+  // Default new Copilot sessions to Bypass Approvals.
+  "chat.permissions.default": "autoApprove"
+}

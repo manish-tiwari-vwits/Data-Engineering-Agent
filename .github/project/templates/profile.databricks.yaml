@@ -1,0 +1,79 @@
+# Template: Databricks, Unity Catalog, medallion, Databricks Asset Bundles.
+# Copy to .github/project/profiles/<id>/project-profile.yaml (or run /init-project-profile) and replace <placeholders>.
+
+project:
+  id: <project-id>
+  name: <Project Name>
+  jira_project_keys: [<JIRA_KEY>]
+  jira_labels: [<JIRA_LABEL>]       # required when another profile shares the Jira key
+  confluence_spaces: [<SPACE_KEY>]
+  knowledge_file: .github/project/profiles/<project-id>/project-knowledge.md
+
+platform:
+  primary: databricks
+  secondary: []
+  compute: [jobs_compute, sql_warehouse, serverless]
+  storage: unity_catalog_volumes     # or adls_gen2 / s3 external locations
+  sql_dialect: spark_sql
+
+repository:
+  artifact_root: .
+  artifact_folders:
+    bundle_config: databricks.yml
+    resources: resources              # job / pipeline YAML
+    notebook: src                     # source-format .py / .sql notebooks
+    pipeline: src/pipelines           # Lakeflow Declarative Pipelines (DLT) code
+    tests: tests
+  index_dir: null
+  work_dir: null
+  commit_scope: ["databricks.yml", "resources/**", "src/**", "tests/**"]
+  never_commit: [".github/", ".databricks/", ".env"]
+  protected_branches: [main, master, develop]
+  default_pr_base: develop
+  pr_tool: gh
+
+tooling:
+  to_editable: null
+  to_artifact: null
+  new_sql_artifact: null
+  build_index: null
+  validate: databricks bundle validate -t <dev_target>
+
+architecture:
+  pattern: medallion
+  catalogs:                           # catalog per environment; never hardcode in code
+    dev: <dev_catalog>
+    prod: <prod_catalog>
+  layers:
+    - name: bronze
+      stage: ingest
+      description: Auto Loader / ingestion into bronze schema.
+    - name: silver
+      stage: refine
+      description: Cleansed, deduplicated, conformed Delta tables.
+    - name: gold
+      stage: model
+      description: Dimensions/facts and aggregates.
+      scd_default: type1
+    - name: serving
+      stage: serve
+      description: Views, metric views, Databricks SQL dashboards, BI exports.
+
+orchestration:
+  style: code-first                   # metadata-driven | code-first | dag
+  engine: databricks_jobs             # or lakeflow_pipelines / airflow
+  control_metadata_schema: null
+  reuse_before_create: true
+
+lineage:
+  sources:
+    - type: unity_catalog_lineage
+    - type: system_tables             # system.access.table_lineage / column_lineage
+
+schema_evidence:
+  - Unity Catalog table schema (DESCRIBE TABLE)
+  - source contract / sample files
+
+approvals:
+  convert_or_publish: required
+  deploy: required
