@@ -9,8 +9,8 @@ One-time setup for developers using the data engineering agents (Synapse, Fabric
 
 ## 2. Clone and open the agents workspace
 ```powershell
-git clone <agents-workspace-repo-url> standard-agent
-cd standard-agent
+git clone <agents-workspace-repo-url> Data-Engineering-Agent
+cd Data-Engineering-Agent
 code .
 ```
 
