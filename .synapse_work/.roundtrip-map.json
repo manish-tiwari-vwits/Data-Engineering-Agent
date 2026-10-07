@@ -1,0 +1,246 @@
+{
+  "p_UpdateExternalTablesForToday.sql": "C:\\Users\\F6SU1OD\\Documents\\synapse\\dp-lxvwap\\synapse\\sqlscript\\p_UpdateExternalTablesForToday.json",
+  "V_PPM_FM.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\V_PPM_FM.json",
+  "V_PlanView_FinancialModels.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\V_PlanView_FinancialModels.json",
+  "dwh_reporting_V_Fact_FinancialModels.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\dwh_reporting_V_Fact_FinancialModels.json",
+    "name": "dwh_reporting_V_Fact_FinancialModels",
+    "folder": "DDL/create/create_reporting_views",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "dwh_meta_tables_population.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\dwh_meta_tables_population.json",
+  "dwh_meta_tables_population2.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\dwh_meta_tables_population2.json",
+  "VWGDS_NPOKPIMASTER.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\VWGDS_NPOKPIMASTER.json",
+    "name": "VWGDS_NPOKPIMASTER",
+    "folder": "DDL/create/create_staging_tables",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "VWGDS_NPOARTPI.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\VWGDS_NPOARTPI.json",
+    "name": "VWGDS_NPOARTPI",
+    "folder": "DDL/create/create_staging_tables",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "VWGDS_NPOPIKPI.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\VWGDS_NPOPIKPI.json",
+    "name": "VWGDS_NPOPIKPI",
+    "folder": "DDL/create/create_staging_tables",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "VWGDS_NPOPIMASTER.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\VWGDS_NPOPIMASTER.json",
+    "name": "VWGDS_NPOPIMASTER",
+    "folder": "DDL/create/create_staging_tables",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "Dim_VWGDS_NPOKPIMASTER.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\Dim_VWGDS_NPOKPIMASTER.json",
+    "name": "Dim_VWGDS_NPOKPIMASTER",
+    "folder": "DDL/create/create_core_tables",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "Dim_VWGDS_NPOARTPI.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\Dim_VWGDS_NPOARTPI.json",
+    "name": "Dim_VWGDS_NPOARTPI",
+    "folder": "DDL/create/create_core_tables",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "Dim_VWGDS_NPOPIKPI.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\Dim_VWGDS_NPOPIKPI.json",
+    "name": "Dim_VWGDS_NPOPIKPI",
+    "folder": "DDL/create/create_core_tables",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "Dim_VWGDS_NPOPIMASTER.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\Dim_VWGDS_NPOPIMASTER.json",
+    "name": "Dim_VWGDS_NPOPIMASTER",
+    "folder": "DDL/create/create_core_tables",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "p_stg2core_LOAD_Dim_VWGDS_NPOKPIMASTER.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\p_stg2core_LOAD_Dim_VWGDS_NPOKPIMASTER.json",
+    "name": "p_stg2core_LOAD_Dim_VWGDS_NPOKPIMASTER",
+    "folder": "DDL/create/create_dwh_stored_procedures",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "p_stg2core_LOAD_Dim_VWGDS_NPOARTPI.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\p_stg2core_LOAD_Dim_VWGDS_NPOARTPI.json",
+    "name": "p_stg2core_LOAD_Dim_VWGDS_NPOARTPI",
+    "folder": "DDL/create/create_dwh_stored_procedures",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "p_stg2core_LOAD_Dim_VWGDS_NPOPIKPI.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\p_stg2core_LOAD_Dim_VWGDS_NPOPIKPI.json",
+    "name": "p_stg2core_LOAD_Dim_VWGDS_NPOPIKPI",
+    "folder": "DDL/create/create_dwh_stored_procedures",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "p_stg2core_LOAD_Dim_VWGDS_NPOPIMASTER.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\p_stg2core_LOAD_Dim_VWGDS_NPOPIMASTER.json",
+    "name": "p_stg2core_LOAD_Dim_VWGDS_NPOPIMASTER",
+    "folder": "DDL/create/create_dwh_stored_procedures",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "VWGDS_AGILETEAMNPO.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\VWGDS_AGILETEAMNPO.json",
+    "name": "VWGDS_AGILETEAMNPO",
+    "folder": "DDL/create/create_staging_tables",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "Dim_VWGDS_AGILETEAMNPO.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\Dim_VWGDS_AGILETEAMNPO.json",
+    "name": "Dim_VWGDS_AGILETEAMNPO",
+    "folder": "DDL/create/create_core_tables",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "p_stg2core_LOAD_Dim_VWGDS_AGILETEAMNPO.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\p_stg2core_LOAD_Dim_VWGDS_AGILETEAMNPO.json",
+    "name": "p_stg2core_LOAD_Dim_VWGDS_AGILETEAMNPO",
+    "folder": "DDL/create/create_dwh_stored_procedures",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "p_DL2DWH_PolyBase_FULL_LOAD.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\p_DL2DWH_PolyBase_FULL_LOAD.json",
+  "p_stg2core_LOAD_Dim_EUAI_Portfolio.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\p_stg2core_LOAD_Dim_EUAI_Portfolio.json",
+  "Fact_ColibriWorkItemBIA.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\Fact_ColibriWorkItemBIA.json",
+    "name": "Fact_ColibriWorkItemBIA",
+    "folder": "DDL/create/create_core_tables",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "p_stg2core_LOAD_Fact_ColibriWorkItemBIA.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\p_stg2core_LOAD_Fact_ColibriWorkItemBIA.json",
+    "name": "p_stg2core_LOAD_Fact_ColibriWorkItemBIA",
+    "folder": "DDL/create/create_dwh_stored_procedures",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "Fact_ColibriWorkItems.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\Fact_ColibriWorkItems.json",
+  "p_stg2core_LOAD_Fact_ColibriWorkItems.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\p_stg2core_LOAD_Fact_ColibriWorkItems.json",
+  "Dim_ColibriProducts.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\Dim_ColibriProducts.json",
+  "Dim_ColibriUsers.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\Dim_ColibriUsers.json",
+  "V_COLIBRI_WorkItems_BIA.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\V_COLIBRI_WorkItems_BIA.json",
+  "p_stg2core_LOAD_Dim_CewGar_Apps.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\p_stg2core_LOAD_Dim_CewGar_Apps.json",
+  "Dim_CewGar_Apps.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\Dim_CewGar_Apps.json",
+  "Dim_CewGar_Apps_Hist.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\Dim_CewGar_Apps_Hist.json",
+  "Dim_Apps_KPI_Checkpoints.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\Dim_Apps_KPI_Checkpoints.json",
+  "p_stg2core_LOAD_Dim_Apps_KPI_Checkpoints.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\p_stg2core_LOAD_Dim_Apps_KPI_Checkpoints.json",
+  "APEX_MONGO_IA_REPORT.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\APEX_MONGO_IA_REPORT.json",
+  "APEX_MSSQL_IA_REPORT.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\APEX_MSSQL_IA_REPORT.json",
+  "APEX_MYSQL_IA_REPORT.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\APEX_MYSQL_IA_REPORT.json",
+  "APEX_ORACLE_IA_REPORT.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\APEX_ORACLE_IA_REPORT.json",
+  "APEX_SAP_IA_REPORT.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\APEX_SAP_IA_REPORT.json",
+  "APEX_IA_REPORT_TOMCAT.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\APEX_IA_REPORT_TOMCAT.json",
+  "APEX_IA_REPORT_HTTPD.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\APEX_IA_REPORT_HTTPD.json",
+  "APEX_IA_REPORT_WAS.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\APEX_IA_REPORT_WAS.json",
+  "APEX_IA_REPORT_LIBERTY.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\APEX_IA_REPORT_LIBERTY.json",
+  "APEX_EXCLUDE_CODES.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\APEX_EXCLUDE_CODES.json",
+  "Dim_KPI47_Apex_Checkpoints.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\Dim_KPI47_Apex_Checkpoints.json",
+    "name": "Dim_KPI47_Apex_Checkpoints",
+    "folder": "DDL/create/create_core_tables",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "Dim_KPI47_Apex_Checkpoints_Hist.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\Dim_KPI47_Apex_Checkpoints_Hist.json",
+    "name": "Dim_KPI47_Apex_Checkpoints_Hist",
+    "folder": "DDL/create/create_core_tables",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "p_stg2core_LOAD_Dim_KPI47_Apex_Checkpoints.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\p_stg2core_LOAD_Dim_KPI47_Apex_Checkpoints.json",
+    "name": "p_stg2core_LOAD_Dim_KPI47_Apex_Checkpoints",
+    "folder": "DDL/create/create_dwh_stored_procedures",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "p_stg2core_LOAD_Dim_AppCIs_IP_Addresses.sql": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\p_stg2core_LOAD_Dim_AppCIs_IP_Addresses.json",
+  "Dim_ACM_UCMDB_Servers.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\Dim_ACM_UCMDB_Servers.json",
+    "name": "Dim_ACM_UCMDB_Servers",
+    "folder": "DDL/create/create_core_tables",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "Dim_ACM_UCMDB_Servers_Hist.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\Dim_ACM_UCMDB_Servers_Hist.json",
+    "name": "Dim_ACM_UCMDB_Servers_Hist",
+    "folder": "DDL/create/create_core_tables",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  },
+  "p_stg2core_LOAD_Dim_ACM_UCMDB_Servers.sql": {
+    "mode": "new-sqlscript",
+    "target": "C:\\Users\\F6SU1OD\\Documents\\gravity_o&s_agents\\synapse_artifacts\\sqlscript\\p_stg2core_LOAD_Dim_ACM_UCMDB_Servers.json",
+    "name": "p_stg2core_LOAD_Dim_ACM_UCMDB_Servers",
+    "folder": "DDL/create/create_dwh_stored_procedures",
+    "database": "itgz",
+    "pool": "itgz",
+    "resultLimit": 5000
+  }
+}

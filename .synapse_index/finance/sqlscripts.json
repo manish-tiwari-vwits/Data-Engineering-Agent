@@ -1,0 +1,1722 @@
+[
+  {
+    "name": "Bridge_Kostenstelle_Index_Projektnummer_history",
+    "path": "Synapse-itf-Dev/sqlscript/Bridge_Kostenstelle_Index_Projektnummer_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Table Schema",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "count_query",
+    "path": "Synapse-itf-Dev/sqlscript/count_query.json",
+    "kind": "sqlscript",
+    "synapseFolder": "",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "create_deltafileformat",
+    "path": "Synapse-itf-Dev/sqlscript/create_deltafileformat.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Serverless/02_ExternalResources",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "it_finance",
+    "poolName": "Built-in"
+  },
+  {
+    "name": "create_externaldatasource",
+    "path": "Synapse-itf-Dev/sqlscript/create_externaldatasource.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Serverless/02_ExternalResources",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "it_finance",
+    "poolName": "Built-in"
+  },
+  {
+    "name": "create_parquetfileformat",
+    "path": "Synapse-itf-Dev/sqlscript/create_parquetfileformat.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Serverless/02_ExternalResources",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "it_finance",
+    "poolName": "Built-in"
+  },
+  {
+    "name": "create_schema",
+    "path": "Synapse-itf-Dev/sqlscript/create_schema.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Serverless/01_Schemas",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "it_finance",
+    "poolName": "Built-in"
+  },
+  {
+    "name": "dbo",
+    "path": "Synapse-itf-Dev/sqlscript/dbo.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_schema",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "dwh",
+    "path": "Synapse-itf-Dev/sqlscript/dwh.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_schema",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "dwh_stg",
+    "path": "Synapse-itf-Dev/sqlscript/dwh_stg.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_schema",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "FinanceFeedMetadata",
+    "path": "Synapse-itf-Dev/sqlscript/FinanceFeedMetadata.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "FinanceFeedMetadata_info",
+    "path": "Synapse-itf-Dev/sqlscript/FinanceFeedMetadata_info.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Operational Queries",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "Historic_data_load",
+    "path": "Synapse-itf-Dev/sqlscript/Historic_data_load.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Operational Queries",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_DIM_01_Datenstand_PLBM",
+    "path": "Synapse-itf-Dev/sqlscript/P_DIM_01_Datenstand_PLBM.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_DIM_01_Datenstand_PLBM_history",
+    "path": "Synapse-itf-Dev/sqlscript/P_DIM_01_Datenstand_PLBM_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Store Procedures",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_DIM_02_Periode",
+    "path": "Synapse-itf-Dev/sqlscript/P_DIM_02_Periode.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_DIM_10_Werksauftrag",
+    "path": "Synapse-itf-Dev/sqlscript/P_DIM_10_Werksauftrag.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_DIM_10_Werksauftrag_history",
+    "path": "Synapse-itf-Dev/sqlscript/P_DIM_10_Werksauftrag_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Store Procedures",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_DIM_43_Kundenkostenstelle_SKST",
+    "path": "Synapse-itf-Dev/sqlscript/P_DIM_43_Kundenkostenstelle_SKST.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_DIM_43_Kundenkostenstelle_SKST_history",
+    "path": "Synapse-itf-Dev/sqlscript/P_DIM_43_Kundenkostenstelle_SKST_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Store Procedures",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_IMPORT_FACT_PAF_Projektausgaben",
+    "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_Projektausgaben.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_IMPORT_FACT_PAF_Projektausgaben_history",
+    "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_Projektausgaben_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Store Procedures",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_IMPORT_FACT_PAF_Projekteinnahmen",
+    "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_Projekteinnahmen.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_IMPORT_FACT_PAF_Projekteinnahmen_FactData",
+    "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_Projekteinnahmen_FactData.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_IMPORT_FACT_PAF_Projekteinnahmen_FactData_history",
+    "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_Projekteinnahmen_FactData_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Store Procedures",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_IMPORT_FACT_PAF_Projekteinnahmen_history",
+    "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_Projekteinnahmen_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Store Procedures",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_IMPORT_FACT_PAF_WA_Uebersicht",
+    "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_WA_Uebersicht.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_IMPORT_FACT_PAF_WA_Uebersicht_his",
+    "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_WA_Uebersicht_his.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_IMPORT_FACT_PAF_WA_Uebersicht_history",
+    "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_WA_Uebersicht_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Store Procedures",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_IMPORT_FACT_PAF_WA_Uebersicht_Pivot",
+    "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_WA_Uebersicht_Pivot.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_IMPORT_FACT_PAF_WA_Uebersicht_Pivot_history",
+    "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_WA_Uebersicht_Pivot_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Store Procedures",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_R_FilterOrganisationssicht",
+    "path": "Synapse-itf-Dev/sqlscript/P_R_FilterOrganisationssicht.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_R_FilterOrganisationssicht_history",
+    "path": "Synapse-itf-Dev/sqlscript/P_R_FilterOrganisationssicht_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Store Procedures",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_R_Projectdashboard_Tablegrid",
+    "path": "Synapse-itf-Dev/sqlscript/P_R_Projectdashboard_Tablegrid.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_R_Projectdashboard_Tablegrid_2026_04_10",
+    "path": "Synapse-itf-Dev/sqlscript/P_R_Projectdashboard_Tablegrid_2026_04_10.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_R_Projectdashboard_Tablegrid_history",
+    "path": "Synapse-itf-Dev/sqlscript/P_R_Projectdashboard_Tablegrid_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Store Procedures",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_R_WA_Dashboard",
+    "path": "Synapse-itf-Dev/sqlscript/P_R_WA_Dashboard.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_R_WA_Number_Projectname_Beleganalyse",
+    "path": "Synapse-itf-Dev/sqlscript/P_R_WA_Number_Projectname_Beleganalyse.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_R_WA_Number_Projectname_Beleganalyse_history",
+    "path": "Synapse-itf-Dev/sqlscript/P_R_WA_Number_Projectname_Beleganalyse_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Store Procedures",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_R_WAUebersicht_Pivot",
+    "path": "Synapse-itf-Dev/sqlscript/P_R_WAUebersicht_Pivot.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_R_WAUebersicht_Pivot_history",
+    "path": "Synapse-itf-Dev/sqlscript/P_R_WAUebersicht_Pivot_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Store Procedures",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "P_R_WAUebersicht_Pivot_history_backup",
+    "path": "Synapse-itf-Dev/sqlscript/P_R_WAUebersicht_Pivot_history_backup.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Store Procedures",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "p_UpdateExternalTables",
+    "path": "Synapse-itf-Dev/sqlscript/p_UpdateExternalTables.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Serverless/03_ExternalTables",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "it_finance",
+    "poolName": "Built-in"
+  },
+  {
+    "name": "Prod_01",
+    "path": "Synapse-itf-Dev/sqlscript/Prod_01.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Sharepoint-data",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "Prod_02",
+    "path": "Synapse-itf-Dev/sqlscript/Prod_02.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Sharepoint-data",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "Prod_03",
+    "path": "Synapse-itf-Dev/sqlscript/Prod_03.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Sharepoint-data",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "Prod_04",
+    "path": "Synapse-itf-Dev/sqlscript/Prod_04.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Sharepoint-data",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "Prod_05",
+    "path": "Synapse-itf-Dev/sqlscript/Prod_05.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Sharepoint-data",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "Prod_07",
+    "path": "Synapse-itf-Dev/sqlscript/Prod_07.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Sharepoint-data",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "Prod_08",
+    "path": "Synapse-itf-Dev/sqlscript/Prod_08.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Sharepoint-data",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "R_FilterOrganisationssicht",
+    "path": "Synapse-itf-Dev/sqlscript/R_FilterOrganisationssicht.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_reporting_view_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "R_FilterOrganisationssicht_history",
+    "path": "Synapse-itf-Dev/sqlscript/R_FilterOrganisationssicht_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Table Schema",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "R_Projectdashboard_Tablegrid",
+    "path": "Synapse-itf-Dev/sqlscript/R_Projectdashboard_Tablegrid.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_reporting_view_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "R_Projectdashboard_Tablegrid_history",
+    "path": "Synapse-itf-Dev/sqlscript/R_Projectdashboard_Tablegrid_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Table Schema",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "R_WA_Dashboard",
+    "path": "Synapse-itf-Dev/sqlscript/R_WA_Dashboard.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_reporting_view_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "R_WA_Number_Projectname_Beleganalyse",
+    "path": "Synapse-itf-Dev/sqlscript/R_WA_Number_Projectname_Beleganalyse.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_reporting_view_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "R_WA_Number_Projectname_Beleganalyse_history",
+    "path": "Synapse-itf-Dev/sqlscript/R_WA_Number_Projectname_Beleganalyse_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Table Schema",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "R_WAUebersicht_Pivot",
+    "path": "Synapse-itf-Dev/sqlscript/R_WAUebersicht_Pivot.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_reporting_view_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "R_WAUebersicht_Pivot_history",
+    "path": "Synapse-itf-Dev/sqlscript/R_WAUebersicht_Pivot_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_reporting_view_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "Regenbogenchart_allyears",
+    "path": "Synapse-itf-Dev/sqlscript/Regenbogenchart_allyears.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Sharepoint-data",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "rpt",
+    "path": "Synapse-itf-Dev/sqlscript/rpt.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_schema",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "SCD2_Load_Audit",
+    "path": "Synapse-itf-Dev/sqlscript/SCD2_Load_Audit.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "Sp_core_reporting_table_count",
+    "path": "Synapse-itf-Dev/sqlscript/Sp_core_reporting_table_count.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_DynamicCopyIntoTemp",
+    "path": "Synapse-itf-Dev/sqlscript/sp_DynamicCopyIntoTemp.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_DynamicTempToStaging_SCD2_QS",
+    "path": "Synapse-itf-Dev/sqlscript/sp_DynamicTempToStaging_SCD2_QS.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_DynamicTempToStg_Load_new",
+    "path": "Synapse-itf-Dev/sqlscript/sp_DynamicTempToStg_Load_new.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_Final_scd_validation",
+    "path": "Synapse-itf-Dev/sqlscript/sp_Final_scd_validation.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "SP_Load_Bridge_Kostenstelle_Index_Projektnummer",
+    "path": "Synapse-itf-Dev/sqlscript/SP_Load_Bridge_Kostenstelle_Index_Projektnummer.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "SP_Load_Bridge_Kostenstelle_Index_Projektnummer_history",
+    "path": "Synapse-itf-Dev/sqlscript/SP_Load_Bridge_Kostenstelle_Index_Projektnummer_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Store Procedures",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_Load_T_IMPORT_PAF_Detaillierungstabelle_R4",
+    "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Detaillierungstabelle_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/staging-sp",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_Load_T_IMPORT_PAF_Einmalaufwaendet_R4",
+    "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Einmalaufwaendet_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/staging-sp",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_Load_T_IMPORT_PAF_Entlastungs_DLV_R4",
+    "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Entlastungs_DLV_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/staging-sp",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_Load_T_IMPORT_PAF_Masterliste_1_R4",
+    "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Masterliste_1_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/staging-sp",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_Load_T_IMPORT_PAF_Masterliste_2_R4",
+    "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Masterliste_2_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/staging-sp",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_Load_T_IMPORT_PAF_Portfolio_Einmalaufwaende_R4",
+    "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Portfolio_Einmalaufwaende_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/staging-sp",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_Load_T_IMPORT_PAF_Portfolio_ICTO_Anteile_R4",
+    "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Portfolio_ICTO_Anteile_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/staging-sp",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_Load_T_IMPORT_PAF_Portfolio_Informationen_R4",
+    "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Portfolio_Informationen_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/staging-sp",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_Load_T_IMPORT_PAF_Portfolio_Nachhaltige_Kosten_R4",
+    "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Portfolio_Nachhaltige_Kosten_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/staging-sp",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_Load_T_IMPORT_PAF_Projektausgaben_R4",
+    "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Projektausgaben_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/staging-sp",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_Load_T_IMPORT_PAF_Projekteinnahmen_R4",
+    "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Projekteinnahmen_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/staging-sp",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_Load_T_IMPORT_PAF_WA_Stammdaten_R4",
+    "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_WA_Stammdaten_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/staging-sp",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_Load_T_IMPORT_PAF_WA_Uebersicht_R41",
+    "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_WA_Uebersicht_R41.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/staging-sp",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_log_error",
+    "path": "Synapse-itf-Dev/sqlscript/sp_log_error.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "SP_Master_Core_to_Reporting",
+    "path": "Synapse-itf-Dev/sqlscript/SP_Master_Core_to_Reporting.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "SP_Master_Historic_Report",
+    "path": "Synapse-itf-Dev/sqlscript/SP_Master_Historic_Report.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Store Procedures",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "SP_Master_Staging_to_Core",
+    "path": "Synapse-itf-Dev/sqlscript/SP_Master_Staging_to_Core.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/staging-sp",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "sp_Run_ETL_Driver",
+    "path": "Synapse-itf-Dev/sqlscript/sp_Run_ETL_Driver.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "Sp_table_count_validation",
+    "path": "Synapse-itf-Dev/sqlscript/Sp_table_count_validation.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_Bridge_Kostenstelle_Index_Projektnummer",
+    "path": "Synapse-itf-Dev/sqlscript/T_Bridge_Kostenstelle_Index_Projektnummer.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_core_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_DIM_01_Datenstand_PLBM",
+    "path": "Synapse-itf-Dev/sqlscript/T_DIM_01_Datenstand_PLBM.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_core_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_DIM_01_Datenstand_PLBM_history",
+    "path": "Synapse-itf-Dev/sqlscript/T_DIM_01_Datenstand_PLBM_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Table Schema",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_DIM_02_Periode",
+    "path": "Synapse-itf-Dev/sqlscript/T_DIM_02_Periode.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_core_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_DIM_10_Werksauftrag",
+    "path": "Synapse-itf-Dev/sqlscript/T_DIM_10_Werksauftrag.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_core_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_DIM_10_Werksauftrag_history",
+    "path": "Synapse-itf-Dev/sqlscript/T_DIM_10_Werksauftrag_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Table Schema",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_DIM_43_Kundenkostenstelle_SKST",
+    "path": "Synapse-itf-Dev/sqlscript/T_DIM_43_Kundenkostenstelle_SKST.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_core_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_DIM_43_Kundenkostenstelle_SKST_history",
+    "path": "Synapse-itf-Dev/sqlscript/T_DIM_43_Kundenkostenstelle_SKST_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Table Schema",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_DWH_stg_FinanceFeedMetadata",
+    "path": "Synapse-itf-Dev/sqlscript/T_DWH_stg_FinanceFeedMetadata.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_errorlog",
+    "path": "Synapse-itf-Dev/sqlscript/T_errorlog.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_core_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Detaillierungstabelle_R4",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Detaillierungstabelle_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Detaillierungstabelle_R4_Rawtable",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Detaillierungstabelle_R4_Rawtable.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Detaillierungstabelle_R4_stg",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Detaillierungstabelle_R4_stg.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Einmalaufwaende_R4",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Einmalaufwaende_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Einmalaufwaende_R4_Rawtable",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Einmalaufwaende_R4_Rawtable.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Einmalaufwaende_R4_stg",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Einmalaufwaende_R4_stg.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Entlastungs_DLV_R4",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Entlastungs_DLV_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Entlastungs_DLV_R4_Rawtable",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Entlastungs_DLV_R4_Rawtable.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Entlastungs_DLV_R4_Rawtable_stg",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Entlastungs_DLV_R4_Rawtable_stg.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Masterliste_1_R4",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Masterliste_1_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Masterliste_1_R4_Rawdata",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Masterliste_1_R4_Rawdata.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Masterliste_1_R4_Rawdata_stg",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Masterliste_1_R4_Rawdata_stg.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Masterliste_2_R4",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Masterliste_2_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Masterliste_2_R4_Rawtable",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Masterliste_2_R4_Rawtable.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Masterliste_2_R4_Rawtable_stg",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Masterliste_2_R4_Rawtable_stg.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Portfolio_Einmalaufwaende_R4",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Einmalaufwaende_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Portfolio_Einmalaufwaende_R4_Rawtable",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Einmalaufwaende_R4_Rawtable.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Portfolio_Einmalaufwaende_R4_Rawtable_stg",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Einmalaufwaende_R4_Rawtable_stg.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Portfolio_ICTO_Anteile_R4",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_ICTO_Anteile_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Portfolio_ICTO_Anteile_R4_Rawtable",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_ICTO_Anteile_R4_Rawtable.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Portfolio_ICTO_Anteile_R4_Rawtable_stg",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_ICTO_Anteile_R4_Rawtable_stg.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Portfolio_Informationen_R4",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Informationen_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Portfolio_Informationen_R4_history",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Informationen_R4_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Table Schema",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Portfolio_Informationen_R4_Rawtable",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Informationen_R4_Rawtable.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Portfolio_Informationen_R4_Rawtable_stg",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Informationen_R4_Rawtable_stg.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Portfolio_Nachhaltige_Kosten_R4",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Nachhaltige_Kosten_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Portfolio_Nachhaltige_Kosten_R4_Rawtable",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Nachhaltige_Kosten_R4_Rawtable.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Portfolio_Nachhaltige_Kosten_R4_Rawtable_stg",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Nachhaltige_Kosten_R4_Rawtable_stg.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Projektausgaben_neuesteDaten",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projektausgaben_neuesteDaten.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_core_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Projektausgaben_neuesteDaten_history",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projektausgaben_neuesteDaten_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Table Schema",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Projektausgaben_R4",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projektausgaben_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Projektausgaben_R4_Rawtable",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projektausgaben_R4_Rawtable.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Projektausgaben_R4_Rawtable_stg",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projektausgaben_R4_Rawtable_stg.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Projekteinnahmen_FactData",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projekteinnahmen_FactData.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_core_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Projekteinnahmen_FactData_history",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projekteinnahmen_FactData_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Table Schema",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Projekteinnahmen_neuesteDaten",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projekteinnahmen_neuesteDaten.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_core_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Projekteinnahmen_neuesteDaten_history",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projekteinnahmen_neuesteDaten_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Table Schema",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Projekteinnahmen_R4",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projekteinnahmen_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Projekteinnahmen_R4_Rawtable",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projekteinnahmen_R4_Rawtable.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_Projekteinnahmen_R4_Rawtable_stg",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projekteinnahmen_R4_Rawtable_stg.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_WA_Stammdaten_R4",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Stammdaten_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_WA_Stammdaten_R4_history",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Stammdaten_R4_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Table Schema",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_WA_Stammdaten_R4_Rawtable",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Stammdaten_R4_Rawtable.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_WA_Stammdaten_R4_Rawtable_stg",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Stammdaten_R4_Rawtable_stg.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_WA_Uebersicht_neuesteDaten",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Uebersicht_neuesteDaten.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_core_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_WA_Uebersicht_neuesteDaten_history",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Uebersicht_neuesteDaten_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_core_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_WA_Uebersicht_Pivot_neuesteDaten",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Uebersicht_Pivot_neuesteDaten.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_core_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_WA_Uebersicht_Pivot_neuesteDaten_his",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Uebersicht_Pivot_neuesteDaten_his.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_core_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_WA_Uebersicht_Pivot_neuesteDaten_history",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Uebersicht_Pivot_neuesteDaten_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Table Schema",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_WA_Uebersicht_R4",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Uebersicht_R4.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_WA_Uebersicht_R4_history",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Uebersicht_R4_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_WA_Uebersicht_Rawtable",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Uebersicht_Rawtable.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_IMPORT_PAF_WA_Uebersicht_Rawtable_stg",
+    "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Uebersicht_Rawtable_stg.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_PipelineLog",
+    "path": "Synapse-itf-Dev/sqlscript/T_PipelineLog.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_core_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "T_USERRLS",
+    "path": "Synapse-itf-Dev/sqlscript/T_USERRLS.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_core_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "Table_Count_History",
+    "path": "Synapse-itf-Dev/sqlscript/Table_Count_History.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "Table_Count_History_RPT",
+    "path": "Synapse-itf-Dev/sqlscript/Table_Count_History_RPT.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "Table_Count_Metadata",
+    "path": "Synapse-itf-Dev/sqlscript/Table_Count_Metadata.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "USERRLS_1",
+    "path": "Synapse-itf-Dev/sqlscript/USERRLS_1.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_core_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "usp_UpdateUserRLSDepartment",
+    "path": "Synapse-itf-Dev/sqlscript/usp_UpdateUserRLSDepartment.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "v_dim_41_01_kostenstelle_test",
+    "path": "Synapse-itf-Dev/sqlscript/v_dim_41_01_kostenstelle_test.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Serverless/04_Views",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "it_finance",
+    "poolName": "Built-in"
+  },
+  {
+    "name": "V_DIM_Datenstand_PLBM",
+    "path": "Synapse-itf-Dev/sqlscript/V_DIM_Datenstand_PLBM.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_reporting_view_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "V_DIM_Datenstand_PLBM_history",
+    "path": "Synapse-itf-Dev/sqlscript/V_DIM_Datenstand_PLBM_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Views",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "V_DIM_Kostenstelle_SKST",
+    "path": "Synapse-itf-Dev/sqlscript/V_DIM_Kostenstelle_SKST.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_reporting_view_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "V_DIM_Kostenstelle_SKST_history",
+    "path": "Synapse-itf-Dev/sqlscript/V_DIM_Kostenstelle_SKST_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Views",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "V_DIM_Periode",
+    "path": "Synapse-itf-Dev/sqlscript/V_DIM_Periode.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_reporting_view_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "V_DIM_Werksauftrag",
+    "path": "Synapse-itf-Dev/sqlscript/V_DIM_Werksauftrag.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_reporting_view_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "V_DIM_Werksauftrag_history",
+    "path": "Synapse-itf-Dev/sqlscript/V_DIM_Werksauftrag_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Views",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "V_FACT_PLBM_Projektausgaben",
+    "path": "Synapse-itf-Dev/sqlscript/V_FACT_PLBM_Projektausgaben.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_reporting_view_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "V_FACT_PLBM_Projektausgaben_history",
+    "path": "Synapse-itf-Dev/sqlscript/V_FACT_PLBM_Projektausgaben_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Views",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "V_FACT_PLBM_Projekteinnahmen",
+    "path": "Synapse-itf-Dev/sqlscript/V_FACT_PLBM_Projekteinnahmen.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_reporting_view_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "V_FACT_PLBM_Projekteinnahmen_history",
+    "path": "Synapse-itf-Dev/sqlscript/V_FACT_PLBM_Projekteinnahmen_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Views",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "V_FACT_PLBM_WAUebersicht_Pivot",
+    "path": "Synapse-itf-Dev/sqlscript/V_FACT_PLBM_WAUebersicht_Pivot.json",
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_reporting_view_table",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "V_FACT_PLBM_WAUebersicht_Pivot_history",
+    "path": "Synapse-itf-Dev/sqlscript/V_FACT_PLBM_WAUebersicht_Pivot_history.json",
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Views",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "itf_frog",
+    "poolName": "itf_frog"
+  },
+  {
+    "name": "validation_table",
+    "path": "Synapse-itf-Dev/sqlscript/validation_table.json",
+    "kind": "sqlscript",
+    "synapseFolder": "deltamaster validation",
+    "type": "SqlQuery",
+    "language": "sql",
+    "databaseName": "it_finance",
+    "poolName": "Built-in"
+  }
+]

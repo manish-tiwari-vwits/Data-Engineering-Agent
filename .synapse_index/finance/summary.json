@@ -1,0 +1,12 @@
+{
+  "artifactRoot": "Synapse-itf-Dev",
+  "gitHead": "a2d09e57a117760f19cd93517777061461ff48d9",
+  "sqlscripts": 172,
+  "notebooks": 63,
+  "folders": 28,
+  "generatedFiles": [
+    ".synapse_index/finance/sqlscripts.json",
+    ".synapse_index/finance/notebooks.json",
+    ".synapse_index/finance/folders.json"
+  ]
+}

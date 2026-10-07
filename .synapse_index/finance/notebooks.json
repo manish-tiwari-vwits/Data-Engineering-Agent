@@ -1,0 +1,506 @@
+[
+  {
+    "name": "All-layer-logs",
+    "path": "Synapse-itf-Dev/notebook/All-layer-logs.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/Error-Monitoring",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "create_gold_table_statement",
+    "path": "Synapse-itf-Dev/notebook/create_gold_table_statement.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/create_reporting_table",
+    "type": "",
+    "language": "sql"
+  },
+  {
+    "name": "Curated_to_Processed_Test",
+    "path": "Synapse-itf-Dev/notebook/Curated_to_Processed_Test.json",
+    "kind": "notebook",
+    "synapseFolder": "Landing-Curated Layer used Notebook",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "fact test",
+    "path": "Synapse-itf-Dev/notebook/fact test.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/validation",
+    "type": "",
+    "language": "sql"
+  },
+  {
+    "name": "Gold_Layer_Execution",
+    "path": "Synapse-itf-Dev/notebook/Gold_Layer_Execution.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "history load",
+    "path": "Synapse-itf-Dev/notebook/history load.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_bronze_layer",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "historydata",
+    "path": "Synapse-itf-Dev/notebook/historydata.json",
+    "kind": "notebook",
+    "synapseFolder": "",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_bronze_metadata_table",
+    "path": "Synapse-itf-Dev/notebook/NB_bronze_metadata_table.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_bronze_layer",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_bronze_to_silver",
+    "path": "Synapse-itf-Dev/notebook/NB_bronze_to_silver.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Silver_layer",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_Datewise_Validation_Report",
+    "path": "Synapse-itf-Dev/notebook/NB_Datewise_Validation_Report.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/validation",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "nb_itf_dl_Curated_to_Processing",
+    "path": "Synapse-itf-Dev/notebook/nb_itf_dl_Curated_to_Processing.json",
+    "kind": "notebook",
+    "synapseFolder": "Raw_to_Processing_Layer_Notebooks",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_itf_dl_landing_to_curated",
+    "path": "Synapse-itf-Dev/notebook/NB_itf_dl_landing_to_curated.json",
+    "kind": "notebook",
+    "synapseFolder": "Raw_to_Processing_Layer_Notebooks",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_itf_dl_landing_to_curated_rb",
+    "path": "Synapse-itf-Dev/notebook/NB_itf_dl_landing_to_curated_rb.json",
+    "kind": "notebook",
+    "synapseFolder": "Raw_to_Processing_Layer_Notebooks",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_itf_dl_landing_to_curated_test",
+    "path": "Synapse-itf-Dev/notebook/NB_itf_dl_landing_to_curated_test.json",
+    "kind": "notebook",
+    "synapseFolder": "Landing-Curated Layer used Notebook",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_itf_planenbm-itf_raw_landing",
+    "path": "Synapse-itf-Dev/notebook/NB_itf_planenbm-itf_raw_landing.json",
+    "kind": "notebook",
+    "synapseFolder": "Raw_to_Processing_Layer_Notebooks",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_landing_to_bronze",
+    "path": "Synapse-itf-Dev/notebook/NB_landing_to_bronze.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_bronze_layer",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_landing_to_bronze1",
+    "path": "Synapse-itf-Dev/notebook/NB_landing_to_bronze1.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_bronze_layer",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_landing_to_bronze_project",
+    "path": "Synapse-itf-Dev/notebook/NB_landing_to_bronze_project.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_bronze_layer",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_silver_metadata_table_create",
+    "path": "Synapse-itf-Dev/notebook/NB_silver_metadata_table_create.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Silver_layer",
+    "type": "",
+    "language": "sql"
+  },
+  {
+    "name": "NB_silver_table_schema",
+    "path": "Synapse-itf-Dev/notebook/NB_silver_table_schema.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Silver_layer",
+    "type": "",
+    "language": "sql"
+  },
+  {
+    "name": "NB_silver_validation",
+    "path": "Synapse-itf-Dev/notebook/NB_silver_validation.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Silver_layer",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "Notebook 1",
+    "path": "Synapse-itf-Dev/notebook/Notebook 1.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/validation",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "one time - t_dim_16_02_belegstatus",
+    "path": "Synapse-itf-Dev/notebook/one time - t_dim_16_02_belegstatus.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_historic_load",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "one_time_t_dim_03_tag",
+    "path": "Synapse-itf-Dev/notebook/one_time_t_dim_03_tag.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_historic_load",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "one_time_t_dim_07_02_werksauftrag",
+    "path": "Synapse-itf-Dev/notebook/one_time_t_dim_07_02_werksauftrag.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_historic_load",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "one_time_t_dim_09_01_kostenart",
+    "path": "Synapse-itf-Dev/notebook/one_time_t_dim_09_01_kostenart.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_historic_load",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "one_time_t_dim_14_02_beleg",
+    "path": "Synapse-itf-Dev/notebook/one_time_t_dim_14_02_beleg.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_historic_load",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "one_time_t_dim_24_02_waprogramm",
+    "path": "Synapse-itf-Dev/notebook/one_time_t_dim_24_02_waprogramm.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_historic_load",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "one_time_t_dim_36_02_lieferant",
+    "path": "Synapse-itf-Dev/notebook/one_time_t_dim_36_02_lieferant.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_historic_load",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "one_time_T_S_Kostenstellenindex",
+    "path": "Synapse-itf-Dev/notebook/one_time_T_S_Kostenstellenindex.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_historic_load",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "sharepoint_target_tables",
+    "path": "Synapse-itf-Dev/notebook/sharepoint_target_tables.json",
+    "kind": "notebook",
+    "synapseFolder": "dataflow migrations",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "T_DIM_01_03_Tag",
+    "path": "Synapse-itf-Dev/notebook/T_DIM_01_03_Tag.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "T_DIM_02_01_Wertart",
+    "path": "Synapse-itf-Dev/notebook/T_DIM_02_01_Wertart.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "sql"
+  },
+  {
+    "name": "t_dim_04_01_periode_jahr",
+    "path": "Synapse-itf-Dev/notebook/t_dim_04_01_periode_jahr.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "sql"
+  },
+  {
+    "name": "t_dim_07_02_werksauftrag",
+    "path": "Synapse-itf-Dev/notebook/t_dim_07_02_werksauftrag.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "t_dim_08_01_kostenstellenindex",
+    "path": "Synapse-itf-Dev/notebook/t_dim_08_01_kostenstellenindex.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "t_dim_09_01_kostenart",
+    "path": "Synapse-itf-Dev/notebook/t_dim_09_01_kostenart.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "T_DIM_14_01_Belegquelle",
+    "path": "Synapse-itf-Dev/notebook/T_DIM_14_01_Belegquelle.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "sql"
+  },
+  {
+    "name": "t_dim_14_02_beleg",
+    "path": "Synapse-itf-Dev/notebook/t_dim_14_02_beleg.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "t_dim_15_01_belegart",
+    "path": "Synapse-itf-Dev/notebook/t_dim_15_01_belegart.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "T_DIM_16_01_Belegstatusgruppe_FI",
+    "path": "Synapse-itf-Dev/notebook/T_DIM_16_01_Belegstatusgruppe_FI.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "t_dim_16_02_belegstatus",
+    "path": "Synapse-itf-Dev/notebook/t_dim_16_02_belegstatus.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "T_DIM_21_01_Mandant",
+    "path": "Synapse-itf-Dev/notebook/T_DIM_21_01_Mandant.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "sql"
+  },
+  {
+    "name": "t_dim_24_02_waprogramm",
+    "path": "Synapse-itf-Dev/notebook/t_dim_24_02_waprogramm.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "t_dim_36_01_lieferantgruppe",
+    "path": "Synapse-itf-Dev/notebook/t_dim_36_01_lieferantgruppe.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "sql"
+  },
+  {
+    "name": "t_dim_36_02_lieferant",
+    "path": "Synapse-itf-Dev/notebook/t_dim_36_02_lieferant.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "T_DIM_41_01_Kostenstelle",
+    "path": "Synapse-itf-Dev/notebook/T_DIM_41_01_Kostenstelle.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "T_DIM_60_01_Hilfskostenstelle",
+    "path": "Synapse-itf-Dev/notebook/T_DIM_60_01_Hilfskostenstelle.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "t_dim_91_02_controller",
+    "path": "Synapse-itf-Dev/notebook/t_dim_91_02_controller.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "t_fact_01_wauebersicht",
+    "path": "Synapse-itf-Dev/notebook/t_fact_01_wauebersicht.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "t_fact_02_projekteinnahmen",
+    "path": "Synapse-itf-Dev/notebook/t_fact_02_projekteinnahmen.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "t_fact_03_projektausgaben",
+    "path": "Synapse-itf-Dev/notebook/t_fact_03_projektausgaben.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "T_FACT_04_Korrekturen",
+    "path": "Synapse-itf-Dev/notebook/T_FACT_04_Korrekturen.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "t_fact_05_projektuebersicht",
+    "path": "Synapse-itf-Dev/notebook/t_fact_05_projektuebersicht.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "T_IMPORT_DIM_Kostenstelle_ARCHIV",
+    "path": "Synapse-itf-Dev/notebook/T_IMPORT_DIM_Kostenstelle_ARCHIV.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_historic_load",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "T_Import_ProjektUebersicht",
+    "path": "Synapse-itf-Dev/notebook/T_Import_ProjektUebersicht.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_historic_load",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "T_IMPORT_PROJEKTUEBERSICHT_ARCHIV",
+    "path": "Synapse-itf-Dev/notebook/T_IMPORT_PROJEKTUEBERSICHT_ARCHIV.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_historic_load",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "T_S_Mapping_Kostenstelle_Controller",
+    "path": "Synapse-itf-Dev/notebook/T_S_Mapping_Kostenstelle_Controller.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_historic_load",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "T_S_Missing_Element",
+    "path": "Synapse-itf-Dev/notebook/T_S_Missing_Element.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_historic_load",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "testnotebook",
+    "path": "Synapse-itf-Dev/notebook/testnotebook.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_bronze_layer",
+    "type": "",
+    "language": "sql"
+  },
+  {
+    "name": "V_COSTCENTER_REPORTING",
+    "path": "Synapse-itf-Dev/notebook/V_COSTCENTER_REPORTING.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "v_s_itprogramme",
+    "path": "Synapse-itf-Dev/notebook/v_s_itprogramme.json",
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_historic_load",
+    "type": "",
+    "language": "sql"
+  },
+  {
+    "name": "Validation",
+    "path": "Synapse-itf-Dev/notebook/Validation.json",
+    "kind": "notebook",
+    "synapseFolder": "",
+    "type": "",
+    "language": "python"
+  }
+]

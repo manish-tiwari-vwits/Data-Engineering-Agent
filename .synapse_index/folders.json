@@ -1,0 +1,5208 @@
+[
+  {
+    "kind": "notebook",
+    "synapseFolder": "",
+    "count": 9,
+    "artifacts": [
+      {
+        "name": "GetLastModifiedFile",
+        "path": "synapse_artifacts/notebook/GetLastModifiedFile.json"
+      },
+      {
+        "name": "NB_Collect_FilesDelivered_Info",
+        "path": "synapse_artifacts/notebook/NB_Collect_FilesDelivered_Info.json"
+      },
+      {
+        "name": "NB_DL_curated_JSON_ANY",
+        "path": "synapse_artifacts/notebook/NB_DL_curated_JSON_ANY.json"
+      },
+      {
+        "name": "NB_DL_landing_Colibri_API_ALL",
+        "path": "synapse_artifacts/notebook/NB_DL_landing_Colibri_API_ALL.json"
+      },
+      {
+        "name": "NB_DL_landing_Colibri_ODATA_ALL",
+        "path": "synapse_artifacts/notebook/NB_DL_landing_Colibri_ODATA_ALL.json"
+      },
+      {
+        "name": "NB_DL_landing_JIRA_ALL",
+        "path": "synapse_artifacts/notebook/NB_DL_landing_JIRA_ALL.json"
+      },
+      {
+        "name": "NB_DL_landing_LeanIX_Polls",
+        "path": "synapse_artifacts/notebook/NB_DL_landing_LeanIX_Polls.json"
+      },
+      {
+        "name": "NB_DL_landing_Meshportal_ANY",
+        "path": "synapse_artifacts/notebook/NB_DL_landing_Meshportal_ANY.json"
+      },
+      {
+        "name": "NB_Purge_OutdatedArchive",
+        "path": "synapse_artifacts/notebook/NB_Purge_OutdatedArchive.json"
+      }
+    ]
+  },
+  {
+    "kind": "notebook",
+    "synapseFolder": "Dev",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "JSON_debug",
+        "path": "synapse_artifacts/notebook/JSON_debug.json"
+      },
+      {
+        "name": "NB_Archive_OutdatedData",
+        "path": "synapse_artifacts/notebook/NB_Archive_OutdatedData.json"
+      }
+    ]
+  },
+  {
+    "kind": "notebook",
+    "synapseFolder": "PoC",
+    "count": 3,
+    "artifacts": [
+      {
+        "name": "NB_DL_landing_JIRA_Assets",
+        "path": "synapse_artifacts/notebook/NB_DL_landing_JIRA_Assets.json"
+      },
+      {
+        "name": "NB_DL_landing_LEANIX",
+        "path": "synapse_artifacts/notebook/NB_DL_landing_LEANIX.json"
+      },
+      {
+        "name": "NB_LeanIX_ALL_lnd2crt",
+        "path": "synapse_artifacts/notebook/NB_LeanIX_ALL_lnd2crt.json"
+      }
+    ]
+  },
+  {
+    "kind": "notebook",
+    "synapseFolder": "utils",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "NB_UTILS",
+        "path": "synapse_artifacts/notebook/NB_UTILS.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "DQ_experiments",
+        "path": "synapse_artifacts/sqlscript/DQ_experiments.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "create_polybase_objects",
+        "path": "synapse_artifacts/sqlscript/create_polybase_objects.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_core_tables",
+    "count": 132,
+    "artifacts": [
+      {
+        "name": "Cfg_CeWGAR_Entities",
+        "path": "synapse_artifacts/sqlscript/Cfg_CeWGAR_Entities.json"
+      },
+      {
+        "name": "Cfg_ChangeClosureCodes",
+        "path": "synapse_artifacts/sqlscript/Cfg_ChangeClosureCodes.json"
+      },
+      {
+        "name": "Cfg_EU_AI_MapUserGroupsBrand",
+        "path": "synapse_artifacts/sqlscript/Cfg_EU_AI_MapUserGroupsBrand.json"
+      },
+      {
+        "name": "Cfg_EU_AI_PortfolioRelevantDevelopmentPhases",
+        "path": "synapse_artifacts/sqlscript/Cfg_EU_AI_PortfolioRelevantDevelopmentPhases.json"
+      },
+      {
+        "name": "Cfg_EU_AI_RelevantUserGroups",
+        "path": "synapse_artifacts/sqlscript/Cfg_EU_AI_RelevantUserGroups.json"
+      },
+      {
+        "name": "Cfg_External_URLs",
+        "path": "synapse_artifacts/sqlscript/Cfg_External_URLs.json"
+      },
+      {
+        "name": "Cfg_Fiscal_Years",
+        "path": "synapse_artifacts/sqlscript/Cfg_Fiscal_Years.json"
+      },
+      {
+        "name": "Cfg_IncTargetDurations",
+        "path": "synapse_artifacts/sqlscript/Cfg_IncTargetDurations.json"
+      },
+      {
+        "name": "Cfg_KPI_Checkpoints",
+        "path": "synapse_artifacts/sqlscript/Cfg_KPI_Checkpoints.json"
+      },
+      {
+        "name": "Cfg_Map_SC3Companies",
+        "path": "synapse_artifacts/sqlscript/Cfg_Map_SC3Companies.json"
+      },
+      {
+        "name": "Cfg_PrbBacklogDurations",
+        "path": "synapse_artifacts/sqlscript/Cfg_PrbBacklogDurations.json"
+      },
+      {
+        "name": "Cfg_PrbRCADurations",
+        "path": "synapse_artifacts/sqlscript/Cfg_PrbRCADurations.json"
+      },
+      {
+        "name": "Cfg_ReqTargetDurations",
+        "path": "synapse_artifacts/sqlscript/Cfg_ReqTargetDurations.json"
+      },
+      {
+        "name": "Cfg_Stakeholder_Cost_Center_Desc",
+        "path": "synapse_artifacts/sqlscript/Cfg_Stakeholder_Cost_Center_Desc.json"
+      },
+      {
+        "name": "Cfg_Technical_Service_Cost_Types",
+        "path": "synapse_artifacts/sqlscript/Cfg_Technical_Service_Cost_Types.json"
+      },
+      {
+        "name": "Cfg_Technical_Service_Hierarchy_Categories",
+        "path": "synapse_artifacts/sqlscript/Cfg_Technical_Service_Hierarchy_Categories.json"
+      },
+      {
+        "name": "Cfg_Technical_Service_Hierarchy_Category_Filters",
+        "path": "synapse_artifacts/sqlscript/Cfg_Technical_Service_Hierarchy_Category_Filters.json"
+      },
+      {
+        "name": "Dim_AppCIs",
+        "path": "synapse_artifacts/sqlscript/Dim_AppCIs.json"
+      },
+      {
+        "name": "Dim_AppCIs_IP_Addresses",
+        "path": "synapse_artifacts/sqlscript/Dim_AppCIs_IP_Addresses.json"
+      },
+      {
+        "name": "Dim_AppCIs_KPI_Checkpoints",
+        "path": "synapse_artifacts/sqlscript/Dim_AppCIs_KPI_Checkpoints.json"
+      },
+      {
+        "name": "Dim_AppRelations",
+        "path": "synapse_artifacts/sqlscript/Dim_AppRelations.json"
+      },
+      {
+        "name": "Dim_Apps",
+        "path": "synapse_artifacts/sqlscript/Dim_Apps.json"
+      },
+      {
+        "name": "Dim_Apps_KPI_Checkpoints",
+        "path": "synapse_artifacts/sqlscript/Dim_Apps_KPI_Checkpoints.json"
+      },
+      {
+        "name": "Dim_AppSubscribers",
+        "path": "synapse_artifacts/sqlscript/Dim_AppSubscribers.json"
+      },
+      {
+        "name": "Dim_Business_Service_Hierarchies",
+        "path": "synapse_artifacts/sqlscript/Dim_Business_Service_Hierarchies.json"
+      },
+      {
+        "name": "Dim_Business_Services",
+        "path": "synapse_artifacts/sqlscript/Dim_Business_Services.json"
+      },
+      {
+        "name": "Dim_CewGar_AppRelations",
+        "path": "synapse_artifacts/sqlscript/Dim_CewGar_AppRelations.json"
+      },
+      {
+        "name": "Dim_CewGar_AppRelations_Hist",
+        "path": "synapse_artifacts/sqlscript/Dim_CewGar_AppRelations_Hist.json"
+      },
+      {
+        "name": "Dim_CewGar_Apps",
+        "path": "synapse_artifacts/sqlscript/Dim_CewGar_Apps.json"
+      },
+      {
+        "name": "Dim_CewGar_Apps_Hist",
+        "path": "synapse_artifacts/sqlscript/Dim_CewGar_Apps_Hist.json"
+      },
+      {
+        "name": "Dim_CewGar_AppSubscribers",
+        "path": "synapse_artifacts/sqlscript/Dim_CewGar_AppSubscribers.json"
+      },
+      {
+        "name": "Dim_CewGar_AppSubscribers_Hist",
+        "path": "synapse_artifacts/sqlscript/Dim_CewGar_AppSubscribers_Hist.json"
+      },
+      {
+        "name": "Dim_CI_Service_Mapping",
+        "path": "synapse_artifacts/sqlscript/Dim_CI_Service_Mapping.json"
+      },
+      {
+        "name": "Dim_CiGnrlSuppGroups",
+        "path": "synapse_artifacts/sqlscript/Dim_CiGnrlSuppGroups.json"
+      },
+      {
+        "name": "Dim_CiSpecSuppGroups",
+        "path": "synapse_artifacts/sqlscript/Dim_CiSpecSuppGroups.json"
+      },
+      {
+        "name": "Dim_ColibriProducts",
+        "path": "synapse_artifacts/sqlscript/Dim_ColibriProducts.json"
+      },
+      {
+        "name": "Dim_ColibriUsers",
+        "path": "synapse_artifacts/sqlscript/Dim_ColibriUsers.json"
+      },
+      {
+        "name": "Dim_Companies",
+        "path": "synapse_artifacts/sqlscript/Dim_Companies.json"
+      },
+      {
+        "name": "Dim_Contract_Assignment_Groups",
+        "path": "synapse_artifacts/sqlscript/Dim_Contract_Assignment_Groups.json"
+      },
+      {
+        "name": "Dim_Contracts",
+        "path": "synapse_artifacts/sqlscript/Dim_Contracts.json"
+      },
+      {
+        "name": "Dim_ContractSpecifications",
+        "path": "synapse_artifacts/sqlscript/Dim_ContractSpecifications.json"
+      },
+      {
+        "name": "Dim_Customers",
+        "path": "synapse_artifacts/sqlscript/Dim_Customers.json"
+      },
+      {
+        "name": "Dim_Date",
+        "path": "synapse_artifacts/sqlscript/Dim_Date.json"
+      },
+      {
+        "name": "Dim_Departments",
+        "path": "synapse_artifacts/sqlscript/Dim_Departments.json"
+      },
+      {
+        "name": "Dim_Departments_Hist",
+        "path": "synapse_artifacts/sqlscript/Dim_Departments_Hist.json"
+      },
+      {
+        "name": "Dim_Employee_Dept_Hist",
+        "path": "synapse_artifacts/sqlscript/Dim_Employee_Dept_Hist.json"
+      },
+      {
+        "name": "Dim_Employee_Periods",
+        "path": "synapse_artifacts/sqlscript/Dim_Employee_Periods.json"
+      },
+      {
+        "name": "Dim_Employees",
+        "path": "synapse_artifacts/sqlscript/Dim_Employees.json"
+      },
+      {
+        "name": "Dim_EUAI_IT_Inventory",
+        "path": "synapse_artifacts/sqlscript/Dim_EUAI_IT_Inventory.json"
+      },
+      {
+        "name": "Dim_EUAI_Portfolio",
+        "path": "synapse_artifacts/sqlscript/Dim_EUAI_Portfolio.json"
+      },
+      {
+        "name": "Dim_Extended_Departments",
+        "path": "synapse_artifacts/sqlscript/Dim_Extended_Departments.json"
+      },
+      {
+        "name": "Dim_HolidayCountryRegions",
+        "path": "synapse_artifacts/sqlscript/Dim_HolidayCountryRegions.json"
+      },
+      {
+        "name": "Dim_IM_PM_CI_Mappings",
+        "path": "synapse_artifacts/sqlscript/Dim_IM_PM_CI_Mappings.json"
+      },
+      {
+        "name": "Dim_IM_PM_Services",
+        "path": "synapse_artifacts/sqlscript/Dim_IM_PM_Services.json"
+      },
+      {
+        "name": "Dim_IncContractSLOs",
+        "path": "synapse_artifacts/sqlscript/Dim_IncContractSLOs.json"
+      },
+      {
+        "name": "Dim_Initiatives",
+        "path": "synapse_artifacts/sqlscript/Dim_Initiatives.json"
+      },
+      {
+        "name": "Dim_IRMA_Measures",
+        "path": "synapse_artifacts/sqlscript/Dim_IRMA_Measures.json"
+      },
+      {
+        "name": "Dim_IRMA_Risks",
+        "path": "synapse_artifacts/sqlscript/Dim_IRMA_Risks.json"
+      },
+      {
+        "name": "Dim_IT_AvailMonCalendars",
+        "path": "synapse_artifacts/sqlscript/Dim_IT_AvailMonCalendars.json"
+      },
+      {
+        "name": "Dim_IT_AvailMonKPIStatuses",
+        "path": "synapse_artifacts/sqlscript/Dim_IT_AvailMonKPIStatuses.json"
+      },
+      {
+        "name": "Dim_Jira_Projects",
+        "path": "synapse_artifacts/sqlscript/Dim_Jira_Projects.json"
+      },
+      {
+        "name": "Dim_LeanixSurveyAnswers",
+        "path": "synapse_artifacts/sqlscript/Dim_LeanixSurveyAnswers.json"
+      },
+      {
+        "name": "Dim_LeanixSurveyFactSheets",
+        "path": "synapse_artifacts/sqlscript/Dim_LeanixSurveyFactSheets.json"
+      },
+      {
+        "name": "Dim_LeanixSurveyQuestions",
+        "path": "synapse_artifacts/sqlscript/Dim_LeanixSurveyQuestions.json"
+      },
+      {
+        "name": "Dim_LeanixSurveyRuns",
+        "path": "synapse_artifacts/sqlscript/Dim_LeanixSurveyRuns.json"
+      },
+      {
+        "name": "Dim_LeanixSurveys",
+        "path": "synapse_artifacts/sqlscript/Dim_LeanixSurveys.json"
+      },
+      {
+        "name": "Dim_Meshportal_Projects",
+        "path": "synapse_artifacts/sqlscript/Dim_Meshportal_Projects.json"
+      },
+      {
+        "name": "Dim_Meshportal_Tenants",
+        "path": "synapse_artifacts/sqlscript/Dim_Meshportal_Tenants.json"
+      },
+      {
+        "name": "Dim_Meshportal_Workspaces",
+        "path": "synapse_artifacts/sqlscript/Dim_Meshportal_Workspaces.json"
+      },
+      {
+        "name": "Dim_PIIs",
+        "path": "synapse_artifacts/sqlscript/Dim_PIIs.json"
+      },
+      {
+        "name": "Dim_PlanenBM_WorkItems",
+        "path": "synapse_artifacts/sqlscript/Dim_PlanenBM_WorkItems.json"
+      },
+      {
+        "name": "Dim_ProductTeams",
+        "path": "synapse_artifacts/sqlscript/Dim_ProductTeams.json"
+      },
+      {
+        "name": "Dim_Report_Range_CIs",
+        "path": "synapse_artifacts/sqlscript/Dim_Report_Range_CIs.json"
+      },
+      {
+        "name": "Dim_Report_Ranges",
+        "path": "synapse_artifacts/sqlscript/Dim_Report_Ranges.json"
+      },
+      {
+        "name": "Dim_ReqContractSLOs",
+        "path": "synapse_artifacts/sqlscript/Dim_ReqContractSLOs.json"
+      },
+      {
+        "name": "Dim_SC3_Companies",
+        "path": "synapse_artifacts/sqlscript/Dim_SC3_Companies.json"
+      },
+      {
+        "name": "Dim_ServiceCalendar_Dates",
+        "path": "synapse_artifacts/sqlscript/Dim_ServiceCalendar_Dates.json"
+      },
+      {
+        "name": "Dim_ServiceCalendars",
+        "path": "synapse_artifacts/sqlscript/Dim_ServiceCalendars.json"
+      },
+      {
+        "name": "Dim_ShutdownCandidates",
+        "path": "synapse_artifacts/sqlscript/Dim_ShutdownCandidates.json"
+      },
+      {
+        "name": "Dim_Technical_Service_Hierarchies",
+        "path": "synapse_artifacts/sqlscript/Dim_Technical_Service_Hierarchies.json"
+      },
+      {
+        "name": "Dim_Technical_Services",
+        "path": "synapse_artifacts/sqlscript/Dim_Technical_Services.json"
+      },
+      {
+        "name": "Dim_UserGroups",
+        "path": "synapse_artifacts/sqlscript/Dim_UserGroups.json"
+      },
+      {
+        "name": "Fact_Budget_Changes",
+        "path": "synapse_artifacts/sqlscript/Fact_Budget_Changes.json"
+      },
+      {
+        "name": "Fact_ChangeClockPhases",
+        "path": "synapse_artifacts/sqlscript/Fact_ChangeClockPhases.json"
+      },
+      {
+        "name": "Fact_ChangeClockStatuses",
+        "path": "synapse_artifacts/sqlscript/Fact_ChangeClockStatuses.json"
+      },
+      {
+        "name": "Fact_Changes",
+        "path": "synapse_artifacts/sqlscript/Fact_Changes.json"
+      },
+      {
+        "name": "Fact_ColibriWorkItems",
+        "path": "synapse_artifacts/sqlscript/Fact_ColibriWorkItems.json"
+      },
+      {
+        "name": "Fact_Customer_BS_Costs",
+        "path": "synapse_artifacts/sqlscript/Fact_Customer_BS_Costs.json"
+      },
+      {
+        "name": "Fact_FinancialModels",
+        "path": "synapse_artifacts/sqlscript/Fact_FinancialModels.json"
+      },
+      {
+        "name": "Fact_Im_F_SolutionTime",
+        "path": "synapse_artifacts/sqlscript/Fact_Im_F_SolutionTime.json"
+      },
+      {
+        "name": "Fact_IM_PM_Datacenters",
+        "path": "synapse_artifacts/sqlscript/Fact_IM_PM_Datacenters.json"
+      },
+      {
+        "name": "Fact_IM_PM_Incident_Related",
+        "path": "synapse_artifacts/sqlscript/Fact_IM_PM_Incident_Related.json"
+      },
+      {
+        "name": "Fact_IM_PM_Problem_Related",
+        "path": "synapse_artifacts/sqlscript/Fact_IM_PM_Problem_Related.json"
+      },
+      {
+        "name": "Fact_IncidentActivities",
+        "path": "synapse_artifacts/sqlscript/Fact_IncidentActivities.json"
+      },
+      {
+        "name": "Fact_IncidentClocksStatuses",
+        "path": "synapse_artifacts/sqlscript/Fact_IncidentClocksStatuses.json"
+      },
+      {
+        "name": "Fact_IncidentKnowledges",
+        "path": "synapse_artifacts/sqlscript/Fact_IncidentKnowledges.json"
+      },
+      {
+        "name": "Fact_Incidents",
+        "path": "synapse_artifacts/sqlscript/Fact_Incidents.json"
+      },
+      {
+        "name": "Fact_IncSolutionTimes",
+        "path": "synapse_artifacts/sqlscript/Fact_IncSolutionTimes.json"
+      },
+      {
+        "name": "Fact_IT_Avail_Incidents",
+        "path": "synapse_artifacts/sqlscript/Fact_IT_Avail_Incidents.json"
+      },
+      {
+        "name": "Fact_IT_AvailMonResults",
+        "path": "synapse_artifacts/sqlscript/Fact_IT_AvailMonResults.json"
+      },
+      {
+        "name": "Fact_Jira_Issue_Changes",
+        "path": "synapse_artifacts/sqlscript/Fact_Jira_Issue_Changes.json"
+      },
+      {
+        "name": "Fact_Jira_Issues",
+        "path": "synapse_artifacts/sqlscript/Fact_Jira_Issues.json"
+      },
+      {
+        "name": "Fact_KnowledgeClockStatuses",
+        "path": "synapse_artifacts/sqlscript/Fact_KnowledgeClockStatuses.json"
+      },
+      {
+        "name": "Fact_Knowledges",
+        "path": "synapse_artifacts/sqlscript/Fact_Knowledges.json"
+      },
+      {
+        "name": "Fact_PlanenBM_Expenses",
+        "path": "synapse_artifacts/sqlscript/Fact_PlanenBM_Expenses.json"
+      },
+      {
+        "name": "Fact_PlanenBM_Overview",
+        "path": "synapse_artifacts/sqlscript/Fact_PlanenBM_Overview.json"
+      },
+      {
+        "name": "Fact_PlanenBM_Revenues",
+        "path": "synapse_artifacts/sqlscript/Fact_PlanenBM_Revenues.json"
+      },
+      {
+        "name": "Fact_ProblemActivities",
+        "path": "synapse_artifacts/sqlscript/Fact_ProblemActivities.json"
+      },
+      {
+        "name": "Fact_ProblemClockPhases",
+        "path": "synapse_artifacts/sqlscript/Fact_ProblemClockPhases.json"
+      },
+      {
+        "name": "Fact_ProblemClocksStatuses",
+        "path": "synapse_artifacts/sqlscript/Fact_ProblemClocksStatuses.json"
+      },
+      {
+        "name": "Fact_Problems",
+        "path": "synapse_artifacts/sqlscript/Fact_Problems.json"
+      },
+      {
+        "name": "Fact_Projects",
+        "path": "synapse_artifacts/sqlscript/Fact_Projects.json"
+      },
+      {
+        "name": "Fact_ReqSolutionTimes",
+        "path": "synapse_artifacts/sqlscript/Fact_ReqSolutionTimes.json"
+      },
+      {
+        "name": "Fact_RequestActivities",
+        "path": "synapse_artifacts/sqlscript/Fact_RequestActivities.json"
+      },
+      {
+        "name": "Fact_RequestClocksStatuses",
+        "path": "synapse_artifacts/sqlscript/Fact_RequestClocksStatuses.json"
+      },
+      {
+        "name": "Fact_RequestKnowledges",
+        "path": "synapse_artifacts/sqlscript/Fact_RequestKnowledges.json"
+      },
+      {
+        "name": "Fact_Requests",
+        "path": "synapse_artifacts/sqlscript/Fact_Requests.json"
+      },
+      {
+        "name": "Fact_Service_Allocations",
+        "path": "synapse_artifacts/sqlscript/Fact_Service_Allocations.json"
+      },
+      {
+        "name": "Fact_Service_Availability",
+        "path": "synapse_artifacts/sqlscript/Fact_Service_Availability.json"
+      },
+      {
+        "name": "Fact_WorkOrders",
+        "path": "synapse_artifacts/sqlscript/Fact_WorkOrders.json"
+      },
+      {
+        "name": "Fltr_MdGroups",
+        "path": "synapse_artifacts/sqlscript/Fltr_MdGroups.json"
+      },
+      {
+        "name": "Map_ChangeRelatedChanges",
+        "path": "synapse_artifacts/sqlscript/Map_ChangeRelatedChanges.json"
+      },
+      {
+        "name": "Map_ChangeRelatedIncidents",
+        "path": "synapse_artifacts/sqlscript/Map_ChangeRelatedIncidents.json"
+      },
+      {
+        "name": "Map_ContractCIs",
+        "path": "synapse_artifacts/sqlscript/Map_ContractCIs.json"
+      },
+      {
+        "name": "Map_Emails",
+        "path": "synapse_artifacts/sqlscript/Map_Emails.json"
+      },
+      {
+        "name": "Map_IncidentRelatedChanges",
+        "path": "synapse_artifacts/sqlscript/Map_IncidentRelatedChanges.json"
+      },
+      {
+        "name": "Map_IncidentRelatedIncidents",
+        "path": "synapse_artifacts/sqlscript/Map_IncidentRelatedIncidents.json"
+      },
+      {
+        "name": "Map_IncRelatedProblems",
+        "path": "synapse_artifacts/sqlscript/Map_IncRelatedProblems.json"
+      },
+      {
+        "name": "Map_InitiativeApplications",
+        "path": "synapse_artifacts/sqlscript/Map_InitiativeApplications.json"
+      },
+      {
+        "name": "Map_InitiativeUserGroups",
+        "path": "synapse_artifacts/sqlscript/Map_InitiativeUserGroups.json"
+      },
+      {
+        "name": "Map_Technical_Service_Variants",
+        "path": "synapse_artifacts/sqlscript/Map_Technical_Service_Variants.json"
+      },
+      {
+        "name": "Map_VW_AppProviderRoles",
+        "path": "synapse_artifacts/sqlscript/Map_VW_AppProviderRoles.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_dwh_dev_stored_procedures",
+    "count": 8,
+    "artifacts": [
+      {
+        "name": "p_gen_GDPR_File_Info",
+        "path": "synapse_artifacts/sqlscript/p_gen_GDPR_File_Info.json"
+      },
+      {
+        "name": "p_gen_GDPR_File_Info_v2",
+        "path": "synapse_artifacts/sqlscript/p_gen_GDPR_File_Info_v2.json"
+      },
+      {
+        "name": "p_gen_reporting_TST_DS_comparison_proc",
+        "path": "synapse_artifacts/sqlscript/p_gen_reporting_TST_DS_comparison_proc.json"
+      },
+      {
+        "name": "p_gen_selfservice_silver_VIEW",
+        "path": "synapse_artifacts/sqlscript/p_gen_selfservice_silver_VIEW.json"
+      },
+      {
+        "name": "p_gen_stg2core_dim_delta_LOAD",
+        "path": "synapse_artifacts/sqlscript/p_gen_stg2core_dim_delta_LOAD.json"
+      },
+      {
+        "name": "p_gen_stg2core_dim_full_LOAD",
+        "path": "synapse_artifacts/sqlscript/p_gen_stg2core_dim_full_LOAD.json"
+      },
+      {
+        "name": "p_script_table_columns",
+        "path": "synapse_artifacts/sqlscript/p_script_table_columns.json"
+      },
+      {
+        "name": "p_table_profiling_str_columns_max_length",
+        "path": "synapse_artifacts/sqlscript/p_table_profiling_str_columns_max_length.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_dwh_functions",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "FN_CONVERT_STRING_TO_DECIMAL",
+        "path": "synapse_artifacts/sqlscript/FN_CONVERT_STRING_TO_DECIMAL.json"
+      },
+      {
+        "name": "FN_REMOVE_PATTERN_FROM_STRING",
+        "path": "synapse_artifacts/sqlscript/FN_REMOVE_PATTERN_FROM_STRING.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_dwh_meta_secutiry_stored_procedures",
+    "count": 3,
+    "artifacts": [
+      {
+        "name": "p_gen_meta_secutiry_DB_ROLE_MEMBERS_proc",
+        "path": "synapse_artifacts/sqlscript/p_gen_meta_secutiry_DB_ROLE_MEMBERS_proc.json"
+      },
+      {
+        "name": "p_gen_meta_secutiry_DB_USERS_proc",
+        "path": "synapse_artifacts/sqlscript/p_gen_meta_secutiry_DB_USERS_proc.json"
+      },
+      {
+        "name": "p_gen_meta_secutiry_PERMISSIONS_proc",
+        "path": "synapse_artifacts/sqlscript/p_gen_meta_secutiry_PERMISSIONS_proc.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_dwh_meta_secutiry_tables",
+    "count": 5,
+    "artifacts": [
+      {
+        "name": "db_logins",
+        "path": "synapse_artifacts/sqlscript/db_logins.json"
+      },
+      {
+        "name": "db_permissions",
+        "path": "synapse_artifacts/sqlscript/db_permissions.json"
+      },
+      {
+        "name": "db_role_members",
+        "path": "synapse_artifacts/sqlscript/db_role_members.json"
+      },
+      {
+        "name": "db_servers",
+        "path": "synapse_artifacts/sqlscript/db_servers.json"
+      },
+      {
+        "name": "db_users",
+        "path": "synapse_artifacts/sqlscript/db_users.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_dwh_meta_tables",
+    "count": 20,
+    "artifacts": [
+      {
+        "name": "csd_classes",
+        "path": "synapse_artifacts/sqlscript/csd_classes.json"
+      },
+      {
+        "name": "etl_data_lake_entities",
+        "path": "synapse_artifacts/sqlscript/etl_data_lake_entities.json"
+      },
+      {
+        "name": "etl_data_lake_entity_attributes",
+        "path": "synapse_artifacts/sqlscript/etl_data_lake_entity_attributes.json"
+      },
+      {
+        "name": "etl_data_lake_json_to_parquet",
+        "path": "synapse_artifacts/sqlscript/etl_data_lake_json_to_parquet.json"
+      },
+      {
+        "name": "etl_data_lake_layers",
+        "path": "synapse_artifacts/sqlscript/etl_data_lake_layers.json"
+      },
+      {
+        "name": "etl_data_source_db_table_columns",
+        "path": "synapse_artifacts/sqlscript/etl_data_source_db_table_columns.json"
+      },
+      {
+        "name": "etl_data_source_db_tables",
+        "path": "synapse_artifacts/sqlscript/etl_data_source_db_tables.json"
+      },
+      {
+        "name": "etl_data_source_file_entities",
+        "path": "synapse_artifacts/sqlscript/etl_data_source_file_entities.json"
+      },
+      {
+        "name": "etl_data_sources",
+        "path": "synapse_artifacts/sqlscript/etl_data_sources.json"
+      },
+      {
+        "name": "etl_inbound_interfaces",
+        "path": "synapse_artifacts/sqlscript/etl_inbound_interfaces.json"
+      },
+      {
+        "name": "etl_jobs_to_inb_interfaces",
+        "path": "synapse_artifacts/sqlscript/etl_jobs_to_inb_interfaces.json"
+      },
+      {
+        "name": "etl_layers",
+        "path": "synapse_artifacts/sqlscript/etl_layers.json"
+      },
+      {
+        "name": "etl_log_tables",
+        "path": "synapse_artifacts/sqlscript/etl_log_tables.json"
+      },
+      {
+        "name": "etl_tables",
+        "path": "synapse_artifacts/sqlscript/etl_tables.json"
+      },
+      {
+        "name": "etl_tables_fk_columns",
+        "path": "synapse_artifacts/sqlscript/etl_tables_fk_columns.json"
+      },
+      {
+        "name": "etl_trigger_parameters",
+        "path": "synapse_artifacts/sqlscript/etl_trigger_parameters.json"
+      },
+      {
+        "name": "etl_triggers_to_inb_interfaces",
+        "path": "synapse_artifacts/sqlscript/etl_triggers_to_inb_interfaces.json"
+      },
+      {
+        "name": "gdpr_attributes",
+        "path": "synapse_artifacts/sqlscript/gdpr_attributes.json"
+      },
+      {
+        "name": "gdpr_filter_columns",
+        "path": "synapse_artifacts/sqlscript/gdpr_filter_columns.json"
+      },
+      {
+        "name": "json_schemas",
+        "path": "synapse_artifacts/sqlscript/json_schemas.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_dwh_selfservice_silver_finance_reporting_views",
+    "count": 31,
+    "artifacts": [
+      {
+        "name": "02_V_AM_REP_Tables_LastDataIngestion_Timestamps_silver_finance",
+        "path": "synapse_artifacts/sqlscript/02_V_AM_REP_Tables_LastDataIngestion_Timestamps_silver_finance.json"
+      },
+      {
+        "name": "V_1CORE_Fact_Services_Allocation",
+        "path": "synapse_artifacts/sqlscript/V_1CORE_Fact_Services_Allocation.json"
+      },
+      {
+        "name": "V_1CORE_KST_selfservice_silver_finance",
+        "path": "synapse_artifacts/sqlscript/V_1CORE_KST_selfservice_silver_finance.json"
+      },
+      {
+        "name": "V_1CORE_Kundenkatalog_selfservice_silver_finance",
+        "path": "synapse_artifacts/sqlscript/V_1CORE_Kundenkatalog_selfservice_silver_finance.json"
+      },
+      {
+        "name": "V_1CORE_Kundenverteiler_selfservice_silver_finance",
+        "path": "synapse_artifacts/sqlscript/V_1CORE_Kundenverteiler_selfservice_silver_finance.json"
+      },
+      {
+        "name": "V_PlanenBM_Detaillierungstabelle",
+        "path": "synapse_artifacts/sqlscript/V_PlanenBM_Detaillierungstabelle.json"
+      },
+      {
+        "name": "V_PlanenBM_Einmalaufwaende",
+        "path": "synapse_artifacts/sqlscript/V_PlanenBM_Einmalaufwaende.json"
+      },
+      {
+        "name": "V_PlanenBM_Entlastungs_DLV",
+        "path": "synapse_artifacts/sqlscript/V_PlanenBM_Entlastungs_DLV.json"
+      },
+      {
+        "name": "V_PlanenBM_Masterliste_1",
+        "path": "synapse_artifacts/sqlscript/V_PlanenBM_Masterliste_1.json"
+      },
+      {
+        "name": "V_PlanenBM_Masterliste_2",
+        "path": "synapse_artifacts/sqlscript/V_PlanenBM_Masterliste_2.json"
+      },
+      {
+        "name": "V_PlanenBM_Portfolio_Einmalaufwaende",
+        "path": "synapse_artifacts/sqlscript/V_PlanenBM_Portfolio_Einmalaufwaende.json"
+      },
+      {
+        "name": "V_PlanenBM_Portfolio_ICTO_Anteile",
+        "path": "synapse_artifacts/sqlscript/V_PlanenBM_Portfolio_ICTO_Anteile.json"
+      },
+      {
+        "name": "V_PlanenBM_Portfolio_Informationen",
+        "path": "synapse_artifacts/sqlscript/V_PlanenBM_Portfolio_Informationen.json"
+      },
+      {
+        "name": "V_PlanenBM_Portfolio_Nachhaltige_Kosten",
+        "path": "synapse_artifacts/sqlscript/V_PlanenBM_Portfolio_Nachhaltige_Kosten.json"
+      },
+      {
+        "name": "V_PlanenBM_Projektausgaben_silver_finance",
+        "path": "synapse_artifacts/sqlscript/V_PlanenBM_Projektausgaben_silver_finance.json"
+      },
+      {
+        "name": "V_PlanenBM_Projekteinnahmen_silver_finance",
+        "path": "synapse_artifacts/sqlscript/V_PlanenBM_Projekteinnahmen_silver_finance.json"
+      },
+      {
+        "name": "V_PlanenBM_Shoring",
+        "path": "synapse_artifacts/sqlscript/V_PlanenBM_Shoring.json"
+      },
+      {
+        "name": "V_PlanenBM_WA_Stammdaten_silver_finance",
+        "path": "synapse_artifacts/sqlscript/V_PlanenBM_WA_Stammdaten_silver_finance.json"
+      },
+      {
+        "name": "V_PlanenBM_WA_Uebersicht_silver_finance",
+        "path": "synapse_artifacts/sqlscript/V_PlanenBM_WA_Uebersicht_silver_finance.json"
+      },
+      {
+        "name": "V_PLATON_Additional_Demands",
+        "path": "synapse_artifacts/sqlscript/V_PLATON_Additional_Demands.json"
+      },
+      {
+        "name": "V_PLATON_Budget_Changes",
+        "path": "synapse_artifacts/sqlscript/V_PLATON_Budget_Changes.json"
+      },
+      {
+        "name": "V_PLATON_STECKBRIEFE_PL74",
+        "path": "synapse_artifacts/sqlscript/V_PLATON_STECKBRIEFE_PL74.json"
+      },
+      {
+        "name": "V_PLATON_WA_Overview",
+        "path": "synapse_artifacts/sqlscript/V_PLATON_WA_Overview.json"
+      },
+      {
+        "name": "V_PPM_FM",
+        "path": "synapse_artifacts/sqlscript/V_PPM_FM.json"
+      },
+      {
+        "name": "V_PPM_SNAPS_DDC_ATTR",
+        "path": "synapse_artifacts/sqlscript/V_PPM_SNAPS_DDC_ATTR.json"
+      },
+      {
+        "name": "V_PPM_SNAPS_WA_FM",
+        "path": "synapse_artifacts/sqlscript/V_PPM_SNAPS_WA_FM.json"
+      },
+      {
+        "name": "V_PPM_SNAPS_WORK2WA",
+        "path": "synapse_artifacts/sqlscript/V_PPM_SNAPS_WORK2WA.json"
+      },
+      {
+        "name": "V_PPM_SNAPS_WORK_ATTR",
+        "path": "synapse_artifacts/sqlscript/V_PPM_SNAPS_WORK_ATTR.json"
+      },
+      {
+        "name": "V_PPM_SNAPS_WORK_FM",
+        "path": "synapse_artifacts/sqlscript/V_PPM_SNAPS_WORK_FM.json"
+      },
+      {
+        "name": "V_PPM_WA",
+        "path": "synapse_artifacts/sqlscript/V_PPM_WA.json"
+      },
+      {
+        "name": "V_PPM_Work",
+        "path": "synapse_artifacts/sqlscript/V_PPM_Work.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_dwh_selfservice_silver_reporting_views",
+    "count": 49,
+    "artifacts": [
+      {
+        "name": "02_V_AM_REP_Tables_LastDataIngestion_Timestamps_selfservice_silver",
+        "path": "synapse_artifacts/sqlscript/02_V_AM_REP_Tables_LastDataIngestion_Timestamps_selfservice_silver.json"
+      },
+      {
+        "name": "V_1CORE_BS",
+        "path": "synapse_artifacts/sqlscript/V_1CORE_BS.json"
+      },
+      {
+        "name": "V_1CORE_KST",
+        "path": "synapse_artifacts/sqlscript/V_1CORE_KST.json"
+      },
+      {
+        "name": "V_1CORE_KUNDENKATALOG",
+        "path": "synapse_artifacts/sqlscript/V_1CORE_KUNDENKATALOG.json"
+      },
+      {
+        "name": "V_1CORE_TSV",
+        "path": "synapse_artifacts/sqlscript/V_1CORE_TSV.json"
+      },
+      {
+        "name": "V_APEX_EXCLUDE_CODES",
+        "path": "synapse_artifacts/sqlscript/V_APEX_EXCLUDE_CODES.json"
+      },
+      {
+        "name": "V_APEX_IA_REPORT_HTTPD",
+        "path": "synapse_artifacts/sqlscript/V_APEX_IA_REPORT_HTTPD.json"
+      },
+      {
+        "name": "V_APEX_IA_REPORT_LIBERTY",
+        "path": "synapse_artifacts/sqlscript/V_APEX_IA_REPORT_LIBERTY.json"
+      },
+      {
+        "name": "V_APEX_IA_REPORT_TOMCAT",
+        "path": "synapse_artifacts/sqlscript/V_APEX_IA_REPORT_TOMCAT.json"
+      },
+      {
+        "name": "V_APEX_IA_REPORT_WAS",
+        "path": "synapse_artifacts/sqlscript/V_APEX_IA_REPORT_WAS.json"
+      },
+      {
+        "name": "V_APEX_MONGO_IA_REPORT",
+        "path": "synapse_artifacts/sqlscript/V_APEX_MONGO_IA_REPORT.json"
+      },
+      {
+        "name": "V_APEX_MSSQL_IA_REPORT",
+        "path": "synapse_artifacts/sqlscript/V_APEX_MSSQL_IA_REPORT.json"
+      },
+      {
+        "name": "V_APEX_MYSQL_IA_REPORT",
+        "path": "synapse_artifacts/sqlscript/V_APEX_MYSQL_IA_REPORT.json"
+      },
+      {
+        "name": "V_APEX_ORACLE_IA_REPORT",
+        "path": "synapse_artifacts/sqlscript/V_APEX_ORACLE_IA_REPORT.json"
+      },
+      {
+        "name": "V_APEX_SAP_IA_REPORT",
+        "path": "synapse_artifacts/sqlscript/V_APEX_SAP_IA_REPORT.json"
+      },
+      {
+        "name": "V_APEX_USER_STATUS_MYSQL",
+        "path": "synapse_artifacts/sqlscript/V_APEX_USER_STATUS_MYSQL.json"
+      },
+      {
+        "name": "V_APEX_USER_STATUS_ORACLE",
+        "path": "synapse_artifacts/sqlscript/V_APEX_USER_STATUS_ORACLE.json"
+      },
+      {
+        "name": "V_CMDB_ACM_OLV_UCMDB_MIDDLEWARE",
+        "path": "synapse_artifacts/sqlscript/V_CMDB_ACM_OLV_UCMDB_MIDDLEWARE.json"
+      },
+      {
+        "name": "V_CMDB_ACM_OLV_UCMDB_SERVER",
+        "path": "synapse_artifacts/sqlscript/V_CMDB_ACM_OLV_UCMDB_SERVER.json"
+      },
+      {
+        "name": "V_COLIBRI_PROJECTS",
+        "path": "synapse_artifacts/sqlscript/V_COLIBRI_PROJECTS.json"
+      },
+      {
+        "name": "V_COLIBRI_USERS",
+        "path": "synapse_artifacts/sqlscript/V_COLIBRI_USERS.json"
+      },
+      {
+        "name": "V_COLIBRI_WORKITEMS",
+        "path": "synapse_artifacts/sqlscript/V_COLIBRI_WORKITEMS.json"
+      },
+      {
+        "name": "V_ITAV_CI_MAPPING",
+        "path": "synapse_artifacts/sqlscript/V_ITAV_CI_MAPPING.json"
+      },
+      {
+        "name": "V_ITAV_GCCA_TICKETDATA",
+        "path": "synapse_artifacts/sqlscript/V_ITAV_GCCA_TICKETDATA.json"
+      },
+      {
+        "name": "V_ITAV_TAG",
+        "path": "synapse_artifacts/sqlscript/V_ITAV_TAG.json"
+      },
+      {
+        "name": "V_JIRA_ISSUE_CHANGELOGS",
+        "path": "synapse_artifacts/sqlscript/V_JIRA_ISSUE_CHANGELOGS.json"
+      },
+      {
+        "name": "V_JIRA_ISSUES",
+        "path": "synapse_artifacts/sqlscript/V_JIRA_ISSUES.json"
+      },
+      {
+        "name": "V_JIRA_PROJECTS",
+        "path": "synapse_artifacts/sqlscript/V_JIRA_PROJECTS.json"
+      },
+      {
+        "name": "V_LEANIX_APP_RELATIONS",
+        "path": "synapse_artifacts/sqlscript/V_LEANIX_APP_RELATIONS.json"
+      },
+      {
+        "name": "V_LEANIX_APP_SUBSCRIBERS",
+        "path": "synapse_artifacts/sqlscript/V_LEANIX_APP_SUBSCRIBERS.json"
+      },
+      {
+        "name": "V_LEANIX_APPS",
+        "path": "synapse_artifacts/sqlscript/V_LEANIX_APPS.json"
+      },
+      {
+        "name": "V_LEANIX_CARIAD_APP_RELATIONS",
+        "path": "synapse_artifacts/sqlscript/V_LEANIX_CARIAD_APP_RELATIONS.json"
+      },
+      {
+        "name": "V_LEANIX_CARIAD_APP_SUBSCRIBERS",
+        "path": "synapse_artifacts/sqlscript/V_LEANIX_CARIAD_APP_SUBSCRIBERS.json"
+      },
+      {
+        "name": "V_LEANIX_CARIAD_APPS",
+        "path": "synapse_artifacts/sqlscript/V_LEANIX_CARIAD_APPS.json"
+      },
+      {
+        "name": "V_LEANIX_USERGROUPS",
+        "path": "synapse_artifacts/sqlscript/V_LEANIX_USERGROUPS.json"
+      },
+      {
+        "name": "V_MESHPORTAL_PROJECTS",
+        "path": "synapse_artifacts/sqlscript/V_MESHPORTAL_PROJECTS.json"
+      },
+      {
+        "name": "V_MESHPORTAL_TENANTS",
+        "path": "synapse_artifacts/sqlscript/V_MESHPORTAL_TENANTS.json"
+      },
+      {
+        "name": "V_MESHPORTAL_WORKSPACES",
+        "path": "synapse_artifacts/sqlscript/V_MESHPORTAL_WORKSPACES.json"
+      },
+      {
+        "name": "V_SC3_OLT_CI_F_CI_GNRL_SUPP_GR",
+        "path": "synapse_artifacts/sqlscript/V_SC3_OLT_CI_F_CI_GNRL_SUPP_GR.json"
+      },
+      {
+        "name": "V_SC3_OLT_CI_F_CI_SPEC_SUPP_GR",
+        "path": "synapse_artifacts/sqlscript/V_SC3_OLT_CI_F_CI_SPEC_SUPP_GR.json"
+      },
+      {
+        "name": "V_SC3_OLT_CI_F_CONFIG_ITEM",
+        "path": "synapse_artifacts/sqlscript/V_SC3_OLT_CI_F_CONFIG_ITEM.json"
+      },
+      {
+        "name": "V_SC3_OLT_MD_D_COMPANY",
+        "path": "synapse_artifacts/sqlscript/V_SC3_OLT_MD_D_COMPANY.json"
+      },
+      {
+        "name": "V_SC3_OLT_MD_D_GROUP",
+        "path": "synapse_artifacts/sqlscript/V_SC3_OLT_MD_D_GROUP.json"
+      },
+      {
+        "name": "V_SC3_OLT_SL_D_CONTRACT",
+        "path": "synapse_artifacts/sqlscript/V_SC3_OLT_SL_D_CONTRACT.json"
+      },
+      {
+        "name": "V_SC3_OLT_SL_D_CONTRACT_CI",
+        "path": "synapse_artifacts/sqlscript/V_SC3_OLT_SL_D_CONTRACT_CI.json"
+      },
+      {
+        "name": "V_SC3_OLT_SL_D_SLO_IM",
+        "path": "synapse_artifacts/sqlscript/V_SC3_OLT_SL_D_SLO_IM.json"
+      },
+      {
+        "name": "V_SC3_OLT_SL_D_SLO_RF",
+        "path": "synapse_artifacts/sqlscript/V_SC3_OLT_SL_D_SLO_RF.json"
+      },
+      {
+        "name": "V_VCD_STD_ILT_ORGTREE",
+        "path": "synapse_artifacts/sqlscript/V_VCD_STD_ILT_ORGTREE.json"
+      },
+      {
+        "name": "V_VCD_STD_ILT_VCD",
+        "path": "synapse_artifacts/sqlscript/V_VCD_STD_ILT_VCD.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_dwh_stored_procedures",
+    "count": 123,
+    "artifacts": [
+      {
+        "name": "p_core2reporting_LOAD_KFIM_REP_KPI_15_IM",
+        "path": "synapse_artifacts/sqlscript/p_core2reporting_LOAD_KFIM_REP_KPI_15_IM.json"
+      },
+      {
+        "name": "p_core2reporting_LOAD_KFIM_REP_KPI_57_RF",
+        "path": "synapse_artifacts/sqlscript/p_core2reporting_LOAD_KFIM_REP_KPI_57_RF.json"
+      },
+      {
+        "name": "p_CREATE_Leanix_Global_IT_Health_Check_Survey",
+        "path": "synapse_artifacts/sqlscript/p_CREATE_Leanix_Global_IT_Health_Check_Survey.json"
+      },
+      {
+        "name": "p_delete_CSD_Core_data",
+        "path": "synapse_artifacts/sqlscript/p_delete_CSD_Core_data.json"
+      },
+      {
+        "name": "p_delete_log_data",
+        "path": "synapse_artifacts/sqlscript/p_delete_log_data.json"
+      },
+      {
+        "name": "p_DL2DWH_PolyBase_FULL_LOAD",
+        "path": "synapse_artifacts/sqlscript/p_DL2DWH_PolyBase_FULL_LOAD.json"
+      },
+      {
+        "name": "p_DL_landing2curated_ColumnsMapping_JSON",
+        "path": "synapse_artifacts/sqlscript/p_DL_landing2curated_ColumnsMapping_JSON.json"
+      },
+      {
+        "name": "p_drop_ext_table",
+        "path": "synapse_artifacts/sqlscript/p_drop_ext_table.json"
+      },
+      {
+        "name": "p_drop_table",
+        "path": "synapse_artifacts/sqlscript/p_drop_table.json"
+      },
+      {
+        "name": "p_get_actual_rows_count_of_staging_table",
+        "path": "synapse_artifacts/sqlscript/p_get_actual_rows_count_of_staging_table.json"
+      },
+      {
+        "name": "p_ins_etl_job_runs",
+        "path": "synapse_artifacts/sqlscript/p_ins_etl_job_runs.json"
+      },
+      {
+        "name": "p_insert_select_FULL_LOAD",
+        "path": "synapse_artifacts/sqlscript/p_insert_select_FULL_LOAD.json"
+      },
+      {
+        "name": "p_log_reporting_views",
+        "path": "synapse_artifacts/sqlscript/p_log_reporting_views.json"
+      },
+      {
+        "name": "p_populate_today_dates",
+        "path": "synapse_artifacts/sqlscript/p_populate_today_dates.json"
+      },
+      {
+        "name": "p_refresh_views",
+        "path": "synapse_artifacts/sqlscript/p_refresh_views.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_AppCIs",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_AppCIs.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_AppCIs_IP_Addresses",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_AppCIs_IP_Addresses.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_AppCIs_KPI_Checkpoints",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_AppCIs_KPI_Checkpoints.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_AppRelations",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_AppRelations.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Apps",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Apps.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Apps_KPI_Checkpoints",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Apps_KPI_Checkpoints.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_AppSubscribers",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_AppSubscribers.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Business_Service_Hierarchies",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Business_Service_Hierarchies.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Business_Services",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Business_Services.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_CewGar_AppRelations",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_CewGar_AppRelations.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_CewGar_Apps",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_CewGar_Apps.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_CewGar_AppSubscribers",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_CewGar_AppSubscribers.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_CI_Service_Mapping",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_CI_Service_Mapping.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_CiGnrlSuppGroups",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_CiGnrlSuppGroups.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_CiSpecSuppGroups",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_CiSpecSuppGroups.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_ColibriProducts",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_ColibriProducts.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_ColibriUsers",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_ColibriUsers.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Companies",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Companies.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Contract_Assignment_Groups",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Contract_Assignment_Groups.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Contracts",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Contracts.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_ContractSpecifications",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_ContractSpecifications.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Customers",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Customers.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Departments",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Departments.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Employee_Dept_Hist",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Employee_Dept_Hist.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Employee_Periods",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Employee_Periods.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Employees",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Employees.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_EUAI_IT_Inventory",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_EUAI_IT_Inventory.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_EUAI_Portfolio",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_EUAI_Portfolio.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Extended_Departments",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Extended_Departments.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_HolidayCountryRegions",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_HolidayCountryRegions.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_IM_PM_CI_MAPPINGS",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_IM_PM_CI_MAPPINGS.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_IM_PM_SERVICES",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_IM_PM_SERVICES.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_IncContractSLOs",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_IncContractSLOs.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Initiatives",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Initiatives.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_IRMA_Measures",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_IRMA_Measures.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_IRMA_Risks",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_IRMA_Risks.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_IT_AvailMonCalendars",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_IT_AvailMonCalendars.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_IT_AvailMonKPIStatuses",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_IT_AvailMonKPIStatuses.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Jira_Projects",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Jira_Projects.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_LeanixSurveyAnswers",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_LeanixSurveyAnswers.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_LeanixSurveyFactSheets",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_LeanixSurveyFactSheets.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_LeanixSurveyQuestions",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_LeanixSurveyQuestions.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_LeanixSurveyRuns",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_LeanixSurveyRuns.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Meshportal_Projects",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Meshportal_Projects.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Meshportal_Tenants",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Meshportal_Tenants.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Meshportal_Workspaces",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Meshportal_Workspaces.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_PlanenBM_WorkItems",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_PlanenBM_WorkItems.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_ProductTeams",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_ProductTeams.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Report_Range_CIs",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Report_Range_CIs.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Report_Ranges",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Report_Ranges.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_ReqContractSLOs",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_ReqContractSLOs.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_SC3_Companies",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_SC3_Companies.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_ServiceCalendar_Dates",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_ServiceCalendar_Dates.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_ServiceCalendars",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_ServiceCalendars.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_ShutdownCandidates",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_ShutdownCandidates.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Technical_Service_Hierarchies",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Technical_Service_Hierarchies.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_Technical_Services",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_Technical_Services.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Dim_UserGroups",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Dim_UserGroups.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_Budget_Changes",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_Budget_Changes.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_ChangeClockPhases",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_ChangeClockPhases.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_ChangeClockStatuses",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_ChangeClockStatuses.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_Changes",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_Changes.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_ColibriWorkItems",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_ColibriWorkItems.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_Customer_BS_Costs",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_Customer_BS_Costs.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_FinancialModels",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_FinancialModels.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_IM_PM_Datacenters",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_IM_PM_Datacenters.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_IM_PM_Incident_Related",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_IM_PM_Incident_Related.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_IM_PM_Problem_Related",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_IM_PM_Problem_Related.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_IncidentActivities",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_IncidentActivities.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_IncidentClocksStatuses",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_IncidentClocksStatuses.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_IncidentKnowledges",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_IncidentKnowledges.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_Incidents",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_Incidents.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_IncSolutionTimes",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_IncSolutionTimes.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_IT_Avail_Incidents",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_IT_Avail_Incidents.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_IT_AvailMonResults",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_IT_AvailMonResults.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_Jira_Issue_Changes",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_Jira_Issue_Changes.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_Jira_Issues",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_Jira_Issues.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_KnowledgeClockStatuses",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_KnowledgeClockStatuses.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_Knowledges",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_Knowledges.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_PlanenBM_Expenses",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_PlanenBM_Expenses.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_PlanenBM_Overview",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_PlanenBM_Overview.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_PlanenBM_Revenues",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_PlanenBM_Revenues.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_ProblemActivities",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_ProblemActivities.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_ProblemClockPhases",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_ProblemClockPhases.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_ProblemClocksStatuses",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_ProblemClocksStatuses.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_Problems",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_Problems.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_Projects",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_Projects.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_ReqSolutionTimes",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_ReqSolutionTimes.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_RequestActivities",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_RequestActivities.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_RequestClocksStatuses",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_RequestClocksStatuses.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_RequestKnowledges",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_RequestKnowledges.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_Requests",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_Requests.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_Service_Allocations",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_Service_Allocations.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_Service_Availability",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_Service_Availability.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fact_WorkOrders",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fact_WorkOrders.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Fltr_MdGroups",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Fltr_MdGroups.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Im_F_SolutionTime",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Im_F_SolutionTime.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Map_ChangeRelatedChanges",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Map_ChangeRelatedChanges.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Map_ChangeRelatedIncidents",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Map_ChangeRelatedIncidents.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Map_ContractCIs",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Map_ContractCIs.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Map_IncidentRelatedChanges",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Map_IncidentRelatedChanges.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Map_IncidentRelatedIncidents",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Map_IncidentRelatedIncidents.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Map_IncRelatedProblems",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Map_IncRelatedProblems.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Map_InitiativeApplications",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Map_InitiativeApplications.json"
+      },
+      {
+        "name": "p_stg2core_LOAD_Map_InitiativeUserGroups",
+        "path": "synapse_artifacts/sqlscript/p_stg2core_LOAD_Map_InitiativeUserGroups.json"
+      },
+      {
+        "name": "p_stg2coreLOAD_Dim_LeanixSurveys",
+        "path": "synapse_artifacts/sqlscript/p_stg2coreLOAD_Dim_LeanixSurveys.json"
+      },
+      {
+        "name": "p_stg_CLEANUP_Table",
+        "path": "synapse_artifacts/sqlscript/p_stg_CLEANUP_Table.json"
+      },
+      {
+        "name": "p_truncate_table",
+        "path": "synapse_artifacts/sqlscript/p_truncate_table.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_dwh_tables",
+    "count": 6,
+    "artifacts": [
+      {
+        "name": "etl_files_delivered",
+        "path": "synapse_artifacts/sqlscript/etl_files_delivered.json"
+      },
+      {
+        "name": "etl_job_runs",
+        "path": "synapse_artifacts/sqlscript/etl_job_runs.json"
+      },
+      {
+        "name": "etl_view_stats",
+        "path": "synapse_artifacts/sqlscript/etl_view_stats.json"
+      },
+      {
+        "name": "stg_table_watermarks",
+        "path": "synapse_artifacts/sqlscript/stg_table_watermarks.json"
+      },
+      {
+        "name": "today",
+        "path": "synapse_artifacts/sqlscript/today.json"
+      },
+      {
+        "name": "type_classes",
+        "path": "synapse_artifacts/sqlscript/type_classes.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_dwh_views",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "V_SynapseTables_Indexes_ToBe_Maintained",
+        "path": "synapse_artifacts/sqlscript/V_SynapseTables_Indexes_ToBe_Maintained.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_kdaex_views",
+    "count": 5,
+    "artifacts": [
+      {
+        "name": "V_CHANGES",
+        "path": "synapse_artifacts/sqlscript/V_CHANGES.json"
+      },
+      {
+        "name": "V_INCIDENTS_REQUESTS",
+        "path": "synapse_artifacts/sqlscript/V_INCIDENTS_REQUESTS.json"
+      },
+      {
+        "name": "V_INCIDENTS_REQUESTS_ACTIVITIES",
+        "path": "synapse_artifacts/sqlscript/V_INCIDENTS_REQUESTS_ACTIVITIES.json"
+      },
+      {
+        "name": "V_PROBLEMS",
+        "path": "synapse_artifacts/sqlscript/V_PROBLEMS.json"
+      },
+      {
+        "name": "V_PROBLEMS_ACTIVITIES",
+        "path": "synapse_artifacts/sqlscript/V_PROBLEMS_ACTIVITIES.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_monitoring_tables",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "last_etl_job_run",
+        "path": "synapse_artifacts/sqlscript/last_etl_job_run.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_monitoring_views",
+    "count": 7,
+    "artifacts": [
+      {
+        "name": "0_V_Tables_Sizes",
+        "path": "synapse_artifacts/sqlscript/0_V_Tables_Sizes.json"
+      },
+      {
+        "name": "1_1_V_ETL_DWH_DataIngestion_Overview",
+        "path": "synapse_artifacts/sqlscript/1_1_V_ETL_DWH_DataIngestion_Overview.json"
+      },
+      {
+        "name": "1_2_V_ETL_DWH_DataIngestion_Details",
+        "path": "synapse_artifacts/sqlscript/1_2_V_ETL_DWH_DataIngestion_Details.json"
+      },
+      {
+        "name": "2_1_V_ETL_DWH_DataIntegration_Overview",
+        "path": "synapse_artifacts/sqlscript/2_1_V_ETL_DWH_DataIntegration_Overview.json"
+      },
+      {
+        "name": "2_2_V_ETL_DWH_DataIntegration_Details",
+        "path": "synapse_artifacts/sqlscript/2_2_V_ETL_DWH_DataIntegration_Details.json"
+      },
+      {
+        "name": "3_1_V_ETL_DWH_DataProvisioning_Overview",
+        "path": "synapse_artifacts/sqlscript/3_1_V_ETL_DWH_DataProvisioning_Overview.json"
+      },
+      {
+        "name": "3_2_V_ETL_DWH_DataProvisioning_Details",
+        "path": "synapse_artifacts/sqlscript/3_2_V_ETL_DWH_DataProvisioning_Details.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_out_euai_act_reporting_views",
+    "count": 3,
+    "artifacts": [
+      {
+        "name": "V_AI_PORTFOLIO",
+        "path": "synapse_artifacts/sqlscript/V_AI_PORTFOLIO.json"
+      },
+      {
+        "name": "V_APPS_EUAI",
+        "path": "synapse_artifacts/sqlscript/V_APPS_EUAI.json"
+      },
+      {
+        "name": "V_OT_KI_LIST",
+        "path": "synapse_artifacts/sqlscript/V_OT_KI_LIST.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_out_kdb_availability_views",
+    "count": 23,
+    "artifacts": [
+      {
+        "name": "KDB_AVAIL_V_AVM_OLT_SPK_D_CALENDAR",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_AVM_OLT_SPK_D_CALENDAR.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_AVM_OLT_SPK_D_KPI_STATUS",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_AVM_OLT_SPK_D_KPI_STATUS.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_AVM_OLT_SPK_F_RESULT",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_AVM_OLT_SPK_F_RESULT.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_ITAV_CI_MAPPING",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_ITAV_CI_MAPPING.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_ITAV_GCCA_TICKETDATA",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_ITAV_GCCA_TICKETDATA.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_ITAV_TAG",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_ITAV_TAG.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_LEANIX_APP_RELATIONS",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_LEANIX_APP_RELATIONS.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_LEANIX_APPS",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_LEANIX_APPS.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_LEANIX_USERGROUPS",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_LEANIX_USERGROUPS.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_LEMI_ORG_NAMES_MAPPING",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_LEMI_ORG_NAMES_MAPPING.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_SC3_OLT_CI_F_CONFIG_ITEM",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_SC3_OLT_CI_F_CONFIG_ITEM.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_SC3_OLT_CM_F_CHANGE",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_SC3_OLT_CM_F_CHANGE.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_SC3_OLT_CM_F_CLOCKS_PHASE",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_SC3_OLT_CM_F_CLOCKS_PHASE.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_SC3_OLT_CM_F_CLOCKS_STATUS",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_SC3_OLT_CM_F_CLOCKS_STATUS.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_SC3_OLT_CM_F_RELATED_CHANGES",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_SC3_OLT_CM_F_RELATED_CHANGES.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_SC3_OLT_CM_F_RELATED_INCIDENTS",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_SC3_OLT_CM_F_RELATED_INCIDENTS.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_SC3_OLT_IM_F_CLOCKS_STATUS",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_SC3_OLT_IM_F_CLOCKS_STATUS.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_SC3_OLT_IM_F_INCIDENT",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_SC3_OLT_IM_F_INCIDENT.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_SC3_OLT_IM_F_RELATED_CHANGES",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_SC3_OLT_IM_F_RELATED_CHANGES.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_SC3_OLT_IM_F_RELATED_INCIDENTS",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_SC3_OLT_IM_F_RELATED_INCIDENTS.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_SC3_OLT_MD_D_COMPANY",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_SC3_OLT_MD_D_COMPANY.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_SC3_OLT_MD_D_GROUP",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_SC3_OLT_MD_D_GROUP.json"
+      },
+      {
+        "name": "KDB_AVAIL_V_STD_ILT_ORGTREE",
+        "path": "synapse_artifacts/sqlscript/KDB_AVAIL_V_STD_ILT_ORGTREE.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_out_osr_reporting_views",
+    "count": 28,
+    "artifacts": [
+      {
+        "name": "out_osr_V_AppCIs",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_AppCIs.json"
+      },
+      {
+        "name": "out_osr_V_Apps",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Apps.json"
+      },
+      {
+        "name": "out_osr_V_CHANGES",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_CHANGES.json"
+      },
+      {
+        "name": "out_osr_V_DEPARTMENTS",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_DEPARTMENTS.json"
+      },
+      {
+        "name": "out_osr_V_Dim_AppRelations",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Dim_AppRelations.json"
+      },
+      {
+        "name": "out_osr_V_Dim_CI_Service_Mapping",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Dim_CI_Service_Mapping.json"
+      },
+      {
+        "name": "out_osr_V_Dim_Companies",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Dim_Companies.json"
+      },
+      {
+        "name": "out_osr_V_Dim_IT_AvailMonCalendars",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Dim_IT_AvailMonCalendars.json"
+      },
+      {
+        "name": "out_osr_V_Dim_IT_AvailMonKPIStatuses",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Dim_IT_AvailMonKPIStatuses.json"
+      },
+      {
+        "name": "out_osr_V_Dim_SC3_Companies",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Dim_SC3_Companies.json"
+      },
+      {
+        "name": "out_osr_V_Dim_UserGroups",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Dim_UserGroups.json"
+      },
+      {
+        "name": "out_osr_V_Fact_ChangeClockPhases",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Fact_ChangeClockPhases.json"
+      },
+      {
+        "name": "out_osr_V_Fact_ChangeClockStatuses",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Fact_ChangeClockStatuses.json"
+      },
+      {
+        "name": "out_osr_V_Fact_Changes",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Fact_Changes.json"
+      },
+      {
+        "name": "out_osr_V_Fact_Im_F_SolutionTime",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Fact_Im_F_SolutionTime.json"
+      },
+      {
+        "name": "out_osr_V_Fact_IncidentClocksStatuses",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Fact_IncidentClocksStatuses.json"
+      },
+      {
+        "name": "out_osr_V_Fact_IT_Avail_Incidents",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Fact_IT_Avail_Incidents.json"
+      },
+      {
+        "name": "out_osr_V_Fact_IT_AvailMonResults",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Fact_IT_AvailMonResults.json"
+      },
+      {
+        "name": "out_osr_V_Fact_Problems",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Fact_Problems.json"
+      },
+      {
+        "name": "out_osr_V_Fact_Service_Availability",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Fact_Service_Availability.json"
+      },
+      {
+        "name": "out_osr_V_Fltr_MdGroups",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Fltr_MdGroups.json"
+      },
+      {
+        "name": "out_osr_V_INCIDENTS",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_INCIDENTS.json"
+      },
+      {
+        "name": "out_osr_V_KDB_ITOPS_INCIDENTS",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_KDB_ITOPS_INCIDENTS.json"
+      },
+      {
+        "name": "out_osr_V_Map_ChangeRelatedChanges",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Map_ChangeRelatedChanges.json"
+      },
+      {
+        "name": "out_osr_V_Map_ChangeRelatedIncidents",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Map_ChangeRelatedIncidents.json"
+      },
+      {
+        "name": "out_osr_V_Map_IncidentRelatedChanges",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Map_IncidentRelatedChanges.json"
+      },
+      {
+        "name": "out_osr_V_Map_IncidentRelatedIncidents",
+        "path": "synapse_artifacts/sqlscript/out_osr_V_Map_IncidentRelatedIncidents.json"
+      },
+      {
+        "name": "V_Dim_Report_Range_CIs",
+        "path": "synapse_artifacts/sqlscript/V_Dim_Report_Range_CIs.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_out_tcor_reporting_views",
+    "count": 8,
+    "artifacts": [
+      {
+        "name": "out_tcor_V_DEPARTMENT",
+        "path": "synapse_artifacts/sqlscript/out_tcor_V_DEPARTMENT.json"
+      },
+      {
+        "name": "out_tcor_V_EMPLOYEES",
+        "path": "synapse_artifacts/sqlscript/out_tcor_V_EMPLOYEES.json"
+      },
+      {
+        "name": "out_tcor_V_LEANIX_APP_RELATION",
+        "path": "synapse_artifacts/sqlscript/out_tcor_V_LEANIX_APP_RELATION.json"
+      },
+      {
+        "name": "out_tcor_V_LEANIX_APPLICATION",
+        "path": "synapse_artifacts/sqlscript/out_tcor_V_LEANIX_APPLICATION.json"
+      },
+      {
+        "name": "out_tcor_V_WORK_ITEMS",
+        "path": "synapse_artifacts/sqlscript/out_tcor_V_WORK_ITEMS.json"
+      },
+      {
+        "name": "V_PlanView_FinancialModels",
+        "path": "synapse_artifacts/sqlscript/V_PlanView_FinancialModels.json"
+      },
+      {
+        "name": "V_PlanView_Projects",
+        "path": "synapse_artifacts/sqlscript/V_PlanView_Projects.json"
+      },
+      {
+        "name": "V_PlanView_WorkOrders",
+        "path": "synapse_artifacts/sqlscript/V_PlanView_WorkOrders.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_reporting_tables",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "KFIM_REP_KPI_15_IM",
+        "path": "synapse_artifacts/sqlscript/KFIM_REP_KPI_15_IM.json"
+      },
+      {
+        "name": "KFIM_REP_KPI_57_RF",
+        "path": "synapse_artifacts/sqlscript/KFIM_REP_KPI_57_RF.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_reporting_tbl_functions",
+    "count": 21,
+    "artifacts": [
+      {
+        "name": "FN_KFIM_REP_KPI_32_33_35_PROBLEMS",
+        "path": "synapse_artifacts/sqlscript/FN_KFIM_REP_KPI_32_33_35_PROBLEMS.json"
+      },
+      {
+        "name": "FN_REP_KPI_01_AVM_AVAIL_IM",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_01_AVM_AVAIL_IM.json"
+      },
+      {
+        "name": "FN_REP_KPI_01_AVM_SC3",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_01_AVM_SC3.json"
+      },
+      {
+        "name": "FN_REP_KPI_01_AVM_SPEAK",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_01_AVM_SPEAK.json"
+      },
+      {
+        "name": "FN_REP_KPI_02_IM_TREND",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_02_IM_TREND.json"
+      },
+      {
+        "name": "FN_REP_KPI_03_RF_TREND",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_03_RF_TREND.json"
+      },
+      {
+        "name": "FN_REP_KPI_29_IM",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_29_IM.json"
+      },
+      {
+        "name": "FN_REP_KPI_31_IM_REOPEN",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_31_IM_REOPEN.json"
+      },
+      {
+        "name": "FN_REP_KPI_34_IM_TOPM",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_34_IM_TOPM.json"
+      },
+      {
+        "name": "FN_REP_KPI_36_KM_USED",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_36_KM_USED.json"
+      },
+      {
+        "name": "FN_REP_KPI_37_KM_SOLVED",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_37_KM_SOLVED.json"
+      },
+      {
+        "name": "FN_REP_KPI_38_KM_TREND",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_38_KM_TREND.json"
+      },
+      {
+        "name": "FN_REP_KPI_39_CM_CLOSE_CODE",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_39_CM_CLOSE_CODE.json"
+      },
+      {
+        "name": "FN_REP_KPI_40_CM_TREND",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_40_CM_TREND.json"
+      },
+      {
+        "name": "FN_REP_KPI_41_CM_TEMPLATE",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_41_CM_TEMPLATE.json"
+      },
+      {
+        "name": "FN_REP_KPI_42_CM_TYPE",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_42_CM_TYPE.json"
+      },
+      {
+        "name": "FN_REP_KPI_43_IM_RATE_CM",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_43_IM_RATE_CM.json"
+      },
+      {
+        "name": "FN_REP_KPI_44_CM_RATE_IM",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_44_CM_RATE_IM.json"
+      },
+      {
+        "name": "FN_REP_KPI_70_RF_REOPEN",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_70_RF_REOPEN.json"
+      },
+      {
+        "name": "FN_REP_KPI_73_RF",
+        "path": "synapse_artifacts/sqlscript/FN_REP_KPI_73_RF.json"
+      },
+      {
+        "name": "FN_SLM_IM_RF_BY_GROUP",
+        "path": "synapse_artifacts/sqlscript/FN_SLM_IM_RF_BY_GROUP.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_reporting_views",
+    "count": 115,
+    "artifacts": [
+      {
+        "name": "00_V_FIN_DEPARTMENTS",
+        "path": "synapse_artifacts/sqlscript/00_V_FIN_DEPARTMENTS.json"
+      },
+      {
+        "name": "01_V_AM_REP_Tables_LastDataIngestion_Timestamps",
+        "path": "synapse_artifacts/sqlscript/01_V_AM_REP_Tables_LastDataIngestion_Timestamps.json"
+      },
+      {
+        "name": "01_V_SL_202_IM",
+        "path": "synapse_artifacts/sqlscript/01_V_SL_202_IM.json"
+      },
+      {
+        "name": "01_V_SL_202_RF",
+        "path": "synapse_artifacts/sqlscript/01_V_SL_202_RF.json"
+      },
+      {
+        "name": "dwh_reporting_V_Jira_Issues",
+        "path": "synapse_artifacts/sqlscript/dwh_reporting_V_Jira_Issues.json"
+      },
+      {
+        "name": "dwh_reporting_V_Jira_Projects",
+        "path": "synapse_artifacts/sqlscript/dwh_reporting_V_Jira_Projects.json"
+      },
+      {
+        "name": "FIT_OLV_ONECORE_BS",
+        "path": "synapse_artifacts/sqlscript/FIT_OLV_ONECORE_BS.json"
+      },
+      {
+        "name": "V_AM_REP_APP_FILTER_FIN",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_APP_FILTER_FIN.json"
+      },
+      {
+        "name": "V_AM_REP_APPS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_APPS.json"
+      },
+      {
+        "name": "V_AM_REP_CIs",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_CIs.json"
+      },
+      {
+        "name": "V_AM_REP_DataSources_LastDataIngestion_Timestamps",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_DataSources_LastDataIngestion_Timestamps.json"
+      },
+      {
+        "name": "V_AM_REP_DEPARTMENTS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_DEPARTMENTS.json"
+      },
+      {
+        "name": "V_AM_REP_FINANZDATEN_INFAUDIT",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_FINANZDATEN_INFAUDIT.json"
+      },
+      {
+        "name": "V_AM_REP_FIT_BS_CATALOG_HISTORY",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_FIT_BS_CATALOG_HISTORY.json"
+      },
+      {
+        "name": "V_AM_REP_FIT_TSV_CATALOG_HISTORY",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_FIT_TSV_CATALOG_HISTORY.json"
+      },
+      {
+        "name": "V_AM_REP_FIT_USER_HISTORY",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_FIT_USER_HISTORY.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_01_AVM_AVAIL_IM_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_01_AVM_AVAIL_IM_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_01_AVM_SC3",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_01_AVM_SC3.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_01_AVM_SC3_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_01_AVM_SC3_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_01_AVM_SERVICE_AVAIL",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_01_AVM_SERVICE_AVAIL.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_01_AVM_SPEAK_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_01_AVM_SPEAK_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_02_IM_TREND_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_02_IM_TREND_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_02_IM_TREND_GD",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_02_IM_TREND_GD.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_03_RF_TREND_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_03_RF_TREND_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_03_RF_TREND_GD",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_03_RF_TREND_GD.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_09_SC3_ALL_TICKETS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_09_SC3_ALL_TICKETS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_15_IM_AGG_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_15_IM_AGG_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_15_IM_GD",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_15_IM_GD.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_19",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_19.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_19_HIST",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_19_HIST.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_20",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_20.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_20_APPLICATION_CI",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_20_APPLICATION_CI.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_20_APPLICATION_CI_HIST",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_20_APPLICATION_CI_HIST.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_20_HIST",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_20_HIST.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_29_IM_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_29_IM_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_31_IM_REOPEN_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_31_IM_REOPEN_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_32_33_35_PM_GD",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_32_33_35_PM_GD.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_32_33_35_PROBLEMS_BACKLOG_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_32_33_35_PROBLEMS_BACKLOG_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_34_IM_TOPM_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_34_IM_TOPM_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_34_IM_TOPM_GD",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_34_IM_TOPM_GD.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_36_KM_USED_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_36_KM_USED_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_37_KM_SOLVED_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_37_KM_SOLVED_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_38_KM_TREND_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_38_KM_TREND_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_38_KM_TREND_GD",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_38_KM_TREND_GD.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_39_CM_CLOSE_CODE_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_39_CM_CLOSE_CODE_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_40_CM_TREND_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_40_CM_TREND_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_40_CM_TREND_GD",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_40_CM_TREND_GD.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_41_CM_TEMPLATE_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_41_CM_TEMPLATE_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_41_CM_TEMPLATE_GD",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_41_CM_TEMPLATE_GD.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_42_CM_TYPE_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_42_CM_TYPE_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_43_IM_RATE_CM_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_43_IM_RATE_CM_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_44_CM_RATE_IM_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_44_CM_RATE_IM_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_48_SC3_TICKETS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_48_SC3_TICKETS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_49_SC3_RD_INCIDENT",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_49_SC3_RD_INCIDENT.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_50_SC3_RD_SERVICE_RQST",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_50_SC3_RD_SERVICE_RQST.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_51_SC3_RD_PROBLEM",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_51_SC3_RD_PROBLEM.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_52_SC3_RD_KNOWLEDGE",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_52_SC3_RD_KNOWLEDGE.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_53_SC3_RD_CHANGE",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_53_SC3_RD_CHANGE.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_57_RF_AGG_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_57_RF_AGG_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_57_RF_GD",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_57_RF_GD.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_70_RF_REOPEN_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_70_RF_REOPEN_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_KPI_73_RF_ALL_PERIODS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_KPI_73_RF_ALL_PERIODS.json"
+      },
+      {
+        "name": "V_AM_REP_LEANIX_INFAUDIT",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_LEANIX_INFAUDIT.json"
+      },
+      {
+        "name": "V_AM_REP_REPORT_RANGE_CI",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_REPORT_RANGE_CI.json"
+      },
+      {
+        "name": "V_AM_REP_SC3_GROUPS",
+        "path": "synapse_artifacts/sqlscript/V_AM_REP_SC3_GROUPS.json"
+      },
+      {
+        "name": "V_Cfg_KPI_Checkpoints",
+        "path": "synapse_artifacts/sqlscript/V_Cfg_KPI_Checkpoints.json"
+      },
+      {
+        "name": "V_COLIBRI_DOMAINS",
+        "path": "synapse_artifacts/sqlscript/V_COLIBRI_DOMAINS.json"
+      },
+      {
+        "name": "V_COLIBRI_PRODUCT_TYPES",
+        "path": "synapse_artifacts/sqlscript/V_COLIBRI_PRODUCT_TYPES.json"
+      },
+      {
+        "name": "V_COLIBRI_PRODUCTS",
+        "path": "synapse_artifacts/sqlscript/V_COLIBRI_PRODUCTS.json"
+      },
+      {
+        "name": "V_COLIBRI_RELEASES",
+        "path": "synapse_artifacts/sqlscript/V_COLIBRI_RELEASES.json"
+      },
+      {
+        "name": "V_COLIBRI_RISKS",
+        "path": "synapse_artifacts/sqlscript/V_COLIBRI_RISKS.json"
+      },
+      {
+        "name": "V_COMPANIES",
+        "path": "synapse_artifacts/sqlscript/V_COMPANIES.json"
+      },
+      {
+        "name": "V_CONFIG_ITEM_INF_AUDIT",
+        "path": "synapse_artifacts/sqlscript/V_CONFIG_ITEM_INF_AUDIT.json"
+      },
+      {
+        "name": "V_DATES_TILL_TODAY",
+        "path": "synapse_artifacts/sqlscript/V_DATES_TILL_TODAY.json"
+      },
+      {
+        "name": "V_DEPARTMENTS",
+        "path": "synapse_artifacts/sqlscript/V_DEPARTMENTS.json"
+      },
+      {
+        "name": "V_Fact_Customer_BS_Costs",
+        "path": "synapse_artifacts/sqlscript/V_Fact_Customer_BS_Costs.json"
+      },
+      {
+        "name": "V_Fact_Service_Allocations",
+        "path": "synapse_artifacts/sqlscript/V_Fact_Service_Allocations.json"
+      },
+      {
+        "name": "V_FISCAL_YEARS",
+        "path": "synapse_artifacts/sqlscript/V_FISCAL_YEARS.json"
+      },
+      {
+        "name": "V_GAP_APPS",
+        "path": "synapse_artifacts/sqlscript/V_GAP_APPS.json"
+      },
+      {
+        "name": "V_GAP_APPS_TREND",
+        "path": "synapse_artifacts/sqlscript/V_GAP_APPS_TREND.json"
+      },
+      {
+        "name": "V_GAP_COMPANIES",
+        "path": "synapse_artifacts/sqlscript/V_GAP_COMPANIES.json"
+      },
+      {
+        "name": "V_GAP_DEPARTMENTS",
+        "path": "synapse_artifacts/sqlscript/V_GAP_DEPARTMENTS.json"
+      },
+      {
+        "name": "V_IA_REP_APPS",
+        "path": "synapse_artifacts/sqlscript/V_IA_REP_APPS.json"
+      },
+      {
+        "name": "V_IM_PM_CI_Mappings",
+        "path": "synapse_artifacts/sqlscript/V_IM_PM_CI_Mappings.json"
+      },
+      {
+        "name": "V_IM_PM_Datacenters",
+        "path": "synapse_artifacts/sqlscript/V_IM_PM_Datacenters.json"
+      },
+      {
+        "name": "V_IM_PM_Incident_Related",
+        "path": "synapse_artifacts/sqlscript/V_IM_PM_Incident_Related.json"
+      },
+      {
+        "name": "V_IM_PM_Problem_Related",
+        "path": "synapse_artifacts/sqlscript/V_IM_PM_Problem_Related.json"
+      },
+      {
+        "name": "V_IM_PM_Services",
+        "path": "synapse_artifacts/sqlscript/V_IM_PM_Services.json"
+      },
+      {
+        "name": "V_LEANIX_APPLICATION_RELATIONS",
+        "path": "synapse_artifacts/sqlscript/V_LEANIX_APPLICATION_RELATIONS.json"
+      },
+      {
+        "name": "V_LEANIX_APPLICATIONS",
+        "path": "synapse_artifacts/sqlscript/V_LEANIX_APPLICATIONS.json"
+      },
+      {
+        "name": "V_LEANIX_USERGROUP",
+        "path": "synapse_artifacts/sqlscript/V_LEANIX_USERGROUP.json"
+      },
+      {
+        "name": "V_MasterData_AppCiRelationships",
+        "path": "synapse_artifacts/sqlscript/V_MasterData_AppCiRelationships.json"
+      },
+      {
+        "name": "V_MasterData_ApplicationProviders",
+        "path": "synapse_artifacts/sqlscript/V_MasterData_ApplicationProviders.json"
+      },
+      {
+        "name": "V_MasterData_APPS",
+        "path": "synapse_artifacts/sqlscript/V_MasterData_APPS.json"
+      },
+      {
+        "name": "V_MasterData_AppSubscribers",
+        "path": "synapse_artifacts/sqlscript/V_MasterData_AppSubscribers.json"
+      },
+      {
+        "name": "V_MasterData_Business_Service_Hierarchies",
+        "path": "synapse_artifacts/sqlscript/V_MasterData_Business_Service_Hierarchies.json"
+      },
+      {
+        "name": "V_MasterData_Business_Services",
+        "path": "synapse_artifacts/sqlscript/V_MasterData_Business_Services.json"
+      },
+      {
+        "name": "V_MasterData_ContractCIs",
+        "path": "synapse_artifacts/sqlscript/V_MasterData_ContractCIs.json"
+      },
+      {
+        "name": "V_MasterData_CONTRACTS",
+        "path": "synapse_artifacts/sqlscript/V_MasterData_CONTRACTS.json"
+      },
+      {
+        "name": "V_MasterData_Customers",
+        "path": "synapse_artifacts/sqlscript/V_MasterData_Customers.json"
+      },
+      {
+        "name": "V_MasterData_DEPARTMENTS",
+        "path": "synapse_artifacts/sqlscript/V_MasterData_DEPARTMENTS.json"
+      },
+      {
+        "name": "V_MasterData_EMPLOYEES",
+        "path": "synapse_artifacts/sqlscript/V_MasterData_EMPLOYEES.json"
+      },
+      {
+        "name": "V_MasterData_GeneralSupportGroups",
+        "path": "synapse_artifacts/sqlscript/V_MasterData_GeneralSupportGroups.json"
+      },
+      {
+        "name": "V_MasterData_SpecificSupportGroups",
+        "path": "synapse_artifacts/sqlscript/V_MasterData_SpecificSupportGroups.json"
+      },
+      {
+        "name": "V_MasterData_Technical_Services",
+        "path": "synapse_artifacts/sqlscript/V_MasterData_Technical_Services.json"
+      },
+      {
+        "name": "V_MasterData_Technical_Services_Desc",
+        "path": "synapse_artifacts/sqlscript/V_MasterData_Technical_Services_Desc.json"
+      },
+      {
+        "name": "V_MonitoringReport_TablesLastUpdateDateTimes",
+        "path": "synapse_artifacts/sqlscript/V_MonitoringReport_TablesLastUpdateDateTimes.json"
+      },
+      {
+        "name": "V_MonitoringReport_ViewsAndUnderlyingTables",
+        "path": "synapse_artifacts/sqlscript/V_MonitoringReport_ViewsAndUnderlyingTables.json"
+      },
+      {
+        "name": "V_SHUTDOWN_BRANDS",
+        "path": "synapse_artifacts/sqlscript/V_SHUTDOWN_BRANDS.json"
+      },
+      {
+        "name": "V_SHUTDOWN_DEPARTMENTS",
+        "path": "synapse_artifacts/sqlscript/V_SHUTDOWN_DEPARTMENTS.json"
+      },
+      {
+        "name": "V_SHUTDOWN_OFFENSIVE",
+        "path": "synapse_artifacts/sqlscript/V_SHUTDOWN_OFFENSIVE.json"
+      },
+      {
+        "name": "V_SLM_CONTRACT_GROUPS",
+        "path": "synapse_artifacts/sqlscript/V_SLM_CONTRACT_GROUPS.json"
+      },
+      {
+        "name": "V_SLM_IM_RF_BY_GROUP_MONTHS",
+        "path": "synapse_artifacts/sqlscript/V_SLM_IM_RF_BY_GROUP_MONTHS.json"
+      },
+      {
+        "name": "V_SLO_DIMENSION_DATA_IM",
+        "path": "synapse_artifacts/sqlscript/V_SLO_DIMENSION_DATA_IM.json"
+      },
+      {
+        "name": "V_SLO_DIMENSION_DATA_RF",
+        "path": "synapse_artifacts/sqlscript/V_SLO_DIMENSION_DATA_RF.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_reporting_views_bia",
+    "count": 6,
+    "artifacts": [
+      {
+        "name": "V_COLIBRI_USERS_BIA",
+        "path": "synapse_artifacts/sqlscript/V_COLIBRI_USERS_BIA.json"
+      },
+      {
+        "name": "V_COLIBRI_WorkItems_BIA",
+        "path": "synapse_artifacts/sqlscript/V_COLIBRI_WorkItems_BIA.json"
+      },
+      {
+        "name": "V_COLIBRI_WorkItems_MasterData_BIA",
+        "path": "synapse_artifacts/sqlscript/V_COLIBRI_WorkItems_MasterData_BIA.json"
+      },
+      {
+        "name": "V_Dim_AppCIs_BIA",
+        "path": "synapse_artifacts/sqlscript/V_Dim_AppCIs_BIA.json"
+      },
+      {
+        "name": "V_Dim_Departments_BIA",
+        "path": "synapse_artifacts/sqlscript/V_Dim_Departments_BIA.json"
+      },
+      {
+        "name": "V_Employees_BIA",
+        "path": "synapse_artifacts/sqlscript/V_Employees_BIA.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_sams_reporting_views",
+    "count": 5,
+    "artifacts": [
+      {
+        "name": "dwh_sams_reporting_V_Departments",
+        "path": "synapse_artifacts/sqlscript/dwh_sams_reporting_V_Departments.json"
+      },
+      {
+        "name": "dwh_sams_reporting_V_Employees",
+        "path": "synapse_artifacts/sqlscript/dwh_sams_reporting_V_Employees.json"
+      },
+      {
+        "name": "V_Apps_CIs_IPs",
+        "path": "synapse_artifacts/sqlscript/V_Apps_CIs_IPs.json"
+      },
+      {
+        "name": "V_Apps_Ids",
+        "path": "synapse_artifacts/sqlscript/V_Apps_Ids.json"
+      },
+      {
+        "name": "V_WorkItems",
+        "path": "synapse_artifacts/sqlscript/V_WorkItems.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_schemas",
+    "count": 19,
+    "artifacts": [
+      {
+        "name": "dwh",
+        "path": "synapse_artifacts/sqlscript/dwh.json"
+      },
+      {
+        "name": "dwh_backup",
+        "path": "synapse_artifacts/sqlscript/dwh_backup.json"
+      },
+      {
+        "name": "dwh_core",
+        "path": "synapse_artifacts/sqlscript/dwh_core.json"
+      },
+      {
+        "name": "dwh_dev",
+        "path": "synapse_artifacts/sqlscript/dwh_dev.json"
+      },
+      {
+        "name": "dwh_meta",
+        "path": "synapse_artifacts/sqlscript/dwh_meta.json"
+      },
+      {
+        "name": "dwh_meta_secutiry",
+        "path": "synapse_artifacts/sqlscript/dwh_meta_secutiry.json"
+      },
+      {
+        "name": "dwh_reporting",
+        "path": "synapse_artifacts/sqlscript/dwh_reporting.json"
+      },
+      {
+        "name": "dwh_sams_reporting",
+        "path": "synapse_artifacts/sqlscript/dwh_sams_reporting.json"
+      },
+      {
+        "name": "dwh_sandbox",
+        "path": "synapse_artifacts/sqlscript/dwh_sandbox.json"
+      },
+      {
+        "name": "dwh_selfservice_silver",
+        "path": "synapse_artifacts/sqlscript/dwh_selfservice_silver.json"
+      },
+      {
+        "name": "dwh_selfservice_silver_finance",
+        "path": "synapse_artifacts/sqlscript/dwh_selfservice_silver_finance.json"
+      },
+      {
+        "name": "dwh_staging",
+        "path": "synapse_artifacts/sqlscript/dwh_staging.json"
+      },
+      {
+        "name": "EXT",
+        "path": "synapse_artifacts/sqlscript/EXT.json"
+      },
+      {
+        "name": "out_euai_act",
+        "path": "synapse_artifacts/sqlscript/out_euai_act.json"
+      },
+      {
+        "name": "out_kdaex2",
+        "path": "synapse_artifacts/sqlscript/out_kdaex2.json"
+      },
+      {
+        "name": "out_kdb_availability",
+        "path": "synapse_artifacts/sqlscript/out_kdb_availability.json"
+      },
+      {
+        "name": "out_monitoring",
+        "path": "synapse_artifacts/sqlscript/out_monitoring.json"
+      },
+      {
+        "name": "out_osr",
+        "path": "synapse_artifacts/sqlscript/out_osr.json"
+      },
+      {
+        "name": "out_tcor",
+        "path": "synapse_artifacts/sqlscript/out_tcor.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/create/create_staging_tables",
+    "count": 176,
+    "artifacts": [
+      {
+        "name": "1CORE_BS",
+        "path": "synapse_artifacts/sqlscript/1CORE_BS.json"
+      },
+      {
+        "name": "1CORE_Fact_Services_Allocation",
+        "path": "synapse_artifacts/sqlscript/1CORE_Fact_Services_Allocation.json"
+      },
+      {
+        "name": "1CORE_KST",
+        "path": "synapse_artifacts/sqlscript/1CORE_KST.json"
+      },
+      {
+        "name": "1CORE_Kundenkatalog",
+        "path": "synapse_artifacts/sqlscript/1CORE_Kundenkatalog.json"
+      },
+      {
+        "name": "1CORE_Kundenverteiler",
+        "path": "synapse_artifacts/sqlscript/1CORE_Kundenverteiler.json"
+      },
+      {
+        "name": "1CORE_TSV",
+        "path": "synapse_artifacts/sqlscript/1CORE_TSV.json"
+      },
+      {
+        "name": "ACM_OLT_D_PIT_ICTO_APP",
+        "path": "synapse_artifacts/sqlscript/ACM_OLT_D_PIT_ICTO_APP.json"
+      },
+      {
+        "name": "ACM_OLV_UCMDB_MIDDLEWARE",
+        "path": "synapse_artifacts/sqlscript/ACM_OLV_UCMDB_MIDDLEWARE.json"
+      },
+      {
+        "name": "ACM_OLV_UCMDB_SERVER",
+        "path": "synapse_artifacts/sqlscript/ACM_OLV_UCMDB_SERVER.json"
+      },
+      {
+        "name": "APEX_EXCLUDE_CODES",
+        "path": "synapse_artifacts/sqlscript/APEX_EXCLUDE_CODES.json"
+      },
+      {
+        "name": "APEX_IA_REPORT_HTTPD",
+        "path": "synapse_artifacts/sqlscript/APEX_IA_REPORT_HTTPD.json"
+      },
+      {
+        "name": "APEX_IA_REPORT_LIBERTY",
+        "path": "synapse_artifacts/sqlscript/APEX_IA_REPORT_LIBERTY.json"
+      },
+      {
+        "name": "APEX_IA_REPORT_TOMCAT",
+        "path": "synapse_artifacts/sqlscript/APEX_IA_REPORT_TOMCAT.json"
+      },
+      {
+        "name": "APEX_IA_REPORT_WAS",
+        "path": "synapse_artifacts/sqlscript/APEX_IA_REPORT_WAS.json"
+      },
+      {
+        "name": "APEX_MONGO_IA_REPORT",
+        "path": "synapse_artifacts/sqlscript/APEX_MONGO_IA_REPORT.json"
+      },
+      {
+        "name": "APEX_MSSQL_IA_REPORT",
+        "path": "synapse_artifacts/sqlscript/APEX_MSSQL_IA_REPORT.json"
+      },
+      {
+        "name": "APEX_MYSQL_IA_REPORT",
+        "path": "synapse_artifacts/sqlscript/APEX_MYSQL_IA_REPORT.json"
+      },
+      {
+        "name": "APEX_ORACLE_IA_REPORT",
+        "path": "synapse_artifacts/sqlscript/APEX_ORACLE_IA_REPORT.json"
+      },
+      {
+        "name": "APEX_SAP_IA_REPORT",
+        "path": "synapse_artifacts/sqlscript/APEX_SAP_IA_REPORT.json"
+      },
+      {
+        "name": "APEX_USER_STATUS_MYSQL",
+        "path": "synapse_artifacts/sqlscript/APEX_USER_STATUS_MYSQL.json"
+      },
+      {
+        "name": "APEX_USER_STATUS_ORACLE",
+        "path": "synapse_artifacts/sqlscript/APEX_USER_STATUS_ORACLE.json"
+      },
+      {
+        "name": "AVM_OLT_SPK_D_CALENDAR",
+        "path": "synapse_artifacts/sqlscript/AVM_OLT_SPK_D_CALENDAR.json"
+      },
+      {
+        "name": "AVM_OLT_SPK_D_KPI_STATUS",
+        "path": "synapse_artifacts/sqlscript/AVM_OLT_SPK_D_KPI_STATUS.json"
+      },
+      {
+        "name": "AVM_OLT_SPK_F_RESULT",
+        "path": "synapse_artifacts/sqlscript/AVM_OLT_SPK_F_RESULT.json"
+      },
+      {
+        "name": "COLIBRI_PROJECTS",
+        "path": "synapse_artifacts/sqlscript/COLIBRI_PROJECTS.json"
+      },
+      {
+        "name": "COLIBRI_USERS",
+        "path": "synapse_artifacts/sqlscript/COLIBRI_USERS.json"
+      },
+      {
+        "name": "COLIBRI_WORKITEMS",
+        "path": "synapse_artifacts/sqlscript/COLIBRI_WORKITEMS.json"
+      },
+      {
+        "name": "COLIBRI_WORKITEMS_EXT",
+        "path": "synapse_artifacts/sqlscript/COLIBRI_WORKITEMS_EXT.json"
+      },
+      {
+        "name": "EUAI_IT_Inventory",
+        "path": "synapse_artifacts/sqlscript/EUAI_IT_Inventory.json"
+      },
+      {
+        "name": "EUAI_Portfolio",
+        "path": "synapse_artifacts/sqlscript/EUAI_Portfolio.json"
+      },
+      {
+        "name": "FIT_OLT_ONECORE_BS",
+        "path": "synapse_artifacts/sqlscript/FIT_OLT_ONECORE_BS.json"
+      },
+      {
+        "name": "FIT_OLT_ONECORE_TSV",
+        "path": "synapse_artifacts/sqlscript/FIT_OLT_ONECORE_TSV.json"
+      },
+      {
+        "name": "FIT_OLT_ONECORE_TSV_DESC",
+        "path": "synapse_artifacts/sqlscript/FIT_OLT_ONECORE_TSV_DESC.json"
+      },
+      {
+        "name": "IM_PM_CI_MAPPING",
+        "path": "synapse_artifacts/sqlscript/IM_PM_CI_MAPPING.json"
+      },
+      {
+        "name": "IM_PM_IR_RELATED",
+        "path": "synapse_artifacts/sqlscript/IM_PM_IR_RELATED.json"
+      },
+      {
+        "name": "IM_PM_PR_RELATED",
+        "path": "synapse_artifacts/sqlscript/IM_PM_PR_RELATED.json"
+      },
+      {
+        "name": "IM_PM_SERVICES",
+        "path": "synapse_artifacts/sqlscript/IM_PM_SERVICES.json"
+      },
+      {
+        "name": "IRMA_Massnahmen",
+        "path": "synapse_artifacts/sqlscript/IRMA_Massnahmen.json"
+      },
+      {
+        "name": "IRMA_Risiken",
+        "path": "synapse_artifacts/sqlscript/IRMA_Risiken.json"
+      },
+      {
+        "name": "ITAV_CI_MAPPING",
+        "path": "synapse_artifacts/sqlscript/ITAV_CI_MAPPING.json"
+      },
+      {
+        "name": "ITAV_GCCA_TICKETDATA",
+        "path": "synapse_artifacts/sqlscript/ITAV_GCCA_TICKETDATA.json"
+      },
+      {
+        "name": "ITAV_TAG",
+        "path": "synapse_artifacts/sqlscript/ITAV_TAG.json"
+      },
+      {
+        "name": "ITG_SLT_L_EMPORGA",
+        "path": "synapse_artifacts/sqlscript/ITG_SLT_L_EMPORGA.json"
+      },
+      {
+        "name": "JIRA_ISSUE_CHANGELOG_ITEMS",
+        "path": "synapse_artifacts/sqlscript/JIRA_ISSUE_CHANGELOG_ITEMS.json"
+      },
+      {
+        "name": "JIRA_ISSUE_CHANGELOGS",
+        "path": "synapse_artifacts/sqlscript/JIRA_ISSUE_CHANGELOGS.json"
+      },
+      {
+        "name": "JIRA_ISSUES",
+        "path": "synapse_artifacts/sqlscript/JIRA_ISSUES.json"
+      },
+      {
+        "name": "JIRA_ISSUES_1",
+        "path": "synapse_artifacts/sqlscript/JIRA_ISSUES_1.json"
+      },
+      {
+        "name": "JIRA_ISSUES_2",
+        "path": "synapse_artifacts/sqlscript/JIRA_ISSUES_2.json"
+      },
+      {
+        "name": "JIRA_PROJECTS",
+        "path": "synapse_artifacts/sqlscript/JIRA_PROJECTS.json"
+      },
+      {
+        "name": "LEANIX_APP_RELATIONS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_APP_RELATIONS.json"
+      },
+      {
+        "name": "LEANIX_APP_SUBSCRIBERS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_APP_SUBSCRIBERS.json"
+      },
+      {
+        "name": "LEANIX_APPS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_APPS.json"
+      },
+      {
+        "name": "LEANIX_CARIAD_APP_RELATIONS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_CARIAD_APP_RELATIONS.json"
+      },
+      {
+        "name": "LEANIX_CARIAD_APP_SUBSCRIBERS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_CARIAD_APP_SUBSCRIBERS.json"
+      },
+      {
+        "name": "LEANIX_CARIAD_APP_TAGS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_CARIAD_APP_TAGS.json"
+      },
+      {
+        "name": "LEANIX_CARIAD_APPS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_CARIAD_APPS.json"
+      },
+      {
+        "name": "LEANIX_DP_APPLICATION_BUSINESS_CAPABILITIES",
+        "path": "synapse_artifacts/sqlscript/LEANIX_DP_APPLICATION_BUSINESS_CAPABILITIES.json"
+      },
+      {
+        "name": "LEANIX_DP_APPLICATIONS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_DP_APPLICATIONS.json"
+      },
+      {
+        "name": "LEANIX_DP_BUSINESS_CAPABILITIES",
+        "path": "synapse_artifacts/sqlscript/LEANIX_DP_BUSINESS_CAPABILITIES.json"
+      },
+      {
+        "name": "LEANIX_DP_ORGANIZATIONS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_DP_ORGANIZATIONS.json"
+      },
+      {
+        "name": "LEANIX_DP_PROVIDERS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_DP_PROVIDERS.json"
+      },
+      {
+        "name": "LEANIX_DP_SUBSCRIPTIONS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_DP_SUBSCRIPTIONS.json"
+      },
+      {
+        "name": "LEANIX_INITIATIVE_APPLICATIONS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_INITIATIVE_APPLICATIONS.json"
+      },
+      {
+        "name": "LEANIX_INITIATIVE_OWNERS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_INITIATIVE_OWNERS.json"
+      },
+      {
+        "name": "LEANIX_INITIATIVES",
+        "path": "synapse_artifacts/sqlscript/LEANIX_INITIATIVES.json"
+      },
+      {
+        "name": "LEANIX_MAN_ES_APP_RELATIONS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_MAN_ES_APP_RELATIONS.json"
+      },
+      {
+        "name": "LEANIX_MAN_ES_APP_SUBSCRIBERS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_MAN_ES_APP_SUBSCRIBERS.json"
+      },
+      {
+        "name": "LEANIX_MAN_ES_APPS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_MAN_ES_APPS.json"
+      },
+      {
+        "name": "LEANIX_PORSCHE_APP_RELATIONS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_PORSCHE_APP_RELATIONS.json"
+      },
+      {
+        "name": "LEANIX_PORSCHE_APP_SUBSCRIBERS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_PORSCHE_APP_SUBSCRIBERS.json"
+      },
+      {
+        "name": "LEANIX_PORSCHE_APPS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_PORSCHE_APPS.json"
+      },
+      {
+        "name": "LEANIX_POWERCO_APP_RELATIONS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_POWERCO_APP_RELATIONS.json"
+      },
+      {
+        "name": "LEANIX_POWERCO_APP_SUBSCRIBERS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_POWERCO_APP_SUBSCRIBERS.json"
+      },
+      {
+        "name": "LEANIX_POWERCO_APPS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_POWERCO_APPS.json"
+      },
+      {
+        "name": "LEANIX_SCOUT_APP_RELATIONS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_SCOUT_APP_RELATIONS.json"
+      },
+      {
+        "name": "LEANIX_SCOUT_APP_SUBSCRIBERS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_SCOUT_APP_SUBSCRIBERS.json"
+      },
+      {
+        "name": "LEANIX_SCOUT_APPS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_SCOUT_APPS.json"
+      },
+      {
+        "name": "LEANIX_SURVEY_ANSWERS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_SURVEY_ANSWERS.json"
+      },
+      {
+        "name": "LEANIX_SURVEY_FACTSHEETS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_SURVEY_FACTSHEETS.json"
+      },
+      {
+        "name": "LEANIX_SURVEY_QUESTIONS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_SURVEY_QUESTIONS.json"
+      },
+      {
+        "name": "LEANIX_SURVEY_RUNS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_SURVEY_RUNS.json"
+      },
+      {
+        "name": "LEANIX_SURVEYS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_SURVEYS.json"
+      },
+      {
+        "name": "LEANIX_TRATON_APP_RELATIONS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_TRATON_APP_RELATIONS.json"
+      },
+      {
+        "name": "LEANIX_TRATON_APP_SUBSCRIBERS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_TRATON_APP_SUBSCRIBERS.json"
+      },
+      {
+        "name": "LEANIX_TRATON_APPS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_TRATON_APPS.json"
+      },
+      {
+        "name": "LEANIX_UserGroups",
+        "path": "synapse_artifacts/sqlscript/LEANIX_UserGroups.json"
+      },
+      {
+        "name": "LEANIX_VWFS_APP_RELATIONS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_VWFS_APP_RELATIONS.json"
+      },
+      {
+        "name": "LEANIX_VWFS_APP_SUBSCRIBERS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_VWFS_APP_SUBSCRIBERS.json"
+      },
+      {
+        "name": "LEANIX_VWFS_APPS",
+        "path": "synapse_artifacts/sqlscript/LEANIX_VWFS_APPS.json"
+      },
+      {
+        "name": "LEMI_ORG_NAMES_MAPPING",
+        "path": "synapse_artifacts/sqlscript/LEMI_ORG_NAMES_MAPPING.json"
+      },
+      {
+        "name": "MESHPORTAL_PROJECTS",
+        "path": "synapse_artifacts/sqlscript/MESHPORTAL_PROJECTS.json"
+      },
+      {
+        "name": "MESHPORTAL_TENANTS",
+        "path": "synapse_artifacts/sqlscript/MESHPORTAL_TENANTS.json"
+      },
+      {
+        "name": "MESHPORTAL_WORKSPACES",
+        "path": "synapse_artifacts/sqlscript/MESHPORTAL_WORKSPACES.json"
+      },
+      {
+        "name": "PlanenBM_Detaillierungstabelle",
+        "path": "synapse_artifacts/sqlscript/PlanenBM_Detaillierungstabelle.json"
+      },
+      {
+        "name": "PlanenBM_Einmalaufwaende",
+        "path": "synapse_artifacts/sqlscript/PlanenBM_Einmalaufwaende.json"
+      },
+      {
+        "name": "PlanenBM_Entlastungs_DLV",
+        "path": "synapse_artifacts/sqlscript/PlanenBM_Entlastungs_DLV.json"
+      },
+      {
+        "name": "PlanenBM_Masterliste_1",
+        "path": "synapse_artifacts/sqlscript/PlanenBM_Masterliste_1.json"
+      },
+      {
+        "name": "PlanenBM_Masterliste_2",
+        "path": "synapse_artifacts/sqlscript/PlanenBM_Masterliste_2.json"
+      },
+      {
+        "name": "PlanenBM_Portfolio_Einmalaufwaende",
+        "path": "synapse_artifacts/sqlscript/PlanenBM_Portfolio_Einmalaufwaende.json"
+      },
+      {
+        "name": "PlanenBM_Portfolio_ICTO_Anteile",
+        "path": "synapse_artifacts/sqlscript/PlanenBM_Portfolio_ICTO_Anteile.json"
+      },
+      {
+        "name": "PlanenBM_Portfolio_Informationen",
+        "path": "synapse_artifacts/sqlscript/PlanenBM_Portfolio_Informationen.json"
+      },
+      {
+        "name": "PlanenBM_Portfolio_Nachhaltige_Kosten",
+        "path": "synapse_artifacts/sqlscript/PlanenBM_Portfolio_Nachhaltige_Kosten.json"
+      },
+      {
+        "name": "PlanenBM_Shoring",
+        "path": "synapse_artifacts/sqlscript/PlanenBM_Shoring.json"
+      },
+      {
+        "name": "PLATON_Additional_Demands",
+        "path": "synapse_artifacts/sqlscript/PLATON_Additional_Demands.json"
+      },
+      {
+        "name": "PLATON_Budget_Changes",
+        "path": "synapse_artifacts/sqlscript/PLATON_Budget_Changes.json"
+      },
+      {
+        "name": "PLATON_STECKBRIEFE_PL74",
+        "path": "synapse_artifacts/sqlscript/PLATON_STECKBRIEFE_PL74.json"
+      },
+      {
+        "name": "PLATON_WA_Overview",
+        "path": "synapse_artifacts/sqlscript/PLATON_WA_Overview.json"
+      },
+      {
+        "name": "PMIM-Ratio",
+        "path": "synapse_artifacts/sqlscript/PMIM-Ratio.json"
+      },
+      {
+        "name": "PPM_FM",
+        "path": "synapse_artifacts/sqlscript/PPM_FM.json"
+      },
+      {
+        "name": "PPM_SNAPS_DDC_ATTR",
+        "path": "synapse_artifacts/sqlscript/PPM_SNAPS_DDC_ATTR.json"
+      },
+      {
+        "name": "PPM_SNAPS_WA_FM",
+        "path": "synapse_artifacts/sqlscript/PPM_SNAPS_WA_FM.json"
+      },
+      {
+        "name": "PPM_SNAPS_WORK2WA",
+        "path": "synapse_artifacts/sqlscript/PPM_SNAPS_WORK2WA.json"
+      },
+      {
+        "name": "PPM_SNAPS_WORK_ATTR",
+        "path": "synapse_artifacts/sqlscript/PPM_SNAPS_WORK_ATTR.json"
+      },
+      {
+        "name": "PPM_SNAPS_WORK_FM",
+        "path": "synapse_artifacts/sqlscript/PPM_SNAPS_WORK_FM.json"
+      },
+      {
+        "name": "PPM_WA",
+        "path": "synapse_artifacts/sqlscript/PPM_WA.json"
+      },
+      {
+        "name": "PPM_Work",
+        "path": "synapse_artifacts/sqlscript/PPM_Work.json"
+      },
+      {
+        "name": "Projektausgaben",
+        "path": "synapse_artifacts/sqlscript/Projektausgaben.json"
+      },
+      {
+        "name": "Projekteinnahmen",
+        "path": "synapse_artifacts/sqlscript/Projekteinnahmen.json"
+      },
+      {
+        "name": "SC3_OLT_CI_F_CI_GNRL_SUPP_GR",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_CI_F_CI_GNRL_SUPP_GR.json"
+      },
+      {
+        "name": "SC3_OLT_CI_F_CI_SPEC_SUPP_GR",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_CI_F_CI_SPEC_SUPP_GR.json"
+      },
+      {
+        "name": "SC3_OLT_CI_F_CONFIG_ITEM",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_CI_F_CONFIG_ITEM.json"
+      },
+      {
+        "name": "SC3_OLT_CM_F_CHANGE",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_CM_F_CHANGE.json"
+      },
+      {
+        "name": "SC3_OLT_CM_F_CLOCKS_PHASE",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_CM_F_CLOCKS_PHASE.json"
+      },
+      {
+        "name": "SC3_OLT_CM_F_CLOCKS_STATUS",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_CM_F_CLOCKS_STATUS.json"
+      },
+      {
+        "name": "SC3_OLT_CM_F_RELATED_CHANGES",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_CM_F_RELATED_CHANGES.json"
+      },
+      {
+        "name": "SC3_OLT_CM_F_RELATED_INCIDENTS",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_CM_F_RELATED_INCIDENTS.json"
+      },
+      {
+        "name": "SC3_OLT_CM_F_RELATED_PROBLEMS",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_CM_F_RELATED_PROBLEMS.json"
+      },
+      {
+        "name": "SC3_OLT_CM_F_RELATED_REQUESTS",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_CM_F_RELATED_REQUESTS.json"
+      },
+      {
+        "name": "SC3_OLT_IM_F_ACTIVITY",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_IM_F_ACTIVITY.json"
+      },
+      {
+        "name": "SC3_OLT_IM_F_CLOCKS_STATUS",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_IM_F_CLOCKS_STATUS.json"
+      },
+      {
+        "name": "SC3_OLT_IM_F_INCIDENT",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_IM_F_INCIDENT.json"
+      },
+      {
+        "name": "SC3_OLT_IM_F_KNOWLEDGE_USE",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_IM_F_KNOWLEDGE_USE.json"
+      },
+      {
+        "name": "SC3_OLT_IM_F_RELATED_CHANGES",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_IM_F_RELATED_CHANGES.json"
+      },
+      {
+        "name": "SC3_OLT_IM_F_RELATED_INCIDENTS",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_IM_F_RELATED_INCIDENTS.json"
+      },
+      {
+        "name": "SC3_OLT_IM_F_RELATED_PROBLEMS",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_IM_F_RELATED_PROBLEMS.json"
+      },
+      {
+        "name": "SC3_OLT_IM_F_SOLUTION_TIME",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_IM_F_SOLUTION_TIME.json"
+      },
+      {
+        "name": "SC3_OLT_KM_F_CLOCKS_STATUS",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_KM_F_CLOCKS_STATUS.json"
+      },
+      {
+        "name": "SC3_OLT_KM_F_KNOWLEDGE",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_KM_F_KNOWLEDGE.json"
+      },
+      {
+        "name": "SC3_OLT_KM_F_RELATED_KNOWLEDGE",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_KM_F_RELATED_KNOWLEDGE.json"
+      },
+      {
+        "name": "SC3_OLT_MD_D_CALENDAR",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_MD_D_CALENDAR.json"
+      },
+      {
+        "name": "SC3_OLT_MD_D_CALENDAR_HOLIDAY",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_MD_D_CALENDAR_HOLIDAY.json"
+      },
+      {
+        "name": "SC3_OLT_MD_D_COMPANY",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_MD_D_COMPANY.json"
+      },
+      {
+        "name": "SC3_OLT_MD_D_GROUP",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_MD_D_GROUP.json"
+      },
+      {
+        "name": "SC3_OLT_MD_D_REPORT_RANGE_AG",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_MD_D_REPORT_RANGE_AG.json"
+      },
+      {
+        "name": "SC3_OLT_MD_D_REPORT_RANGE_CI",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_MD_D_REPORT_RANGE_CI.json"
+      },
+      {
+        "name": "SC3_OLT_MD_D_RR_AG_AG",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_MD_D_RR_AG_AG.json"
+      },
+      {
+        "name": "SC3_OLT_MD_D_RR_CI_CI",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_MD_D_RR_CI_CI.json"
+      },
+      {
+        "name": "SC3_OLT_MD_F_RESTRICTION",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_MD_F_RESTRICTION.json"
+      },
+      {
+        "name": "SC3_OLT_MD_F_RESTRICTION_DET_D",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_MD_F_RESTRICTION_DET_D.json"
+      },
+      {
+        "name": "SC3_OLT_PM_F_ACTIVITY",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_PM_F_ACTIVITY.json"
+      },
+      {
+        "name": "SC3_OLT_PM_F_CLOCKS_PHASE",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_PM_F_CLOCKS_PHASE.json"
+      },
+      {
+        "name": "SC3_OLT_PM_F_CLOCKS_STATUS",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_PM_F_CLOCKS_STATUS.json"
+      },
+      {
+        "name": "SC3_OLT_PM_F_PROBLEM",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_PM_F_PROBLEM.json"
+      },
+      {
+        "name": "SC3_OLT_PM_F_RELATED_CHANGES",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_PM_F_RELATED_CHANGES.json"
+      },
+      {
+        "name": "SC3_OLT_PM_F_RELATED_INCIDENTS",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_PM_F_RELATED_INCIDENTS.json"
+      },
+      {
+        "name": "SC3_OLT_PM_F_RELATED_PROBLEMS",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_PM_F_RELATED_PROBLEMS.json"
+      },
+      {
+        "name": "SC3_OLT_RF_F_ACTIVITY",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_RF_F_ACTIVITY.json"
+      },
+      {
+        "name": "SC3_OLT_RF_F_CLOCKS_STATUS",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_RF_F_CLOCKS_STATUS.json"
+      },
+      {
+        "name": "SC3_OLT_RF_F_KNOWLEDGE_USE",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_RF_F_KNOWLEDGE_USE.json"
+      },
+      {
+        "name": "SC3_OLT_RF_F_REQUEST",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_RF_F_REQUEST.json"
+      },
+      {
+        "name": "SC3_OLT_SL_D_CONTRACT",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_SL_D_CONTRACT.json"
+      },
+      {
+        "name": "SC3_OLT_SL_D_CONTRACT_ASSIGN",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_SL_D_CONTRACT_ASSIGN.json"
+      },
+      {
+        "name": "SC3_OLT_SL_D_CONTRACT_CI",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_SL_D_CONTRACT_CI.json"
+      },
+      {
+        "name": "SC3_OLT_SL_D_SLO_IM",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_SL_D_SLO_IM.json"
+      },
+      {
+        "name": "SC3_OLT_SL_D_SLO_RF",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_SL_D_SLO_RF.json"
+      },
+      {
+        "name": "SC3_OLT_SL_F_IM_SOLUTION",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_SL_F_IM_SOLUTION.json"
+      },
+      {
+        "name": "SC3_OLT_SL_F_RESTRICT_CONTR",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_SL_F_RESTRICT_CONTR.json"
+      },
+      {
+        "name": "SC3_OLT_SL_F_RESTRICT_CONTR_DT",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_SL_F_RESTRICT_CONTR_DT.json"
+      },
+      {
+        "name": "SC3_OLT_SL_F_RF_SOLUTION",
+        "path": "synapse_artifacts/sqlscript/SC3_OLT_SL_F_RF_SOLUTION.json"
+      },
+      {
+        "name": "SHUTDOWN_OFFENSIVES",
+        "path": "synapse_artifacts/sqlscript/SHUTDOWN_OFFENSIVES.json"
+      },
+      {
+        "name": "STD_ILT_ORGTREE",
+        "path": "synapse_artifacts/sqlscript/STD_ILT_ORGTREE.json"
+      },
+      {
+        "name": "STD_ILT_VCD",
+        "path": "synapse_artifacts/sqlscript/STD_ILT_VCD.json"
+      },
+      {
+        "name": "V_KFIM_REP_DEPARTMENTS_",
+        "path": "synapse_artifacts/sqlscript/V_KFIM_REP_DEPARTMENTS_.json"
+      },
+      {
+        "name": "VCD_SLT_S_EMPLOYEE",
+        "path": "synapse_artifacts/sqlscript/VCD_SLT_S_EMPLOYEE.json"
+      },
+      {
+        "name": "WA_Stammdaten",
+        "path": "synapse_artifacts/sqlscript/WA_Stammdaten.json"
+      },
+      {
+        "name": "WA_Uebersicht",
+        "path": "synapse_artifacts/sqlscript/WA_Uebersicht.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DDL/drop",
+    "count": 8,
+    "artifacts": [
+      {
+        "name": "drop_core_tables",
+        "path": "synapse_artifacts/sqlscript/drop_core_tables.json"
+      },
+      {
+        "name": "drop_dwh_meta_tables",
+        "path": "synapse_artifacts/sqlscript/drop_dwh_meta_tables.json"
+      },
+      {
+        "name": "drop_dwh_tables",
+        "path": "synapse_artifacts/sqlscript/drop_dwh_tables.json"
+      },
+      {
+        "name": "drop_reporting_functions",
+        "path": "synapse_artifacts/sqlscript/drop_reporting_functions.json"
+      },
+      {
+        "name": "drop_reporting_views",
+        "path": "synapse_artifacts/sqlscript/drop_reporting_views.json"
+      },
+      {
+        "name": "drop_schemas",
+        "path": "synapse_artifacts/sqlscript/drop_schemas.json"
+      },
+      {
+        "name": "drop_staging_tables",
+        "path": "synapse_artifacts/sqlscript/drop_staging_tables.json"
+      },
+      {
+        "name": "drop_stored_procedures",
+        "path": "synapse_artifacts/sqlscript/drop_stored_procedures.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Data profiling",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "determine_of_too_long_string_values",
+        "path": "synapse_artifacts/sqlscript/determine_of_too_long_string_values.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment",
+    "count": 7,
+    "artifacts": [
+      {
+        "name": "cfg_tables_population",
+        "path": "synapse_artifacts/sqlscript/cfg_tables_population.json"
+      },
+      {
+        "name": "dwh_meta_security_tables_population",
+        "path": "synapse_artifacts/sqlscript/dwh_meta_security_tables_population.json"
+      },
+      {
+        "name": "dwh_meta_tables_population",
+        "path": "synapse_artifacts/sqlscript/dwh_meta_tables_population.json"
+      },
+      {
+        "name": "dwh_meta_tables_population2",
+        "path": "synapse_artifacts/sqlscript/dwh_meta_tables_population2.json"
+      },
+      {
+        "name": "dwh_meta_tables_population3",
+        "path": "synapse_artifacts/sqlscript/dwh_meta_tables_population3.json"
+      },
+      {
+        "name": "dwh_tables_popuation",
+        "path": "synapse_artifacts/sqlscript/dwh_tables_popuation.json"
+      },
+      {
+        "name": "monitoring_tables_population",
+        "path": "synapse_artifacts/sqlscript/monitoring_tables_population.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Hotfixes/Dev/2023-06-05",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "fix_removal of dwh_core Dim_AppRelations",
+        "path": "synapse_artifacts/sqlscript/fix_removal of dwh_core Dim_AppRelations.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Hotfixes/Dev/2023-07-20",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "alter table dwh_staging_LEANIX_APPS alter columns",
+        "path": "synapse_artifacts/sqlscript/alter table dwh_staging_LEANIX_APPS alter columns.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Hotfixes/Prod/23.09-1.1",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "fix_ALTER_COLUMNS_SC3_OLT_KM_F_CLOCKS_STATUS_2023-09-15",
+        "path": "synapse_artifacts/sqlscript/fix_ALTER_COLUMNS_SC3_OLT_KM_F_CLOCKS_STATUS_2023-09-15.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Hotfixes/Prod/24.02-1",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "fix_ITRA-1961 Add_Cols",
+        "path": "synapse_artifacts/sqlscript/fix_ITRA-1961 Add_Cols.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Hotfixes/Prod/24.04-1",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "fix_ITRA-2238",
+        "path": "synapse_artifacts/sqlscript/fix_ITRA-2238.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Hotfixes/Prod/24.08-1",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "PPM tables duplicated lineage_row_id analysis",
+        "path": "synapse_artifacts/sqlscript/PPM tables duplicated lineage_row_id analysis.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Hotfixes/Prod/24.08-2",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "Dim_AppSubscribers index rebuild issue",
+        "path": "synapse_artifacts/sqlscript/Dim_AppSubscribers index rebuild issue.json"
+      },
+      {
+        "name": "fix_ITRA-2996",
+        "path": "synapse_artifacts/sqlscript/fix_ITRA-2996.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Hotfixes/Prod/24.09-3",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "fix_ITRA-3250",
+        "path": "synapse_artifacts/sqlscript/fix_ITRA-3250.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Permissions (manual)",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "initial_common_serverless",
+        "path": "synapse_artifacts/sqlscript/initial_common_serverless.json"
+      },
+      {
+        "name": "sql_logins",
+        "path": "synapse_artifacts/sqlscript/sql_logins.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.01-1",
+    "count": 6,
+    "artifacts": [
+      {
+        "name": "rel_ITRA-3546",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3546.json"
+      },
+      {
+        "name": "rel_ITRA-3546_2",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3546_2.json"
+      },
+      {
+        "name": "rel_ITRA-3736",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3736.json"
+      },
+      {
+        "name": "rel_ITRA-3758_ALTER_Fact_PlanenBM_Revenues",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3758_ALTER_Fact_PlanenBM_Revenues.json"
+      },
+      {
+        "name": "rel_ITRA-3758_DROP_OLD_BACKUP_TABLES",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3758_DROP_OLD_BACKUP_TABLES.json"
+      },
+      {
+        "name": "rel_ITRA-3758_KFIM_views_removal",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3758_KFIM_views_removal.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.01-2",
+    "count": 10,
+    "artifacts": [
+      {
+        "name": "rel_ITRA-3410",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3410.json"
+      },
+      {
+        "name": "rel_ITRA-3775",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3775.json"
+      },
+      {
+        "name": "rel_ITRA-3775_1",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3775_1.json"
+      },
+      {
+        "name": "rel_ITRA-3775_2",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3775_2.json"
+      },
+      {
+        "name": "rel_ITRA-3775_3",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3775_3.json"
+      },
+      {
+        "name": "rel_ITRA-3775_4",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3775_4.json"
+      },
+      {
+        "name": "rel_ITRA-3775_5",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3775_5.json"
+      },
+      {
+        "name": "rel_ITRA-3775_6",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3775_6.json"
+      },
+      {
+        "name": "rel_ITRA-3775_7",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3775_7.json"
+      },
+      {
+        "name": "rel_ITRA-3775_8",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3775_8.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.02-1",
+    "count": 6,
+    "artifacts": [
+      {
+        "name": "rel_ITRA-3495",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3495.json"
+      },
+      {
+        "name": "rel_ITRA-3730",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3730.json"
+      },
+      {
+        "name": "rel_ITRA-3730_2",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3730_2.json"
+      },
+      {
+        "name": "rel_ITRA-3730_3",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3730_3.json"
+      },
+      {
+        "name": "rel_ITRA-3822",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3822.json"
+      },
+      {
+        "name": "rel_ITRA-3822_1",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3822_1.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.03-1",
+    "count": 9,
+    "artifacts": [
+      {
+        "name": "rel_ITRA-3731",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3731.json"
+      },
+      {
+        "name": "rel_ITRA-3731a",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3731a.json"
+      },
+      {
+        "name": "rel_ITRA-3731b",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3731b.json"
+      },
+      {
+        "name": "rel_ITRA-3791",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3791.json"
+      },
+      {
+        "name": "rel_ITRA-3822_5",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3822_5.json"
+      },
+      {
+        "name": "rel_ITRA-3833",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3833.json"
+      },
+      {
+        "name": "rel_ITRA-3896",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3896.json"
+      },
+      {
+        "name": "rel_ITRA-3897",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3897.json"
+      },
+      {
+        "name": "rel_ITRA-3913_2",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3913_2.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.03-2",
+    "count": 10,
+    "artifacts": [
+      {
+        "name": "rel_ITRA-3697",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3697.json"
+      },
+      {
+        "name": "rel_ITRA-3731_3a",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3731_3a.json"
+      },
+      {
+        "name": "rel_ITRA-3731_3b",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3731_3b.json"
+      },
+      {
+        "name": "rel_ITRA-3858",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3858.json"
+      },
+      {
+        "name": "rel_ITRA-3936",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3936.json"
+      },
+      {
+        "name": "rel_ITRA-3939",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3939.json"
+      },
+      {
+        "name": "rel_ITRA-3943",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3943.json"
+      },
+      {
+        "name": "rel_ITRA-3986_2",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3986_2.json"
+      },
+      {
+        "name": "rel_ITRA-3986_4",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3986_4.json"
+      },
+      {
+        "name": "rel_ITRA-3986_6_bug",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3986_6_bug.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.03-3",
+    "count": 6,
+    "artifacts": [
+      {
+        "name": "rel_ITRA-2742",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-2742.json"
+      },
+      {
+        "name": "rel_ITRA-3906",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3906.json"
+      },
+      {
+        "name": "rel_ITRA-3963",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3963.json"
+      },
+      {
+        "name": "rel_ITRA-4012",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4012.json"
+      },
+      {
+        "name": "rel_ITRA-4028",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4028.json"
+      },
+      {
+        "name": "rel_ITRA-4028_3",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4028_3.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.04-1",
+    "count": 4,
+    "artifacts": [
+      {
+        "name": "rel_ITRA-3952_2",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3952_2.json"
+      },
+      {
+        "name": "rel_ITRA-4036_2",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4036_2.json"
+      },
+      {
+        "name": "rel_ITRA-4036_6",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4036_6.json"
+      },
+      {
+        "name": "rel_ITRA-4079",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4079.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.04-2",
+    "count": 4,
+    "artifacts": [
+      {
+        "name": "rel_ITRA-3581a",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3581a.json"
+      },
+      {
+        "name": "rel_ITRA-3581b",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3581b.json"
+      },
+      {
+        "name": "rel_ITRA-4123",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4123.json"
+      },
+      {
+        "name": "rel_ITRA-4142_Drop_Tables",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4142_Drop_Tables.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.05-1",
+    "count": 4,
+    "artifacts": [
+      {
+        "name": "rel_ITRA-4048",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4048.json"
+      },
+      {
+        "name": "rel_ITRA-4080",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4080.json"
+      },
+      {
+        "name": "rel_ITRA-4196",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4196.json"
+      },
+      {
+        "name": "rel_ITRA-4210",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4210.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.05-2",
+    "count": 7,
+    "artifacts": [
+      {
+        "name": "rel_ITRA-4144",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4144.json"
+      },
+      {
+        "name": "rel_ITRA-4161",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4161.json"
+      },
+      {
+        "name": "rel_ITRA-4167",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4167.json"
+      },
+      {
+        "name": "rel_ITRA-4181",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4181.json"
+      },
+      {
+        "name": "rel_ITRA-4202",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4202.json"
+      },
+      {
+        "name": "rel_ITRA-4243_JIRA_ISSUES_ALTER_COLUMNS",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4243_JIRA_ISSUES_ALTER_COLUMNS.json"
+      },
+      {
+        "name": "rel_ITRA-4267",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4267.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.06-1",
+    "count": 3,
+    "artifacts": [
+      {
+        "name": "rel_ITRA-2504",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-2504.json"
+      },
+      {
+        "name": "rel_ITRA-4133",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4133.json"
+      },
+      {
+        "name": "rel_ITRA-4274",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4274.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.06-2",
+    "count": 4,
+    "artifacts": [
+      {
+        "name": "rel_ITRA-4208",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4208.json"
+      },
+      {
+        "name": "rel_ITRA-4316",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4316.json"
+      },
+      {
+        "name": "rel_ITRA-4338",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4338.json"
+      },
+      {
+        "name": "rel_ITRA-4341",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4341.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.07-1",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "rel_ITRA-3820",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3820.json"
+      },
+      {
+        "name": "rel_ITRA-4353",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4353.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.07-2",
+    "count": 8,
+    "artifacts": [
+      {
+        "name": "rel_ITRA-2850_cleansing_up",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-2850_cleansing_up.json"
+      },
+      {
+        "name": "rel_ITRA-4242",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4242.json"
+      },
+      {
+        "name": "rel_ITRA-4318_2",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4318_2.json"
+      },
+      {
+        "name": "rel_ITRA-4381",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4381.json"
+      },
+      {
+        "name": "rel_ITRA-4390",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4390.json"
+      },
+      {
+        "name": "rel_ITRA-4394",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4394.json"
+      },
+      {
+        "name": "rel_ITRA-4425_3",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4425_3.json"
+      },
+      {
+        "name": "rel_ITRA_4382",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA_4382.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.08-1",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "rel_ITRA-3843",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-3843.json"
+      },
+      {
+        "name": "rel_ITRA-4440_2",
+        "path": "synapse_artifacts/sqlscript/rel_ITRA-4440_2.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.08-2",
+    "count": 4,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-303",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-303.json"
+      },
+      {
+        "name": "rel_GRAVITY-459",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-459.json"
+      },
+      {
+        "name": "rel_GRAVITY-460",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-460.json"
+      },
+      {
+        "name": "rel_GRAVITY-462",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-462.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.09-1",
+    "count": 6,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-288",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-288.json"
+      },
+      {
+        "name": "rel_GRAVITY-386",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-386.json"
+      },
+      {
+        "name": "rel_GRAVITY-462_2",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-462_2.json"
+      },
+      {
+        "name": "rel_GRAVITY-540",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-540.json"
+      },
+      {
+        "name": "rel_GRAVITY-574",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-574.json"
+      },
+      {
+        "name": "rel_GRAVITY_415",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY_415.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.09-2",
+    "count": 4,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-397",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-397.json"
+      },
+      {
+        "name": "rel_GRAVITY-398",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-398.json"
+      },
+      {
+        "name": "rel_GRAVITY-579",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-579.json"
+      },
+      {
+        "name": "rel_GRAVITY-682",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-682.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.10-1",
+    "count": 3,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-539",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-539.json"
+      },
+      {
+        "name": "rel_GRAVITY-678",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-678.json"
+      },
+      {
+        "name": "rel_GRAVITY-755",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-755.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.10-2",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-336",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-336.json"
+      },
+      {
+        "name": "rel_GRAVITY-360",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-360.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.10-3",
+    "count": 3,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-654",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-654.json"
+      },
+      {
+        "name": "rel_GRAVITY-928",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-928.json"
+      },
+      {
+        "name": "rel_GRAVITY-935_8",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-935_8.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.11-1",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-1010",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1010.json"
+      },
+      {
+        "name": "rel_GRAVITY-553",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-553.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.11-2",
+    "count": 6,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-1067_2",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1067_2.json"
+      },
+      {
+        "name": "rel_GRAVITY-316",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-316.json"
+      },
+      {
+        "name": "rel_GRAVITY-482",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-482.json"
+      },
+      {
+        "name": "rel_GRAVITY-483",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-483.json"
+      },
+      {
+        "name": "rel_GRAVITY-983",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-983.json"
+      },
+      {
+        "name": "rel_GRAVITY-983_3",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-983_3.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.12-1",
+    "count": 3,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-1062",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1062.json"
+      },
+      {
+        "name": "rel_GRAVITY-1171",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1171.json"
+      },
+      {
+        "name": "rel_GRAVITY-1175",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1175.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/25.12-2",
+    "count": 3,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-1196",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1196.json"
+      },
+      {
+        "name": "rel_GRAVITY-1219",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1219.json"
+      },
+      {
+        "name": "rel_GRAVITY-324",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-324.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/26.01-1",
+    "count": 3,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-1233",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1233.json"
+      },
+      {
+        "name": "rel_GRAVITY-1265",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1265.json"
+      },
+      {
+        "name": "rel_GRAVITY-337",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-337.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/26.02-1",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-1128",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1128.json"
+      },
+      {
+        "name": "rel_GRAVITY-1385",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1385.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/26.03-1",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-1578_2",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1578_2.json"
+      },
+      {
+        "name": "rel_GRAVITY-1605",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1605.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/26.03-2",
+    "count": 3,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-1290",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1290.json"
+      },
+      {
+        "name": "rel_GRAVITY-1503",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1503.json"
+      },
+      {
+        "name": "rel_GRAVITY-1559",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1559.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/26.04-1",
+    "count": 5,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-1293",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1293.json"
+      },
+      {
+        "name": "rel_GRAVITY-1586_4",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1586_4.json"
+      },
+      {
+        "name": "rel_GRAVITY-1711",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1711.json"
+      },
+      {
+        "name": "rel_GRAVITY-1765_2",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1765_2.json"
+      },
+      {
+        "name": "rel_GRAVITY-695",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-695.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/26.04-3",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-1289",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1289.json"
+      },
+      {
+        "name": "rel_GRAVITY-1428_1",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1428_1.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/26.05-1",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-1779",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-1779.json"
+      },
+      {
+        "name": "rel_GRAVITY-2050",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-2050.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/26.06-2",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-2653",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-2653.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/26.07-2",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-2515",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-2515.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/26.08-1",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-2635",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-2635.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Deployment/Releases/26.08-2",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "rel_GRAVITY-2625",
+        "path": "synapse_artifacts/sqlscript/rel_GRAVITY-2625.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Dev/Oracle scripts",
+    "count": 4,
+    "artifacts": [
+      {
+        "name": "Create_Staging_Table",
+        "path": "synapse_artifacts/sqlscript/Create_Staging_Table.json"
+      },
+      {
+        "name": "Get_Max_Length",
+        "path": "synapse_artifacts/sqlscript/Get_Max_Length.json"
+      },
+      {
+        "name": "Meta_Columns_To_Insert_Stmt",
+        "path": "synapse_artifacts/sqlscript/Meta_Columns_To_Insert_Stmt.json"
+      },
+      {
+        "name": "Meta_Rows_Population",
+        "path": "synapse_artifacts/sqlscript/Meta_Rows_Population.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Dev/Oracle scripts/Views Definitions",
+    "count": 6,
+    "artifacts": [
+      {
+        "name": "View_Def_MV_KFIM_REP_APP_FILTER",
+        "path": "synapse_artifacts/sqlscript/View_Def_MV_KFIM_REP_APP_FILTER.json"
+      },
+      {
+        "name": "View_Def_MV_KFIM_REP_CONFIG_ITEM_INF_AUDIT",
+        "path": "synapse_artifacts/sqlscript/View_Def_MV_KFIM_REP_CONFIG_ITEM_INF_AUDIT.json"
+      },
+      {
+        "name": "View_Def_MV_KFIM_REP_DEPARTMENTS_INFAUDIT",
+        "path": "synapse_artifacts/sqlscript/View_Def_MV_KFIM_REP_DEPARTMENTS_INFAUDIT.json"
+      },
+      {
+        "name": "View_Def_MV_KFIM_REP_LEANIX_INFAUDIT",
+        "path": "synapse_artifacts/sqlscript/View_Def_MV_KFIM_REP_LEANIX_INFAUDIT.json"
+      },
+      {
+        "name": "View_Def_V_KFIM_REP_FIT_BS_CATALOG_HISTORY",
+        "path": "synapse_artifacts/sqlscript/View_Def_V_KFIM_REP_FIT_BS_CATALOG_HISTORY.json"
+      },
+      {
+        "name": "View_Def_V_KFIM_REP_FIT_TSV_CATALOG_HISTORY",
+        "path": "synapse_artifacts/sqlscript/View_Def_V_KFIM_REP_FIT_TSV_CATALOG_HISTORY.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Dev/Temp_Tables/2025-02-24 ITRA-3731 CewGar",
+    "count": 9,
+    "artifacts": [
+      {
+        "name": "Dim_AppRelations_Hist_20250224",
+        "path": "synapse_artifacts/sqlscript/Dim_AppRelations_Hist_20250224.json"
+      },
+      {
+        "name": "Dim_Cewgar_AppRelations_Hist_20250224",
+        "path": "synapse_artifacts/sqlscript/Dim_Cewgar_AppRelations_Hist_20250224.json"
+      },
+      {
+        "name": "Dim_CewGar_AppRelations_Hist_Migration",
+        "path": "synapse_artifacts/sqlscript/Dim_CewGar_AppRelations_Hist_Migration.json"
+      },
+      {
+        "name": "Dim_Cewgar_Apps_Hist_20250224",
+        "path": "synapse_artifacts/sqlscript/Dim_Cewgar_Apps_Hist_20250224.json"
+      },
+      {
+        "name": "Dim_CewGar_Apps_Hist_Migration",
+        "path": "synapse_artifacts/sqlscript/Dim_CewGar_Apps_Hist_Migration.json"
+      },
+      {
+        "name": "Dim_Cewgar_AppSubscribers_Hist_20250224",
+        "path": "synapse_artifacts/sqlscript/Dim_Cewgar_AppSubscribers_Hist_20250224.json"
+      },
+      {
+        "name": "Dim_CewGar_AppSubscribers_Hist_Migration",
+        "path": "synapse_artifacts/sqlscript/Dim_CewGar_AppSubscribers_Hist_Migration.json"
+      },
+      {
+        "name": "V_GAP_APPS_LEGACY",
+        "path": "synapse_artifacts/sqlscript/V_GAP_APPS_LEGACY.json"
+      },
+      {
+        "name": "V_GAP_APPS_TREND_LEGACY",
+        "path": "synapse_artifacts/sqlscript/V_GAP_APPS_TREND_LEGACY.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Dev/Temp_Tables/2025-03-07 ITRA-3731 CewGar",
+    "count": 7,
+    "artifacts": [
+      {
+        "name": "Dim_Apps_Hist_20250307",
+        "path": "synapse_artifacts/sqlscript/Dim_Apps_Hist_20250307.json"
+      },
+      {
+        "name": "Dim_AppSubscribers_Hist_20250307",
+        "path": "synapse_artifacts/sqlscript/Dim_AppSubscribers_Hist_20250307.json"
+      },
+      {
+        "name": "Dim_Cewgar_Apps_Hist_20250307",
+        "path": "synapse_artifacts/sqlscript/Dim_Cewgar_Apps_Hist_20250307.json"
+      },
+      {
+        "name": "Dim_CewGar_Apps_Hist_Correction",
+        "path": "synapse_artifacts/sqlscript/Dim_CewGar_Apps_Hist_Correction.json"
+      },
+      {
+        "name": "Dim_Cewgar_AppSubscribers_Hist_20250307",
+        "path": "synapse_artifacts/sqlscript/Dim_Cewgar_AppSubscribers_Hist_20250307.json"
+      },
+      {
+        "name": "Dim_CewGar_AppSubscribers_Hist_Correction",
+        "path": "synapse_artifacts/sqlscript/Dim_CewGar_AppSubscribers_Hist_Correction.json"
+      },
+      {
+        "name": "V_GAP_APPS_TREND_NEW",
+        "path": "synapse_artifacts/sqlscript/V_GAP_APPS_TREND_NEW.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Dev/Temp_Tables/2025-03-11 ITRA-3731 CewGar",
+    "count": 9,
+    "artifacts": [
+      {
+        "name": "Dim_AppRelations_Hist_20250311",
+        "path": "synapse_artifacts/sqlscript/Dim_AppRelations_Hist_20250311.json"
+      },
+      {
+        "name": "Dim_Apps_Hist_20250311",
+        "path": "synapse_artifacts/sqlscript/Dim_Apps_Hist_20250311.json"
+      },
+      {
+        "name": "Dim_AppSubscribers_Hist_20250311",
+        "path": "synapse_artifacts/sqlscript/Dim_AppSubscribers_Hist_20250311.json"
+      },
+      {
+        "name": "Dim_Cewgar_AppRelations_Hist_20250311",
+        "path": "synapse_artifacts/sqlscript/Dim_Cewgar_AppRelations_Hist_20250311.json"
+      },
+      {
+        "name": "Dim_Cewgar_Apps_Hist_20250311",
+        "path": "synapse_artifacts/sqlscript/Dim_Cewgar_Apps_Hist_20250311.json"
+      },
+      {
+        "name": "Dim_Cewgar_AppSubscribers_Hist_20250311",
+        "path": "synapse_artifacts/sqlscript/Dim_Cewgar_AppSubscribers_Hist_20250311.json"
+      },
+      {
+        "name": "Dim_Porsche_AppRelations_Hist_20250311",
+        "path": "synapse_artifacts/sqlscript/Dim_Porsche_AppRelations_Hist_20250311.json"
+      },
+      {
+        "name": "Dim_Porsche_Apps_Hist_20250311",
+        "path": "synapse_artifacts/sqlscript/Dim_Porsche_Apps_Hist_20250311.json"
+      },
+      {
+        "name": "Dim_Porsche_AppSubscribers_Hist_20250311",
+        "path": "synapse_artifacts/sqlscript/Dim_Porsche_AppSubscribers_Hist_20250311.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Dev/Tests/1core",
+    "count": 3,
+    "artifacts": [
+      {
+        "name": "ITRA-3114  staging TESTS 56626",
+        "path": "synapse_artifacts/sqlscript/ITRA-3114  staging TESTS 56626.json"
+      },
+      {
+        "name": "ITRA-3114 core_and_reporting TESTS 66625",
+        "path": "synapse_artifacts/sqlscript/ITRA-3114 core_and_reporting TESTS 66625.json"
+      },
+      {
+        "name": "ITRA-3114 ITGZ TESTS 34534",
+        "path": "synapse_artifacts/sqlscript/ITRA-3114 ITGZ TESTS 34534.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Dev/Tests/PII",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "PII tables values comparison",
+        "path": "synapse_artifacts/sqlscript/PII tables values comparison.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug",
+    "count": 7,
+    "artifacts": [
+      {
+        "name": "read CSV via SQL",
+        "path": "synapse_artifacts/sqlscript/read CSV via SQL.json"
+      },
+      {
+        "name": "read JSON via SQL",
+        "path": "synapse_artifacts/sqlscript/read JSON via SQL.json"
+      },
+      {
+        "name": "Read PARQUET via SQL",
+        "path": "synapse_artifacts/sqlscript/Read PARQUET via SQL.json"
+      },
+      {
+        "name": "row_counts_core",
+        "path": "synapse_artifacts/sqlscript/row_counts_core.json"
+      },
+      {
+        "name": "row_counts_db_logs",
+        "path": "synapse_artifacts/sqlscript/row_counts_db_logs.json"
+      },
+      {
+        "name": "row_counts_landing",
+        "path": "synapse_artifacts/sqlscript/row_counts_landing.json"
+      },
+      {
+        "name": "row_counts_staging",
+        "path": "synapse_artifacts/sqlscript/row_counts_staging.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "GRAVITY-2177",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-2177.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev/GRAVITY-1003",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "gravity-1003 debug",
+        "path": "synapse_artifacts/sqlscript/gravity-1003 debug.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev/GRAVITY-1073",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "GRAVITY-1073 Users_Login_Creation",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-1073 Users_Login_Creation.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev/GRAVITY-1194",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "GRAVITY-1194 DQ",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-1194 DQ.json"
+      },
+      {
+        "name": "GRAVITY-1194 p_gen_stg2core_dim_delta_LOAD",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-1194 p_gen_stg2core_dim_delta_LOAD.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev/GRAVITY-1288",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "GRAVITY-1288 DQ",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-1288 DQ.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev/GRAVITY-1289",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "GRAVITY-1289 Performance_checks",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-1289 Performance_checks.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev/GRAVITY-1428",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "GRAVITY-1428",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-1428.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev/GRAVITY-1503",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "GRAVITY-1503 Data_Exploration",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-1503 Data_Exploration.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev/GRAVITY-1578",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "GRAVITY-1578 DQ",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-1578 DQ.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev/GRAVITY-1711",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "GRAVITY-1711 Comparison",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-1711 Comparison.json"
+      },
+      {
+        "name": "GRAVITY-1711 DQ",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-1711 DQ.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev/GRAVITY-1765",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "GRAVITY-1765 DQ",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-1765 DQ.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev/GRAVITY-1954",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "GRAVITY-1954",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-1954.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev/GRAVITY-312",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "GRAVITY-312 Data_Exploration",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-312 Data_Exploration.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev/GRAVITY-522",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "GRAVITY-522 DQ",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-522 DQ.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev/GRAVITY-553",
+    "count": 6,
+    "artifacts": [
+      {
+        "name": "Dim_AppRelations_MainQuery",
+        "path": "synapse_artifacts/sqlscript/Dim_AppRelations_MainQuery.json"
+      },
+      {
+        "name": "GRAVITY-553 Data_Exploration",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-553 Data_Exploration.json"
+      },
+      {
+        "name": "GRAVITY-553 Diffs",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-553 Diffs.json"
+      },
+      {
+        "name": "GRAVITY-553 Insert_Meta_Rows",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-553 Insert_Meta_Rows.json"
+      },
+      {
+        "name": "GRAVITY-553 Temp_Tables",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-553 Temp_Tables.json"
+      },
+      {
+        "name": "GRAVITY-553 USERGROUPS_Diffs_select",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-553 USERGROUPS_Diffs_select.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev/GRAVITY-641",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "GRAVITY-641 DQ",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-641 DQ.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev/GRAVITY-695",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "GRAVITY-695 Create_Tables",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-695 Create_Tables.json"
+      },
+      {
+        "name": "GRAVITY-695 Data_Exploration",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-695 Data_Exploration.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev/GRAVITY-909",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "GRAVITY-909 debug",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-909 debug.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Debug/Dev/GRAVITY-935",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "GRAVITY-935 Load_Data_From_Storage_Account",
+        "path": "synapse_artifacts/sqlscript/GRAVITY-935 Load_Data_From_Storage_Account.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "ETL Monitoring",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "Reporting views last refreshes",
+        "path": "synapse_artifacts/sqlscript/Reporting views last refreshes.json"
+      },
+      {
+        "name": "tables loaded row counts",
+        "path": "synapse_artifacts/sqlscript/tables loaded row counts.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Generate of Documenation/Data Lineage",
+    "count": 3,
+    "artifacts": [
+      {
+        "name": "data lineage 0 - inbound to staging",
+        "path": "synapse_artifacts/sqlscript/data lineage 0 - inbound to staging.json"
+      },
+      {
+        "name": "data lineage 1 - staging to core",
+        "path": "synapse_artifacts/sqlscript/data lineage 1 - staging to core.json"
+      },
+      {
+        "name": "data lineage 2 - outbound layer",
+        "path": "synapse_artifacts/sqlscript/data lineage 2 - outbound layer.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Generate of Documenation/Data Model",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "generate of physical data model",
+        "path": "synapse_artifacts/sqlscript/generate of physical data model.json"
+      },
+      {
+        "name": "tables missing in data model",
+        "path": "synapse_artifacts/sqlscript/tables missing in data model.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Generate of Documenation/Interfaces/Inbound",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "inbound interfaces",
+        "path": "synapse_artifacts/sqlscript/inbound interfaces.json"
+      },
+      {
+        "name": "inbound tables",
+        "path": "synapse_artifacts/sqlscript/inbound tables.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Generate of Documenation/Interfaces/Outbound",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "outbound views",
+        "path": "synapse_artifacts/sqlscript/outbound views.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Maintenance",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "amount of data stored staing tables",
+        "path": "synapse_artifacts/sqlscript/amount of data stored staing tables.json"
+      },
+      {
+        "name": "collect old backup tables to drop",
+        "path": "synapse_artifacts/sqlscript/collect old backup tables to drop.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Maintenance/Backup Objects",
+    "count": 9,
+    "artifacts": [
+      {
+        "name": "Bck_ACM_OLT_D_LEANIX_KFIM_APPLICATION",
+        "path": "synapse_artifacts/sqlscript/Bck_ACM_OLT_D_LEANIX_KFIM_APPLICATION.json"
+      },
+      {
+        "name": "Bck_ACM_OLT_D_LEANIX_KFIM_RELATIONS",
+        "path": "synapse_artifacts/sqlscript/Bck_ACM_OLT_D_LEANIX_KFIM_RELATIONS.json"
+      },
+      {
+        "name": "Bck_CeWGAR_From_Prod",
+        "path": "synapse_artifacts/sqlscript/Bck_CeWGAR_From_Prod.json"
+      },
+      {
+        "name": "Bck_V_KFIM_REP_FIT_BS_CATALOG_HISTORY",
+        "path": "synapse_artifacts/sqlscript/Bck_V_KFIM_REP_FIT_BS_CATALOG_HISTORY.json"
+      },
+      {
+        "name": "Bck_V_KFIM_REP_FIT_TSV_CATALOG_HISTORY",
+        "path": "synapse_artifacts/sqlscript/Bck_V_KFIM_REP_FIT_TSV_CATALOG_HISTORY.json"
+      },
+      {
+        "name": "Bck_V_Vuln_MV_KFIM_REP_APP_FILTER",
+        "path": "synapse_artifacts/sqlscript/Bck_V_Vuln_MV_KFIM_REP_APP_FILTER.json"
+      },
+      {
+        "name": "Bck_V_Vuln_MV_KFIM_REP_CONFIG_ITEM_INF_AUDIT",
+        "path": "synapse_artifacts/sqlscript/Bck_V_Vuln_MV_KFIM_REP_CONFIG_ITEM_INF_AUDIT.json"
+      },
+      {
+        "name": "Bck_V_Vuln_MV_KFIM_REP_DEPARTMENTS_INFAUDIT",
+        "path": "synapse_artifacts/sqlscript/Bck_V_Vuln_MV_KFIM_REP_DEPARTMENTS_INFAUDIT.json"
+      },
+      {
+        "name": "Bck_V_Vuln_MV_KFIM_REP_LEANIX_INFAUDIT",
+        "path": "synapse_artifacts/sqlscript/Bck_V_Vuln_MV_KFIM_REP_LEANIX_INFAUDIT.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Maintenance/Backup SQL Definitions",
+    "count": 5,
+    "artifacts": [
+      {
+        "name": "dwh_reporting_V_GAP_APPS_TREND_LEGACY",
+        "path": "synapse_artifacts/sqlscript/dwh_reporting_V_GAP_APPS_TREND_LEGACY.json"
+      },
+      {
+        "name": "V_PlanenBM_Projektausgaben",
+        "path": "synapse_artifacts/sqlscript/V_PlanenBM_Projektausgaben.json"
+      },
+      {
+        "name": "V_PlanenBM_Projekteinnahmen",
+        "path": "synapse_artifacts/sqlscript/V_PlanenBM_Projekteinnahmen.json"
+      },
+      {
+        "name": "V_PlanenBM_WA_Stammdaten",
+        "path": "synapse_artifacts/sqlscript/V_PlanenBM_WA_Stammdaten.json"
+      },
+      {
+        "name": "V_PlanenBM_WA_Uebersicht",
+        "path": "synapse_artifacts/sqlscript/V_PlanenBM_WA_Uebersicht.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Maintenance/Clean-up activities",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "ETL tables out of processing",
+        "path": "synapse_artifacts/sqlscript/ETL tables out of processing.json"
+      },
+      {
+        "name": "search old dwh_backup tables",
+        "path": "synapse_artifacts/sqlscript/search old dwh_backup tables.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Reporting/Db Metrics",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "Tables_Size",
+        "path": "synapse_artifacts/sqlscript/Tables_Size.json"
+      },
+      {
+        "name": "Tables_Size_By_Distribution",
+        "path": "synapse_artifacts/sqlscript/Tables_Size_By_Distribution.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Reporting/Experiments",
+    "count": 3,
+    "artifacts": [
+      {
+        "name": "get_chain_of_successful_runs",
+        "path": "synapse_artifacts/sqlscript/get_chain_of_successful_runs.json"
+      },
+      {
+        "name": "get_unsuccessful_runs",
+        "path": "synapse_artifacts/sqlscript/get_unsuccessful_runs.json"
+      },
+      {
+        "name": "rows_execution_time",
+        "path": "synapse_artifacts/sqlscript/rows_execution_time.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Security",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "all_db_roles_memberships",
+        "path": "synapse_artifacts/sqlscript/all_db_roles_memberships.json"
+      },
+      {
+        "name": "all_granted_directly_permissions",
+        "path": "synapse_artifacts/sqlscript/all_granted_directly_permissions.json"
+      }
+    ]
+  }
+]
