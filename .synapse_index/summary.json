@@ -1,0 +1,10 @@
+{
+  "sqlscripts": 1080,
+  "notebooks": 15,
+  "folders": 118,
+  "generatedFiles": [
+    ".synapse_index/sqlscripts.json",
+    ".synapse_index/notebooks.json",
+    ".synapse_index/folders.json"
+  ]
+}

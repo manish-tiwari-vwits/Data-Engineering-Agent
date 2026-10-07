@@ -1,0 +1,122 @@
+[
+  {
+    "name": "GetLastModifiedFile",
+    "path": "synapse_artifacts/notebook/GetLastModifiedFile.json",
+    "kind": "notebook",
+    "synapseFolder": "",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "JSON_debug",
+    "path": "synapse_artifacts/notebook/JSON_debug.json",
+    "kind": "notebook",
+    "synapseFolder": "Dev",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_Archive_OutdatedData",
+    "path": "synapse_artifacts/notebook/NB_Archive_OutdatedData.json",
+    "kind": "notebook",
+    "synapseFolder": "Dev",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_Collect_FilesDelivered_Info",
+    "path": "synapse_artifacts/notebook/NB_Collect_FilesDelivered_Info.json",
+    "kind": "notebook",
+    "synapseFolder": "",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_DL_curated_JSON_ANY",
+    "path": "synapse_artifacts/notebook/NB_DL_curated_JSON_ANY.json",
+    "kind": "notebook",
+    "synapseFolder": "",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_DL_landing_Colibri_API_ALL",
+    "path": "synapse_artifacts/notebook/NB_DL_landing_Colibri_API_ALL.json",
+    "kind": "notebook",
+    "synapseFolder": "",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_DL_landing_Colibri_ODATA_ALL",
+    "path": "synapse_artifacts/notebook/NB_DL_landing_Colibri_ODATA_ALL.json",
+    "kind": "notebook",
+    "synapseFolder": "",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_DL_landing_JIRA_ALL",
+    "path": "synapse_artifacts/notebook/NB_DL_landing_JIRA_ALL.json",
+    "kind": "notebook",
+    "synapseFolder": "",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_DL_landing_JIRA_Assets",
+    "path": "synapse_artifacts/notebook/NB_DL_landing_JIRA_Assets.json",
+    "kind": "notebook",
+    "synapseFolder": "PoC",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_DL_landing_LEANIX",
+    "path": "synapse_artifacts/notebook/NB_DL_landing_LEANIX.json",
+    "kind": "notebook",
+    "synapseFolder": "PoC",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_DL_landing_LeanIX_Polls",
+    "path": "synapse_artifacts/notebook/NB_DL_landing_LeanIX_Polls.json",
+    "kind": "notebook",
+    "synapseFolder": "",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_DL_landing_Meshportal_ANY",
+    "path": "synapse_artifacts/notebook/NB_DL_landing_Meshportal_ANY.json",
+    "kind": "notebook",
+    "synapseFolder": "",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_LeanIX_ALL_lnd2crt",
+    "path": "synapse_artifacts/notebook/NB_LeanIX_ALL_lnd2crt.json",
+    "kind": "notebook",
+    "synapseFolder": "PoC",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_Purge_OutdatedArchive",
+    "path": "synapse_artifacts/notebook/NB_Purge_OutdatedArchive.json",
+    "kind": "notebook",
+    "synapseFolder": "",
+    "type": "",
+    "language": "python"
+  },
+  {
+    "name": "NB_UTILS",
+    "path": "synapse_artifacts/notebook/NB_UTILS.json",
+    "kind": "notebook",
+    "synapseFolder": "utils",
+    "type": "",
+    "language": "python"
+  }
+]

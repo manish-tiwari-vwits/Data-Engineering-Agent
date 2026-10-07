@@ -1,0 +1,1138 @@
+[
+  {
+    "kind": "notebook",
+    "synapseFolder": "",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "historydata",
+        "path": "Synapse-itf-Dev/notebook/historydata.json"
+      },
+      {
+        "name": "Validation",
+        "path": "Synapse-itf-Dev/notebook/Validation.json"
+      }
+    ]
+  },
+  {
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/Error-Monitoring",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "All-layer-logs",
+        "path": "Synapse-itf-Dev/notebook/All-layer-logs.json"
+      }
+    ]
+  },
+  {
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/create_reporting_table",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "create_gold_table_statement",
+        "path": "Synapse-itf-Dev/notebook/create_gold_table_statement.json"
+      }
+    ]
+  },
+  {
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Gold_layer/reporting_dwh_gold_scripts",
+    "count": 25,
+    "artifacts": [
+      {
+        "name": "Gold_Layer_Execution",
+        "path": "Synapse-itf-Dev/notebook/Gold_Layer_Execution.json"
+      },
+      {
+        "name": "T_DIM_01_03_Tag",
+        "path": "Synapse-itf-Dev/notebook/T_DIM_01_03_Tag.json"
+      },
+      {
+        "name": "T_DIM_02_01_Wertart",
+        "path": "Synapse-itf-Dev/notebook/T_DIM_02_01_Wertart.json"
+      },
+      {
+        "name": "t_dim_04_01_periode_jahr",
+        "path": "Synapse-itf-Dev/notebook/t_dim_04_01_periode_jahr.json"
+      },
+      {
+        "name": "t_dim_07_02_werksauftrag",
+        "path": "Synapse-itf-Dev/notebook/t_dim_07_02_werksauftrag.json"
+      },
+      {
+        "name": "t_dim_08_01_kostenstellenindex",
+        "path": "Synapse-itf-Dev/notebook/t_dim_08_01_kostenstellenindex.json"
+      },
+      {
+        "name": "t_dim_09_01_kostenart",
+        "path": "Synapse-itf-Dev/notebook/t_dim_09_01_kostenart.json"
+      },
+      {
+        "name": "T_DIM_14_01_Belegquelle",
+        "path": "Synapse-itf-Dev/notebook/T_DIM_14_01_Belegquelle.json"
+      },
+      {
+        "name": "t_dim_14_02_beleg",
+        "path": "Synapse-itf-Dev/notebook/t_dim_14_02_beleg.json"
+      },
+      {
+        "name": "t_dim_15_01_belegart",
+        "path": "Synapse-itf-Dev/notebook/t_dim_15_01_belegart.json"
+      },
+      {
+        "name": "T_DIM_16_01_Belegstatusgruppe_FI",
+        "path": "Synapse-itf-Dev/notebook/T_DIM_16_01_Belegstatusgruppe_FI.json"
+      },
+      {
+        "name": "t_dim_16_02_belegstatus",
+        "path": "Synapse-itf-Dev/notebook/t_dim_16_02_belegstatus.json"
+      },
+      {
+        "name": "T_DIM_21_01_Mandant",
+        "path": "Synapse-itf-Dev/notebook/T_DIM_21_01_Mandant.json"
+      },
+      {
+        "name": "t_dim_24_02_waprogramm",
+        "path": "Synapse-itf-Dev/notebook/t_dim_24_02_waprogramm.json"
+      },
+      {
+        "name": "t_dim_36_01_lieferantgruppe",
+        "path": "Synapse-itf-Dev/notebook/t_dim_36_01_lieferantgruppe.json"
+      },
+      {
+        "name": "t_dim_36_02_lieferant",
+        "path": "Synapse-itf-Dev/notebook/t_dim_36_02_lieferant.json"
+      },
+      {
+        "name": "T_DIM_41_01_Kostenstelle",
+        "path": "Synapse-itf-Dev/notebook/T_DIM_41_01_Kostenstelle.json"
+      },
+      {
+        "name": "T_DIM_60_01_Hilfskostenstelle",
+        "path": "Synapse-itf-Dev/notebook/T_DIM_60_01_Hilfskostenstelle.json"
+      },
+      {
+        "name": "t_dim_91_02_controller",
+        "path": "Synapse-itf-Dev/notebook/t_dim_91_02_controller.json"
+      },
+      {
+        "name": "t_fact_01_wauebersicht",
+        "path": "Synapse-itf-Dev/notebook/t_fact_01_wauebersicht.json"
+      },
+      {
+        "name": "t_fact_02_projekteinnahmen",
+        "path": "Synapse-itf-Dev/notebook/t_fact_02_projekteinnahmen.json"
+      },
+      {
+        "name": "t_fact_03_projektausgaben",
+        "path": "Synapse-itf-Dev/notebook/t_fact_03_projektausgaben.json"
+      },
+      {
+        "name": "T_FACT_04_Korrekturen",
+        "path": "Synapse-itf-Dev/notebook/T_FACT_04_Korrekturen.json"
+      },
+      {
+        "name": "t_fact_05_projektuebersicht",
+        "path": "Synapse-itf-Dev/notebook/t_fact_05_projektuebersicht.json"
+      },
+      {
+        "name": "V_COSTCENTER_REPORTING",
+        "path": "Synapse-itf-Dev/notebook/V_COSTCENTER_REPORTING.json"
+      }
+    ]
+  },
+  {
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_Silver_layer",
+    "count": 4,
+    "artifacts": [
+      {
+        "name": "NB_bronze_to_silver",
+        "path": "Synapse-itf-Dev/notebook/NB_bronze_to_silver.json"
+      },
+      {
+        "name": "NB_silver_metadata_table_create",
+        "path": "Synapse-itf-Dev/notebook/NB_silver_metadata_table_create.json"
+      },
+      {
+        "name": "NB_silver_table_schema",
+        "path": "Synapse-itf-Dev/notebook/NB_silver_table_schema.json"
+      },
+      {
+        "name": "NB_silver_validation",
+        "path": "Synapse-itf-Dev/notebook/NB_silver_validation.json"
+      }
+    ]
+  },
+  {
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_bronze_layer",
+    "count": 6,
+    "artifacts": [
+      {
+        "name": "history load",
+        "path": "Synapse-itf-Dev/notebook/history load.json"
+      },
+      {
+        "name": "NB_bronze_metadata_table",
+        "path": "Synapse-itf-Dev/notebook/NB_bronze_metadata_table.json"
+      },
+      {
+        "name": "NB_landing_to_bronze",
+        "path": "Synapse-itf-Dev/notebook/NB_landing_to_bronze.json"
+      },
+      {
+        "name": "NB_landing_to_bronze1",
+        "path": "Synapse-itf-Dev/notebook/NB_landing_to_bronze1.json"
+      },
+      {
+        "name": "NB_landing_to_bronze_project",
+        "path": "Synapse-itf-Dev/notebook/NB_landing_to_bronze_project.json"
+      },
+      {
+        "name": "testnotebook",
+        "path": "Synapse-itf-Dev/notebook/testnotebook.json"
+      }
+    ]
+  },
+  {
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/NB_historic_load",
+    "count": 14,
+    "artifacts": [
+      {
+        "name": "one time - t_dim_16_02_belegstatus",
+        "path": "Synapse-itf-Dev/notebook/one time - t_dim_16_02_belegstatus.json"
+      },
+      {
+        "name": "one_time_t_dim_03_tag",
+        "path": "Synapse-itf-Dev/notebook/one_time_t_dim_03_tag.json"
+      },
+      {
+        "name": "one_time_t_dim_07_02_werksauftrag",
+        "path": "Synapse-itf-Dev/notebook/one_time_t_dim_07_02_werksauftrag.json"
+      },
+      {
+        "name": "one_time_t_dim_09_01_kostenart",
+        "path": "Synapse-itf-Dev/notebook/one_time_t_dim_09_01_kostenart.json"
+      },
+      {
+        "name": "one_time_t_dim_14_02_beleg",
+        "path": "Synapse-itf-Dev/notebook/one_time_t_dim_14_02_beleg.json"
+      },
+      {
+        "name": "one_time_t_dim_24_02_waprogramm",
+        "path": "Synapse-itf-Dev/notebook/one_time_t_dim_24_02_waprogramm.json"
+      },
+      {
+        "name": "one_time_t_dim_36_02_lieferant",
+        "path": "Synapse-itf-Dev/notebook/one_time_t_dim_36_02_lieferant.json"
+      },
+      {
+        "name": "one_time_T_S_Kostenstellenindex",
+        "path": "Synapse-itf-Dev/notebook/one_time_T_S_Kostenstellenindex.json"
+      },
+      {
+        "name": "T_IMPORT_DIM_Kostenstelle_ARCHIV",
+        "path": "Synapse-itf-Dev/notebook/T_IMPORT_DIM_Kostenstelle_ARCHIV.json"
+      },
+      {
+        "name": "T_Import_ProjektUebersicht",
+        "path": "Synapse-itf-Dev/notebook/T_Import_ProjektUebersicht.json"
+      },
+      {
+        "name": "T_IMPORT_PROJEKTUEBERSICHT_ARCHIV",
+        "path": "Synapse-itf-Dev/notebook/T_IMPORT_PROJEKTUEBERSICHT_ARCHIV.json"
+      },
+      {
+        "name": "T_S_Mapping_Kostenstelle_Controller",
+        "path": "Synapse-itf-Dev/notebook/T_S_Mapping_Kostenstelle_Controller.json"
+      },
+      {
+        "name": "T_S_Missing_Element",
+        "path": "Synapse-itf-Dev/notebook/T_S_Missing_Element.json"
+      },
+      {
+        "name": "v_s_itprogramme",
+        "path": "Synapse-itf-Dev/notebook/v_s_itprogramme.json"
+      }
+    ]
+  },
+  {
+    "kind": "notebook",
+    "synapseFolder": "Deltamaster/validation",
+    "count": 3,
+    "artifacts": [
+      {
+        "name": "fact test",
+        "path": "Synapse-itf-Dev/notebook/fact test.json"
+      },
+      {
+        "name": "NB_Datewise_Validation_Report",
+        "path": "Synapse-itf-Dev/notebook/NB_Datewise_Validation_Report.json"
+      },
+      {
+        "name": "Notebook 1",
+        "path": "Synapse-itf-Dev/notebook/Notebook 1.json"
+      }
+    ]
+  },
+  {
+    "kind": "notebook",
+    "synapseFolder": "Landing-Curated Layer used Notebook",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "Curated_to_Processed_Test",
+        "path": "Synapse-itf-Dev/notebook/Curated_to_Processed_Test.json"
+      },
+      {
+        "name": "NB_itf_dl_landing_to_curated_test",
+        "path": "Synapse-itf-Dev/notebook/NB_itf_dl_landing_to_curated_test.json"
+      }
+    ]
+  },
+  {
+    "kind": "notebook",
+    "synapseFolder": "Raw_to_Processing_Layer_Notebooks",
+    "count": 4,
+    "artifacts": [
+      {
+        "name": "nb_itf_dl_Curated_to_Processing",
+        "path": "Synapse-itf-Dev/notebook/nb_itf_dl_Curated_to_Processing.json"
+      },
+      {
+        "name": "NB_itf_dl_landing_to_curated",
+        "path": "Synapse-itf-Dev/notebook/NB_itf_dl_landing_to_curated.json"
+      },
+      {
+        "name": "NB_itf_dl_landing_to_curated_rb",
+        "path": "Synapse-itf-Dev/notebook/NB_itf_dl_landing_to_curated_rb.json"
+      },
+      {
+        "name": "NB_itf_planenbm-itf_raw_landing",
+        "path": "Synapse-itf-Dev/notebook/NB_itf_planenbm-itf_raw_landing.json"
+      }
+    ]
+  },
+  {
+    "kind": "notebook",
+    "synapseFolder": "dataflow migrations",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "sharepoint_target_tables",
+        "path": "Synapse-itf-Dev/notebook/sharepoint_target_tables.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "count_query",
+        "path": "Synapse-itf-Dev/sqlscript/count_query.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create of stored procedure",
+    "count": 27,
+    "artifacts": [
+      {
+        "name": "P_DIM_01_Datenstand_PLBM",
+        "path": "Synapse-itf-Dev/sqlscript/P_DIM_01_Datenstand_PLBM.json"
+      },
+      {
+        "name": "P_DIM_02_Periode",
+        "path": "Synapse-itf-Dev/sqlscript/P_DIM_02_Periode.json"
+      },
+      {
+        "name": "P_DIM_10_Werksauftrag",
+        "path": "Synapse-itf-Dev/sqlscript/P_DIM_10_Werksauftrag.json"
+      },
+      {
+        "name": "P_DIM_43_Kundenkostenstelle_SKST",
+        "path": "Synapse-itf-Dev/sqlscript/P_DIM_43_Kundenkostenstelle_SKST.json"
+      },
+      {
+        "name": "P_IMPORT_FACT_PAF_Projektausgaben",
+        "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_Projektausgaben.json"
+      },
+      {
+        "name": "P_IMPORT_FACT_PAF_Projekteinnahmen",
+        "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_Projekteinnahmen.json"
+      },
+      {
+        "name": "P_IMPORT_FACT_PAF_Projekteinnahmen_FactData",
+        "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_Projekteinnahmen_FactData.json"
+      },
+      {
+        "name": "P_IMPORT_FACT_PAF_WA_Uebersicht",
+        "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_WA_Uebersicht.json"
+      },
+      {
+        "name": "P_IMPORT_FACT_PAF_WA_Uebersicht_his",
+        "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_WA_Uebersicht_his.json"
+      },
+      {
+        "name": "P_IMPORT_FACT_PAF_WA_Uebersicht_Pivot",
+        "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_WA_Uebersicht_Pivot.json"
+      },
+      {
+        "name": "P_R_FilterOrganisationssicht",
+        "path": "Synapse-itf-Dev/sqlscript/P_R_FilterOrganisationssicht.json"
+      },
+      {
+        "name": "P_R_Projectdashboard_Tablegrid",
+        "path": "Synapse-itf-Dev/sqlscript/P_R_Projectdashboard_Tablegrid.json"
+      },
+      {
+        "name": "P_R_Projectdashboard_Tablegrid_2026_04_10",
+        "path": "Synapse-itf-Dev/sqlscript/P_R_Projectdashboard_Tablegrid_2026_04_10.json"
+      },
+      {
+        "name": "P_R_WA_Dashboard",
+        "path": "Synapse-itf-Dev/sqlscript/P_R_WA_Dashboard.json"
+      },
+      {
+        "name": "P_R_WA_Number_Projectname_Beleganalyse",
+        "path": "Synapse-itf-Dev/sqlscript/P_R_WA_Number_Projectname_Beleganalyse.json"
+      },
+      {
+        "name": "P_R_WAUebersicht_Pivot",
+        "path": "Synapse-itf-Dev/sqlscript/P_R_WAUebersicht_Pivot.json"
+      },
+      {
+        "name": "Sp_core_reporting_table_count",
+        "path": "Synapse-itf-Dev/sqlscript/Sp_core_reporting_table_count.json"
+      },
+      {
+        "name": "sp_DynamicCopyIntoTemp",
+        "path": "Synapse-itf-Dev/sqlscript/sp_DynamicCopyIntoTemp.json"
+      },
+      {
+        "name": "sp_DynamicTempToStaging_SCD2_QS",
+        "path": "Synapse-itf-Dev/sqlscript/sp_DynamicTempToStaging_SCD2_QS.json"
+      },
+      {
+        "name": "sp_DynamicTempToStg_Load_new",
+        "path": "Synapse-itf-Dev/sqlscript/sp_DynamicTempToStg_Load_new.json"
+      },
+      {
+        "name": "sp_Final_scd_validation",
+        "path": "Synapse-itf-Dev/sqlscript/sp_Final_scd_validation.json"
+      },
+      {
+        "name": "SP_Load_Bridge_Kostenstelle_Index_Projektnummer",
+        "path": "Synapse-itf-Dev/sqlscript/SP_Load_Bridge_Kostenstelle_Index_Projektnummer.json"
+      },
+      {
+        "name": "sp_log_error",
+        "path": "Synapse-itf-Dev/sqlscript/sp_log_error.json"
+      },
+      {
+        "name": "SP_Master_Core_to_Reporting",
+        "path": "Synapse-itf-Dev/sqlscript/SP_Master_Core_to_Reporting.json"
+      },
+      {
+        "name": "sp_Run_ETL_Driver",
+        "path": "Synapse-itf-Dev/sqlscript/sp_Run_ETL_Driver.json"
+      },
+      {
+        "name": "Sp_table_count_validation",
+        "path": "Synapse-itf-Dev/sqlscript/Sp_table_count_validation.json"
+      },
+      {
+        "name": "usp_UpdateUserRLSDepartment",
+        "path": "Synapse-itf-Dev/sqlscript/usp_UpdateUserRLSDepartment.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_core_table",
+    "count": 16,
+    "artifacts": [
+      {
+        "name": "T_Bridge_Kostenstelle_Index_Projektnummer",
+        "path": "Synapse-itf-Dev/sqlscript/T_Bridge_Kostenstelle_Index_Projektnummer.json"
+      },
+      {
+        "name": "T_DIM_01_Datenstand_PLBM",
+        "path": "Synapse-itf-Dev/sqlscript/T_DIM_01_Datenstand_PLBM.json"
+      },
+      {
+        "name": "T_DIM_02_Periode",
+        "path": "Synapse-itf-Dev/sqlscript/T_DIM_02_Periode.json"
+      },
+      {
+        "name": "T_DIM_10_Werksauftrag",
+        "path": "Synapse-itf-Dev/sqlscript/T_DIM_10_Werksauftrag.json"
+      },
+      {
+        "name": "T_DIM_43_Kundenkostenstelle_SKST",
+        "path": "Synapse-itf-Dev/sqlscript/T_DIM_43_Kundenkostenstelle_SKST.json"
+      },
+      {
+        "name": "T_errorlog",
+        "path": "Synapse-itf-Dev/sqlscript/T_errorlog.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Projektausgaben_neuesteDaten",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projektausgaben_neuesteDaten.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Projekteinnahmen_FactData",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projekteinnahmen_FactData.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Projekteinnahmen_neuesteDaten",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projekteinnahmen_neuesteDaten.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_WA_Uebersicht_neuesteDaten",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Uebersicht_neuesteDaten.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_WA_Uebersicht_neuesteDaten_history",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Uebersicht_neuesteDaten_history.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_WA_Uebersicht_Pivot_neuesteDaten",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Uebersicht_Pivot_neuesteDaten.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_WA_Uebersicht_Pivot_neuesteDaten_his",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Uebersicht_Pivot_neuesteDaten_his.json"
+      },
+      {
+        "name": "T_PipelineLog",
+        "path": "Synapse-itf-Dev/sqlscript/T_PipelineLog.json"
+      },
+      {
+        "name": "T_USERRLS",
+        "path": "Synapse-itf-Dev/sqlscript/T_USERRLS.json"
+      },
+      {
+        "name": "USERRLS_1",
+        "path": "Synapse-itf-Dev/sqlscript/USERRLS_1.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_reporting_view_table",
+    "count": 13,
+    "artifacts": [
+      {
+        "name": "R_FilterOrganisationssicht",
+        "path": "Synapse-itf-Dev/sqlscript/R_FilterOrganisationssicht.json"
+      },
+      {
+        "name": "R_Projectdashboard_Tablegrid",
+        "path": "Synapse-itf-Dev/sqlscript/R_Projectdashboard_Tablegrid.json"
+      },
+      {
+        "name": "R_WA_Dashboard",
+        "path": "Synapse-itf-Dev/sqlscript/R_WA_Dashboard.json"
+      },
+      {
+        "name": "R_WA_Number_Projectname_Beleganalyse",
+        "path": "Synapse-itf-Dev/sqlscript/R_WA_Number_Projectname_Beleganalyse.json"
+      },
+      {
+        "name": "R_WAUebersicht_Pivot",
+        "path": "Synapse-itf-Dev/sqlscript/R_WAUebersicht_Pivot.json"
+      },
+      {
+        "name": "R_WAUebersicht_Pivot_history",
+        "path": "Synapse-itf-Dev/sqlscript/R_WAUebersicht_Pivot_history.json"
+      },
+      {
+        "name": "V_DIM_Datenstand_PLBM",
+        "path": "Synapse-itf-Dev/sqlscript/V_DIM_Datenstand_PLBM.json"
+      },
+      {
+        "name": "V_DIM_Kostenstelle_SKST",
+        "path": "Synapse-itf-Dev/sqlscript/V_DIM_Kostenstelle_SKST.json"
+      },
+      {
+        "name": "V_DIM_Periode",
+        "path": "Synapse-itf-Dev/sqlscript/V_DIM_Periode.json"
+      },
+      {
+        "name": "V_DIM_Werksauftrag",
+        "path": "Synapse-itf-Dev/sqlscript/V_DIM_Werksauftrag.json"
+      },
+      {
+        "name": "V_FACT_PLBM_Projektausgaben",
+        "path": "Synapse-itf-Dev/sqlscript/V_FACT_PLBM_Projektausgaben.json"
+      },
+      {
+        "name": "V_FACT_PLBM_Projekteinnahmen",
+        "path": "Synapse-itf-Dev/sqlscript/V_FACT_PLBM_Projekteinnahmen.json"
+      },
+      {
+        "name": "V_FACT_PLBM_WAUebersicht_Pivot",
+        "path": "Synapse-itf-Dev/sqlscript/V_FACT_PLBM_WAUebersicht_Pivot.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_schema",
+    "count": 4,
+    "artifacts": [
+      {
+        "name": "dbo",
+        "path": "Synapse-itf-Dev/sqlscript/dbo.json"
+      },
+      {
+        "name": "dwh",
+        "path": "Synapse-itf-Dev/sqlscript/dwh.json"
+      },
+      {
+        "name": "dwh_stg",
+        "path": "Synapse-itf-Dev/sqlscript/dwh_stg.json"
+      },
+      {
+        "name": "rpt",
+        "path": "Synapse-itf-Dev/sqlscript/rpt.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/create_staging table",
+    "count": 46,
+    "artifacts": [
+      {
+        "name": "FinanceFeedMetadata",
+        "path": "Synapse-itf-Dev/sqlscript/FinanceFeedMetadata.json"
+      },
+      {
+        "name": "SCD2_Load_Audit",
+        "path": "Synapse-itf-Dev/sqlscript/SCD2_Load_Audit.json"
+      },
+      {
+        "name": "T_DWH_stg_FinanceFeedMetadata",
+        "path": "Synapse-itf-Dev/sqlscript/T_DWH_stg_FinanceFeedMetadata.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Detaillierungstabelle_R4",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Detaillierungstabelle_R4.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Detaillierungstabelle_R4_Rawtable",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Detaillierungstabelle_R4_Rawtable.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Detaillierungstabelle_R4_stg",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Detaillierungstabelle_R4_stg.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Einmalaufwaende_R4",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Einmalaufwaende_R4.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Einmalaufwaende_R4_Rawtable",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Einmalaufwaende_R4_Rawtable.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Einmalaufwaende_R4_stg",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Einmalaufwaende_R4_stg.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Entlastungs_DLV_R4",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Entlastungs_DLV_R4.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Entlastungs_DLV_R4_Rawtable",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Entlastungs_DLV_R4_Rawtable.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Entlastungs_DLV_R4_Rawtable_stg",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Entlastungs_DLV_R4_Rawtable_stg.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Masterliste_1_R4",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Masterliste_1_R4.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Masterliste_1_R4_Rawdata",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Masterliste_1_R4_Rawdata.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Masterliste_1_R4_Rawdata_stg",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Masterliste_1_R4_Rawdata_stg.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Masterliste_2_R4",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Masterliste_2_R4.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Masterliste_2_R4_Rawtable",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Masterliste_2_R4_Rawtable.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Masterliste_2_R4_Rawtable_stg",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Masterliste_2_R4_Rawtable_stg.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Portfolio_Einmalaufwaende_R4",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Einmalaufwaende_R4.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Portfolio_Einmalaufwaende_R4_Rawtable",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Einmalaufwaende_R4_Rawtable.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Portfolio_Einmalaufwaende_R4_Rawtable_stg",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Einmalaufwaende_R4_Rawtable_stg.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Portfolio_ICTO_Anteile_R4",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_ICTO_Anteile_R4.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Portfolio_ICTO_Anteile_R4_Rawtable",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_ICTO_Anteile_R4_Rawtable.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Portfolio_ICTO_Anteile_R4_Rawtable_stg",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_ICTO_Anteile_R4_Rawtable_stg.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Portfolio_Informationen_R4",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Informationen_R4.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Portfolio_Informationen_R4_Rawtable",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Informationen_R4_Rawtable.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Portfolio_Informationen_R4_Rawtable_stg",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Informationen_R4_Rawtable_stg.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Portfolio_Nachhaltige_Kosten_R4",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Nachhaltige_Kosten_R4.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Portfolio_Nachhaltige_Kosten_R4_Rawtable",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Nachhaltige_Kosten_R4_Rawtable.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Portfolio_Nachhaltige_Kosten_R4_Rawtable_stg",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Nachhaltige_Kosten_R4_Rawtable_stg.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Projektausgaben_R4",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projektausgaben_R4.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Projektausgaben_R4_Rawtable",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projektausgaben_R4_Rawtable.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Projektausgaben_R4_Rawtable_stg",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projektausgaben_R4_Rawtable_stg.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Projekteinnahmen_R4",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projekteinnahmen_R4.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Projekteinnahmen_R4_Rawtable",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projekteinnahmen_R4_Rawtable.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Projekteinnahmen_R4_Rawtable_stg",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projekteinnahmen_R4_Rawtable_stg.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_WA_Stammdaten_R4",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Stammdaten_R4.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_WA_Stammdaten_R4_Rawtable",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Stammdaten_R4_Rawtable.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_WA_Stammdaten_R4_Rawtable_stg",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Stammdaten_R4_Rawtable_stg.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_WA_Uebersicht_R4",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Uebersicht_R4.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_WA_Uebersicht_R4_history",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Uebersicht_R4_history.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_WA_Uebersicht_Rawtable",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Uebersicht_Rawtable.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_WA_Uebersicht_Rawtable_stg",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Uebersicht_Rawtable_stg.json"
+      },
+      {
+        "name": "Table_Count_History",
+        "path": "Synapse-itf-Dev/sqlscript/Table_Count_History.json"
+      },
+      {
+        "name": "Table_Count_History_RPT",
+        "path": "Synapse-itf-Dev/sqlscript/Table_Count_History_RPT.json"
+      },
+      {
+        "name": "Table_Count_Metadata",
+        "path": "Synapse-itf-Dev/sqlscript/Table_Count_Metadata.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "DWH_Scrpit/staging-sp",
+    "count": 14,
+    "artifacts": [
+      {
+        "name": "sp_Load_T_IMPORT_PAF_Detaillierungstabelle_R4",
+        "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Detaillierungstabelle_R4.json"
+      },
+      {
+        "name": "sp_Load_T_IMPORT_PAF_Einmalaufwaendet_R4",
+        "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Einmalaufwaendet_R4.json"
+      },
+      {
+        "name": "sp_Load_T_IMPORT_PAF_Entlastungs_DLV_R4",
+        "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Entlastungs_DLV_R4.json"
+      },
+      {
+        "name": "sp_Load_T_IMPORT_PAF_Masterliste_1_R4",
+        "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Masterliste_1_R4.json"
+      },
+      {
+        "name": "sp_Load_T_IMPORT_PAF_Masterliste_2_R4",
+        "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Masterliste_2_R4.json"
+      },
+      {
+        "name": "sp_Load_T_IMPORT_PAF_Portfolio_Einmalaufwaende_R4",
+        "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Portfolio_Einmalaufwaende_R4.json"
+      },
+      {
+        "name": "sp_Load_T_IMPORT_PAF_Portfolio_ICTO_Anteile_R4",
+        "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Portfolio_ICTO_Anteile_R4.json"
+      },
+      {
+        "name": "sp_Load_T_IMPORT_PAF_Portfolio_Informationen_R4",
+        "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Portfolio_Informationen_R4.json"
+      },
+      {
+        "name": "sp_Load_T_IMPORT_PAF_Portfolio_Nachhaltige_Kosten_R4",
+        "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Portfolio_Nachhaltige_Kosten_R4.json"
+      },
+      {
+        "name": "sp_Load_T_IMPORT_PAF_Projektausgaben_R4",
+        "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Projektausgaben_R4.json"
+      },
+      {
+        "name": "sp_Load_T_IMPORT_PAF_Projekteinnahmen_R4",
+        "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Projekteinnahmen_R4.json"
+      },
+      {
+        "name": "sp_Load_T_IMPORT_PAF_WA_Stammdaten_R4",
+        "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_WA_Stammdaten_R4.json"
+      },
+      {
+        "name": "sp_Load_T_IMPORT_PAF_WA_Uebersicht_R41",
+        "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_WA_Uebersicht_R41.json"
+      },
+      {
+        "name": "SP_Master_Staging_to_Core",
+        "path": "Synapse-itf-Dev/sqlscript/SP_Master_Staging_to_Core.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Operational Queries",
+    "count": 2,
+    "artifacts": [
+      {
+        "name": "FinanceFeedMetadata_info",
+        "path": "Synapse-itf-Dev/sqlscript/FinanceFeedMetadata_info.json"
+      },
+      {
+        "name": "Historic_data_load",
+        "path": "Synapse-itf-Dev/sqlscript/Historic_data_load.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Store Procedures",
+    "count": 15,
+    "artifacts": [
+      {
+        "name": "P_DIM_01_Datenstand_PLBM_history",
+        "path": "Synapse-itf-Dev/sqlscript/P_DIM_01_Datenstand_PLBM_history.json"
+      },
+      {
+        "name": "P_DIM_10_Werksauftrag_history",
+        "path": "Synapse-itf-Dev/sqlscript/P_DIM_10_Werksauftrag_history.json"
+      },
+      {
+        "name": "P_DIM_43_Kundenkostenstelle_SKST_history",
+        "path": "Synapse-itf-Dev/sqlscript/P_DIM_43_Kundenkostenstelle_SKST_history.json"
+      },
+      {
+        "name": "P_IMPORT_FACT_PAF_Projektausgaben_history",
+        "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_Projektausgaben_history.json"
+      },
+      {
+        "name": "P_IMPORT_FACT_PAF_Projekteinnahmen_FactData_history",
+        "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_Projekteinnahmen_FactData_history.json"
+      },
+      {
+        "name": "P_IMPORT_FACT_PAF_Projekteinnahmen_history",
+        "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_Projekteinnahmen_history.json"
+      },
+      {
+        "name": "P_IMPORT_FACT_PAF_WA_Uebersicht_history",
+        "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_WA_Uebersicht_history.json"
+      },
+      {
+        "name": "P_IMPORT_FACT_PAF_WA_Uebersicht_Pivot_history",
+        "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_WA_Uebersicht_Pivot_history.json"
+      },
+      {
+        "name": "P_R_FilterOrganisationssicht_history",
+        "path": "Synapse-itf-Dev/sqlscript/P_R_FilterOrganisationssicht_history.json"
+      },
+      {
+        "name": "P_R_Projectdashboard_Tablegrid_history",
+        "path": "Synapse-itf-Dev/sqlscript/P_R_Projectdashboard_Tablegrid_history.json"
+      },
+      {
+        "name": "P_R_WA_Number_Projectname_Beleganalyse_history",
+        "path": "Synapse-itf-Dev/sqlscript/P_R_WA_Number_Projectname_Beleganalyse_history.json"
+      },
+      {
+        "name": "P_R_WAUebersicht_Pivot_history",
+        "path": "Synapse-itf-Dev/sqlscript/P_R_WAUebersicht_Pivot_history.json"
+      },
+      {
+        "name": "P_R_WAUebersicht_Pivot_history_backup",
+        "path": "Synapse-itf-Dev/sqlscript/P_R_WAUebersicht_Pivot_history_backup.json"
+      },
+      {
+        "name": "SP_Load_Bridge_Kostenstelle_Index_Projektnummer_history",
+        "path": "Synapse-itf-Dev/sqlscript/SP_Load_Bridge_Kostenstelle_Index_Projektnummer_history.json"
+      },
+      {
+        "name": "SP_Master_Historic_Report",
+        "path": "Synapse-itf-Dev/sqlscript/SP_Master_Historic_Report.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Table Schema",
+    "count": 13,
+    "artifacts": [
+      {
+        "name": "Bridge_Kostenstelle_Index_Projektnummer_history",
+        "path": "Synapse-itf-Dev/sqlscript/Bridge_Kostenstelle_Index_Projektnummer_history.json"
+      },
+      {
+        "name": "R_FilterOrganisationssicht_history",
+        "path": "Synapse-itf-Dev/sqlscript/R_FilterOrganisationssicht_history.json"
+      },
+      {
+        "name": "R_Projectdashboard_Tablegrid_history",
+        "path": "Synapse-itf-Dev/sqlscript/R_Projectdashboard_Tablegrid_history.json"
+      },
+      {
+        "name": "R_WA_Number_Projectname_Beleganalyse_history",
+        "path": "Synapse-itf-Dev/sqlscript/R_WA_Number_Projectname_Beleganalyse_history.json"
+      },
+      {
+        "name": "T_DIM_01_Datenstand_PLBM_history",
+        "path": "Synapse-itf-Dev/sqlscript/T_DIM_01_Datenstand_PLBM_history.json"
+      },
+      {
+        "name": "T_DIM_10_Werksauftrag_history",
+        "path": "Synapse-itf-Dev/sqlscript/T_DIM_10_Werksauftrag_history.json"
+      },
+      {
+        "name": "T_DIM_43_Kundenkostenstelle_SKST_history",
+        "path": "Synapse-itf-Dev/sqlscript/T_DIM_43_Kundenkostenstelle_SKST_history.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Portfolio_Informationen_R4_history",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Portfolio_Informationen_R4_history.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Projektausgaben_neuesteDaten_history",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projektausgaben_neuesteDaten_history.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Projekteinnahmen_FactData_history",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projekteinnahmen_FactData_history.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_Projekteinnahmen_neuesteDaten_history",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Projekteinnahmen_neuesteDaten_history.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_WA_Stammdaten_R4_history",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Stammdaten_R4_history.json"
+      },
+      {
+        "name": "T_IMPORT_PAF_WA_Uebersicht_Pivot_neuesteDaten_history",
+        "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_WA_Uebersicht_Pivot_neuesteDaten_history.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Historic Data Development/Views",
+    "count": 6,
+    "artifacts": [
+      {
+        "name": "V_DIM_Datenstand_PLBM_history",
+        "path": "Synapse-itf-Dev/sqlscript/V_DIM_Datenstand_PLBM_history.json"
+      },
+      {
+        "name": "V_DIM_Kostenstelle_SKST_history",
+        "path": "Synapse-itf-Dev/sqlscript/V_DIM_Kostenstelle_SKST_history.json"
+      },
+      {
+        "name": "V_DIM_Werksauftrag_history",
+        "path": "Synapse-itf-Dev/sqlscript/V_DIM_Werksauftrag_history.json"
+      },
+      {
+        "name": "V_FACT_PLBM_Projektausgaben_history",
+        "path": "Synapse-itf-Dev/sqlscript/V_FACT_PLBM_Projektausgaben_history.json"
+      },
+      {
+        "name": "V_FACT_PLBM_Projekteinnahmen_history",
+        "path": "Synapse-itf-Dev/sqlscript/V_FACT_PLBM_Projekteinnahmen_history.json"
+      },
+      {
+        "name": "V_FACT_PLBM_WAUebersicht_Pivot_history",
+        "path": "Synapse-itf-Dev/sqlscript/V_FACT_PLBM_WAUebersicht_Pivot_history.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Serverless/01_Schemas",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "create_schema",
+        "path": "Synapse-itf-Dev/sqlscript/create_schema.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Serverless/02_ExternalResources",
+    "count": 3,
+    "artifacts": [
+      {
+        "name": "create_deltafileformat",
+        "path": "Synapse-itf-Dev/sqlscript/create_deltafileformat.json"
+      },
+      {
+        "name": "create_externaldatasource",
+        "path": "Synapse-itf-Dev/sqlscript/create_externaldatasource.json"
+      },
+      {
+        "name": "create_parquetfileformat",
+        "path": "Synapse-itf-Dev/sqlscript/create_parquetfileformat.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Serverless/03_ExternalTables",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "p_UpdateExternalTables",
+        "path": "Synapse-itf-Dev/sqlscript/p_UpdateExternalTables.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Serverless/04_Views",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "v_dim_41_01_kostenstelle_test",
+        "path": "Synapse-itf-Dev/sqlscript/v_dim_41_01_kostenstelle_test.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "Sharepoint-data",
+    "count": 8,
+    "artifacts": [
+      {
+        "name": "Prod_01",
+        "path": "Synapse-itf-Dev/sqlscript/Prod_01.json"
+      },
+      {
+        "name": "Prod_02",
+        "path": "Synapse-itf-Dev/sqlscript/Prod_02.json"
+      },
+      {
+        "name": "Prod_03",
+        "path": "Synapse-itf-Dev/sqlscript/Prod_03.json"
+      },
+      {
+        "name": "Prod_04",
+        "path": "Synapse-itf-Dev/sqlscript/Prod_04.json"
+      },
+      {
+        "name": "Prod_05",
+        "path": "Synapse-itf-Dev/sqlscript/Prod_05.json"
+      },
+      {
+        "name": "Prod_07",
+        "path": "Synapse-itf-Dev/sqlscript/Prod_07.json"
+      },
+      {
+        "name": "Prod_08",
+        "path": "Synapse-itf-Dev/sqlscript/Prod_08.json"
+      },
+      {
+        "name": "Regenbogenchart_allyears",
+        "path": "Synapse-itf-Dev/sqlscript/Regenbogenchart_allyears.json"
+      }
+    ]
+  },
+  {
+    "kind": "sqlscript",
+    "synapseFolder": "deltamaster validation",
+    "count": 1,
+    "artifacts": [
+      {
+        "name": "validation_table",
+        "path": "Synapse-itf-Dev/sqlscript/validation_table.json"
+      }
+    ]
+  }
+]

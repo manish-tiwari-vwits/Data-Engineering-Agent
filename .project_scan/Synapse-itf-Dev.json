@@ -1,0 +1,740 @@
+{
+  "root": "Synapse-itf-Dev",
+  "platforms": {
+    "synapse": 1
+  },
+  "markers": [
+    "folders: ['dataflow', 'dataset', 'integrationRuntime', 'linkedService', 'notebook', 'pipeline', 'sparkConfiguration', 'sqlscript', 'trigger']"
+  ],
+  "git": {
+    "found": true,
+    "evidence": "Synapse-itf-Dev/.git",
+    "remotes": {
+      "origin": "https://dev.azure.com/Volkswagen-AG/gravity-development/_git/Synapse-itf-Dev"
+    },
+    "pr_tool": "az-repos",
+    "current_branch": "Main-DEV",
+    "branches": [
+      "2563-Gravity",
+      "2723-Silver-layer-master-pipeline",
+      "Creating-Dataflow_activity",
+      "Creating-Dataflow_activity-revert-from-Creating-Dataflow_activity",
+      "Creating-Dataflow_activity-revert-from-Main-DEV",
+      "DE-2704",
+      "Dataflow_Activity_new",
+      "DeltaMaster_Sprint1_Saurabh",
+      "Deltamaster_Data_lineage",
+      "Dev_Data_Deployment_QA_PROD",
+      "GRA-2963-Gold_fact_test",
+      "GRA-Gold-test",
+      "GRAVITY-2450",
+      "GRAVITY-2552-Master-ETL-pipeline",
+      "GRAVITY-2776-Dataflow-RLS",
+      "Gravity-2454",
+      "Gravity-2581",
+      "Gravity-2590",
+      "Gravity-2731/Gold-layer",
+      "Gravity-2773",
+      "Gravity-2775",
+      "Gravity-2832",
+      "Gravity-2882",
+      "Gravity-2883",
+      "Gravity-2884",
+      "Gravity-2886",
+      "Gravity-2886-cleanup",
+      "Gravity-2959",
+      "Gravity-2963/Gold-layer-test",
+      "Gravity-3043",
+      "Gravity_2589",
+      "Main-DEV",
+      "Master_pipeline_run",
+      "PBIvalidation",
+      "QS_load",
+      "RLS_NEW_DATAFLOW",
+      "Silver_layer_DM",
+      "Spark3.5",
+      "Sprint-28-Saurabh-on-Main-DEV",
+      "Trigger",
+      "USERRLS_RVS",
+      "Userrls_olddept",
+      "ValidationGoldLayer",
+      "aishwarya.mokhashi",
+      "counts_validation",
+      "dataflow-migration-e178vgr",
+      "datflow_deployment_2466",
+      "e178vgr-errorlogs",
+      "error-handling",
+      "feature-checksparkpool",
+      "feature-error-handling-e178vgr",
+      "feature/GRAVITY-2408",
+      "feature/GRAVITY-2784",
+      "feature/ls-landing-parameterize-endpoint",
+      "file_check",
+      "fix-sparkpoolv35-reference",
+      "fix/copydata-ad-its-adls-destination",
+      "gold_layer_branch",
+      "gold_layer_new_deployment",
+      "gravity-2773new",
+      "gravity-duplicatecount",
+      "gravity-gold-fix-manish",
+      "main",
+      "new_historic_branch",
+      "qa-data-copy",
+      "release-delta-master",
+      "rvs-landing-ingestion",
+      "saurabh.shirsat",
+      "serverless-security-setup",
+      "sharepoint-master-pipeline",
+      "sharepoint-master-pipeline-revert-from-Main-DEV",
+      "synapse-delta-test",
+      "workspace_publish"
+    ],
+    "likely_protected": [
+      "main"
+    ]
+  },
+  "docs": {
+    "readme": {
+      "path": "Synapse-itf-Dev/README.md",
+      "title": "Synapse-ITF-Dev",
+      "excerpt": "# Synapse-ITF-Dev\n\nGit-integrated source repository for the **ITF FROG** Azure Synapse Analytics workspace (`vwag-frog-itf-dev-syn-ws`, workspace factory identity `testfrog`). It contains the full ARM/Synapse-native artifact set (pipelines, dataflows, datasets, linked services, notebooks, SQL scripts, triggers) used to build and deploy the ITF FROG ETL/reporting solution across environments via Azure DevOps/Synapse \"Publish\".\n\n> See [CHANGELOG.md](CHANGELOG.md) for a history of workspace changes and instructions on how to log new ones.\n\n## Overview\n\nThe workspace implements an end-to-end ETL pipeline for **ITF (Adastra/PLBM/PAF Finance) & SharePoint** source data into a Synapse dedicated SQL Pool (`itf_frog`), which is then exposed for reporting (Power BI).\n\nThis repository owns the Synapse application and data-platform artifacts, not the Azure platform itself. [`itf-frog-infra`](../itf-frog-infra/README.md) provisions the workspaces, storage, networking, Key Vault, pools and monitoring. [`itf-frog-devops`](../itf-frog-devops/README.md) checks out this repository, applies environment-specific parameters, deploys the artifacts and SQL objects, approves managed private endpoints, and promotes releases from QS to Prod. The operational dependency is: **infrastructure first -> artifact deployment second -> scheduled Synapse processing**.\n\nTwo independent data domains are orchestrated:\n\n1. **Adastra / PLBM datalake ETL** – Raw files are copied from an Adastra file share into ADLS Gen2, promoted through **Landing → Curated → Staging** using PySpark notebooks on a Synapse Spark pool, then loaded into the SQL Pool through **Core** (staging → core) and **Reporting** (core → reporting) stored-procedure driven stages.\n2. **SharePoint Excel ETL** – Excel-based SharePoint lists/files (`DS_Excel_SharePointData`) are ingested directly into SQL Pool tables via 8 parallel mapping data flows (`DF_sharepoint_Prod_01`–`08`).\n\nA third set of pipelines manages the **compute lifecycle of the dedicated SQL Pool** (scale up before business hours, scale down / pause after hours) to control cost.\n\nAll stages include structured error handling: failures are captured with `SetVariable`/`Switch` activities and persisted to SQL Pool logging tables (`dwh.sp_log_error`, `dbo.usp_SpDFMasterLogPipelineError`) for auditability.\n\n## Repository / Folder Structure\n\nThis follows the standard Synapse workspace Git-export layout — every folder maps 1:1 to a Synapse artifact type:\n\n| Folder | Content"
+    },
+    "CHANGELOG.md": "Synapse-itf-Dev/CHANGELOG.md",
+    "repo_docs": [
+      {
+        "path": "Synapse-itf-Dev/CHANGELOG.md",
+        "title": "Changelog",
+        "chars": 4586
+      },
+      {
+        "path": "Synapse-itf-Dev/SPARKPOOL_MIGRATION_CLEANUP.md",
+        "title": "Spark Pool Migration Cleanup (`sparkpool` v3.4 → `sparkpoolv35`)",
+        "chars": 8256
+      }
+    ],
+    "lineage_documents": [],
+    "schema_files": [],
+    "shared_workspace_docs_unconfirmed": [
+      "docs/reference/Data_Lineage.pdf",
+      "docs/reference/npo_schema.txt"
+    ]
+  },
+  "team_rules": {
+    "files": []
+  },
+  "cicd": {
+    "files": [],
+    "related_repos_from_readme": [
+      "itf-frog-devops",
+      "itf-frog-infra"
+    ]
+  },
+  "synapse": {
+    "folders": {
+      "credential": 1,
+      "dataflow": 9,
+      "dataset": 10,
+      "factory": 1,
+      "integrationRuntime": 1,
+      "linkedService": 16,
+      "managedVirtualNetwork": 1,
+      "notebook": 63,
+      "pipeline": 26,
+      "sparkConfiguration": 1,
+      "sqlscript": 172,
+      "trigger": 8
+    },
+    "publish_branch": {
+      "value": "workspace_publish",
+      "evidence": "Synapse-itf-Dev/publish_config.json"
+    },
+    "sql": {
+      "schemas": {
+        "dbo": {
+          "objects": {
+            "table": 32,
+            "schema": 1,
+            "proc": 23,
+            "view": 13
+          },
+          "stage_guess": null,
+          "samples": [
+            {
+              "name": "Bridge_Kostenstelle_Index_Projektnummer_history",
+              "kind": "table",
+              "path": "Synapse-itf-Dev/sqlscript/Bridge_Kostenstelle_Index_Projektnummer_history.json"
+            },
+            {
+              "name": "P_DIM_01_Datenstand_PLBM",
+              "kind": "proc",
+              "path": "Synapse-itf-Dev/sqlscript/P_DIM_01_Datenstand_PLBM.json"
+            },
+            {
+              "name": "P_DIM_01_Datenstand_PLBM_history",
+              "kind": "proc",
+              "path": "Synapse-itf-Dev/sqlscript/P_DIM_01_Datenstand_PLBM_history.json"
+            },
+            {
+              "name": "P_DIM_02_Periode",
+              "kind": "proc",
+              "path": "Synapse-itf-Dev/sqlscript/P_DIM_02_Periode.json"
+            },
+            {
+              "name": "P_DIM_10_Werksauftrag",
+              "kind": "proc",
+              "path": "Synapse-itf-Dev/sqlscript/P_DIM_10_Werksauftrag.json"
+            },
+            {
+              "name": "P_DIM_10_Werksauftrag_history",
+              "kind": "proc",
+              "path": "Synapse-itf-Dev/sqlscript/P_DIM_10_Werksauftrag_history.json"
+            }
+          ]
+        },
+        "dwh": {
+          "objects": {
+            "schema": 1,
+            "table": 32,
+            "proc": 19
+          },
+          "stage_guess": null,
+          "samples": [
+            {
+              "name": "FinanceFeedMetadata",
+              "kind": "table",
+              "path": "Synapse-itf-Dev/sqlscript/FinanceFeedMetadata.json"
+            },
+            {
+              "name": "SCD2_Load_Audit",
+              "kind": "table",
+              "path": "Synapse-itf-Dev/sqlscript/SCD2_Load_Audit.json"
+            },
+            {
+              "name": "usp_Log_Table_Counts_MetadataDriven",
+              "kind": "proc",
+              "path": "Synapse-itf-Dev/sqlscript/Sp_core_reporting_table_count.json"
+            },
+            {
+              "name": "sp_DynamicCopyIntoTemp",
+              "kind": "proc",
+              "path": "Synapse-itf-Dev/sqlscript/sp_DynamicCopyIntoTemp.json"
+            },
+            {
+              "name": "sp_DynamicTempToStaging_SCD2",
+              "kind": "proc",
+              "path": "Synapse-itf-Dev/sqlscript/sp_DynamicTempToStaging_SCD2_QS.json"
+            },
+            {
+              "name": "sp_DynamicTempToStg_Load_new",
+              "kind": "proc",
+              "path": "Synapse-itf-Dev/sqlscript/sp_DynamicTempToStg_Load_new.json"
+            }
+          ]
+        },
+        "out_gold": {
+          "objects": {
+            "schema": 2,
+            "external_table": 25,
+            "view": 4
+          },
+          "stage_guess": "serve",
+          "samples": [
+            {
+              "name": "T_DIM_41_01_Kostenstelle",
+              "kind": "external_table",
+              "path": "Synapse-itf-Dev/sqlscript/p_UpdateExternalTables.json"
+            },
+            {
+              "name": "t_fact_02_projekteinnahmen",
+              "kind": "external_table",
+              "path": "Synapse-itf-Dev/sqlscript/p_UpdateExternalTables.json"
+            },
+            {
+              "name": "t_fact_03_projektausgaben",
+              "kind": "view",
+              "path": "Synapse-itf-Dev/sqlscript/p_UpdateExternalTables.json"
+            },
+            {
+              "name": "t_fact_01_wauebersicht",
+              "kind": "view",
+              "path": "Synapse-itf-Dev/sqlscript/p_UpdateExternalTables.json"
+            },
+            {
+              "name": "t_fact_05_projektuebersicht",
+              "kind": "view",
+              "path": "Synapse-itf-Dev/sqlscript/p_UpdateExternalTables.json"
+            },
+            {
+              "name": "t_dim_16_02_belegstatus",
+              "kind": "external_table",
+              "path": "Synapse-itf-Dev/sqlscript/p_UpdateExternalTables.json"
+            }
+          ]
+        },
+        "rpt": {
+          "objects": {
+            "proc": 13,
+            "table": 9,
+            "schema": 1
+          },
+          "stage_guess": null,
+          "samples": [
+            {
+              "name": "P_R_FilterOrganisationssicht",
+              "kind": "proc",
+              "path": "Synapse-itf-Dev/sqlscript/P_R_FilterOrganisationssicht.json"
+            },
+            {
+              "name": "P_R_FilterOrganisationssicht_history",
+              "kind": "proc",
+              "path": "Synapse-itf-Dev/sqlscript/P_R_FilterOrganisationssicht_history.json"
+            },
+            {
+              "name": "P_R_Projectdashboard_Tablegrid",
+              "kind": "proc",
+              "path": "Synapse-itf-Dev/sqlscript/P_R_Projectdashboard_Tablegrid.json"
+            },
+            {
+              "name": "P_R_Projectdashboard_Tablegrid",
+              "kind": "proc",
+              "path": "Synapse-itf-Dev/sqlscript/P_R_Projectdashboard_Tablegrid_2026_04_10.json"
+            },
+            {
+              "name": "P_R_Projectdashboard_Tablegrid_history",
+              "kind": "proc",
+              "path": "Synapse-itf-Dev/sqlscript/P_R_Projectdashboard_Tablegrid_history.json"
+            },
+            {
+              "name": "P_R_WA_Dashboard",
+              "kind": "proc",
+              "path": "Synapse-itf-Dev/sqlscript/P_R_WA_Dashboard.json"
+            }
+          ]
+        },
+        "dwh_stg": {
+          "objects": {
+            "schema": 1,
+            "table": 16
+          },
+          "stage_guess": "refine",
+          "samples": [
+            {
+              "name": "FinanceFeedMetadata",
+              "kind": "table",
+              "path": "Synapse-itf-Dev/sqlscript/T_DWH_stg_FinanceFeedMetadata.json"
+            },
+            {
+              "name": "T_IMPORT_PAF_Detaillierungstabelle_R4",
+              "kind": "table",
+              "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Detaillierungstabelle_R4_stg.json"
+            },
+            {
+              "name": "T_IMPORT_PAF_Einmalaufwaende_R4",
+              "kind": "table",
+              "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Einmalaufwaende_R4_stg.json"
+            },
+            {
+              "name": "T_IMPORT_PAF_Entlastungs_DLV_R4",
+              "kind": "table",
+              "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Entlastungs_DLV_R4_Rawtable_stg.json"
+            },
+            {
+              "name": "T_IMPORT_PAF_Masterliste_1_R4",
+              "kind": "table",
+              "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Masterliste_1_R4_Rawdata_stg.json"
+            },
+            {
+              "name": "T_IMPORT_PAF_Masterliste_2_R4",
+              "kind": "table",
+              "path": "Synapse-itf-Dev/sqlscript/T_IMPORT_PAF_Masterliste_2_R4_Rawtable_stg.json"
+            }
+          ]
+        },
+        "meta": {
+          "objects": {
+            "schema": 1,
+            "proc": 1
+          },
+          "stage_guess": "meta",
+          "samples": [
+            {
+              "name": "p_CreateAllExternalTables_ItFinance",
+              "kind": "proc",
+              "path": "Synapse-itf-Dev/sqlscript/p_UpdateExternalTables.json"
+            }
+          ]
+        }
+      },
+      "pools": {
+        "itf_frog": 165,
+        "Built-in": 7
+      },
+      "databases": {
+        "itf_frog": 165,
+        "it_finance": 7
+      },
+      "folders_top": {
+        "DWH_Scrpit/create_staging table": 46,
+        "DWH_Scrpit/create of stored procedure": 27,
+        "DWH_Scrpit/create_core_table": 16,
+        "Historic Data Development/Store Procedures": 15,
+        "DWH_Scrpit/staging-sp": 14,
+        "Historic Data Development/Table Schema": 13,
+        "DWH_Scrpit/create_reporting_view_table": 13,
+        "Sharepoint-data": 8,
+        "Historic Data Development/Views": 6,
+        "DWH_Scrpit/create_schema": 4,
+        "Serverless/02_ExternalResources": 3,
+        "Historic Data Development/Operational Queries": 2,
+        "<root>": 1,
+        "Serverless/01_Schemas": 1,
+        "Serverless/03_ExternalTables": 1,
+        "Serverless/04_Views": 1,
+        "deltamaster validation": 1
+      },
+      "procedure_prefixes": {
+        "sp_Load_": 13,
+        "P_IMPORT_": 11,
+        "P_R_": 11,
+        "P_DIM_": 7,
+        "SP_Master_": 3,
+        "usp_Log_": 2,
+        "SP_Load_": 2,
+        "p_CreateAllExternalTables_": 1,
+        "sp_DynamicCopyIntoTemp": 1,
+        "sp_DynamicTempToStaging_": 1,
+        "sp_DynamicTempToStg_": 1,
+        "sp_log_": 1,
+        "sp_Run_": 1,
+        "usp_UpdateUserRLSDepartment": 1
+      },
+      "reference_procedures": {
+        "P_DIM_": [
+          {
+            "name": "P_DIM_43_Kundenkostenstelle_SKST_history",
+            "path": "Synapse-itf-Dev/sqlscript/P_DIM_43_Kundenkostenstelle_SKST_history.json",
+            "pattern_score": 3
+          },
+          {
+            "name": "P_DIM_43_Kundenkostenstelle_SKST",
+            "path": "Synapse-itf-Dev/sqlscript/P_DIM_43_Kundenkostenstelle_SKST.json",
+            "pattern_score": 3
+          },
+          {
+            "name": "P_DIM_10_Werksauftrag_history",
+            "path": "Synapse-itf-Dev/sqlscript/P_DIM_10_Werksauftrag_history.json",
+            "pattern_score": 3
+          }
+        ],
+        "P_IMPORT_": [
+          {
+            "name": "P_IMPORT_FACT_PAF_WA_Uebersicht_history",
+            "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_WA_Uebersicht_history.json",
+            "pattern_score": 3
+          },
+          {
+            "name": "P_IMPORT_FACT_PAF_WA_Uebersicht_history",
+            "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_WA_Uebersicht_his.json",
+            "pattern_score": 3
+          },
+          {
+            "name": "P_IMPORT_FACT_PAF_WA_Uebersicht",
+            "path": "Synapse-itf-Dev/sqlscript/P_IMPORT_FACT_PAF_WA_Uebersicht.json",
+            "pattern_score": 3
+          }
+        ],
+        "P_R_": [
+          {
+            "name": "P_R_WA_Number_Projectname_Beleganalyse_history",
+            "path": "Synapse-itf-Dev/sqlscript/P_R_WA_Number_Projectname_Beleganalyse_history.json",
+            "pattern_score": 2
+          },
+          {
+            "name": "P_R_WA_Number_Projectname_Beleganalyse",
+            "path": "Synapse-itf-Dev/sqlscript/P_R_WA_Number_Projectname_Beleganalyse.json",
+            "pattern_score": 2
+          },
+          {
+            "name": "P_R_WA_Dashboard",
+            "path": "Synapse-itf-Dev/sqlscript/P_R_WA_Dashboard.json",
+            "pattern_score": 2
+          }
+        ],
+        "sp_Load_": [
+          {
+            "name": "sp_Load_T_IMPORT_PAF_WA_Uebersicht_R41",
+            "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_WA_Uebersicht_R41.json",
+            "pattern_score": 0
+          },
+          {
+            "name": "sp_Load_T_IMPORT_PAF_WA_Stammdaten_R4",
+            "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_WA_Stammdaten_R4.json",
+            "pattern_score": 0
+          },
+          {
+            "name": "sp_Load_T_IMPORT_PAF_Projekteinnahmen_R4",
+            "path": "Synapse-itf-Dev/sqlscript/sp_Load_T_IMPORT_PAF_Projekteinnahmen_R4.json",
+            "pattern_score": 0
+          }
+        ],
+        "SP_Master_": [
+          {
+            "name": "SP_Master_Staging_to_Core",
+            "path": "Synapse-itf-Dev/sqlscript/SP_Master_Staging_to_Core.json",
+            "pattern_score": 2
+          },
+          {
+            "name": "SP_Master_Historic_Report",
+            "path": "Synapse-itf-Dev/sqlscript/SP_Master_Historic_Report.json",
+            "pattern_score": 2
+          },
+          {
+            "name": "SP_Master_Core_to_Reporting",
+            "path": "Synapse-itf-Dev/sqlscript/SP_Master_Core_to_Reporting.json",
+            "pattern_score": 2
+          }
+        ]
+      },
+      "metadata_tables_and_writers": {}
+    },
+    "notebooks": {
+      "count": 63,
+      "names": [
+        "All-layer-logs",
+        "Curated_to_Processed_Test",
+        "Gold_Layer_Execution",
+        "NB_Datewise_Validation_Report",
+        "NB_bronze_metadata_table",
+        "NB_bronze_to_silver",
+        "NB_itf_dl_landing_to_curated",
+        "NB_itf_dl_landing_to_curated_rb",
+        "NB_itf_dl_landing_to_curated_test",
+        "NB_itf_planenbm-itf_raw_landing",
+        "NB_landing_to_bronze",
+        "NB_landing_to_bronze1",
+        "NB_landing_to_bronze_project",
+        "NB_silver_metadata_table_create",
+        "NB_silver_table_schema",
+        "NB_silver_validation",
+        "Notebook 1",
+        "T_DIM_01_03_Tag",
+        "T_DIM_02_01_Wertart",
+        "T_DIM_14_01_Belegquelle",
+        "T_DIM_16_01_Belegstatusgruppe_FI",
+        "T_DIM_21_01_Mandant",
+        "T_DIM_41_01_Kostenstelle",
+        "T_DIM_60_01_Hilfskostenstelle",
+        "T_FACT_04_Korrekturen",
+        "T_IMPORT_DIM_Kostenstelle_ARCHIV",
+        "T_IMPORT_PROJEKTUEBERSICHT_ARCHIV",
+        "T_Import_ProjektUebersicht",
+        "T_S_Mapping_Kostenstelle_Controller",
+        "T_S_Missing_Element",
+        "V_COSTCENTER_REPORTING",
+        "Validation",
+        "create_gold_table_statement",
+        "fact test",
+        "history load",
+        "historydata",
+        "nb_itf_dl_Curated_to_Processing",
+        "one time - t_dim_16_02_belegstatus",
+        "one_time_T_S_Kostenstellenindex",
+        "one_time_t_dim_03_tag",
+        "one_time_t_dim_07_02_werksauftrag",
+        "one_time_t_dim_09_01_kostenart",
+        "one_time_t_dim_14_02_beleg",
+        "one_time_t_dim_24_02_waprogramm",
+        "one_time_t_dim_36_02_lieferant",
+        "sharepoint_target_tables",
+        "t_dim_04_01_periode_jahr",
+        "t_dim_07_02_werksauftrag",
+        "t_dim_08_01_kostenstellenindex",
+        "t_dim_09_01_kostenart",
+        "t_dim_14_02_beleg",
+        "t_dim_15_01_belegart",
+        "t_dim_16_02_belegstatus",
+        "t_dim_24_02_waprogramm",
+        "t_dim_36_01_lieferantgruppe",
+        "t_dim_36_02_lieferant",
+        "t_dim_91_02_controller",
+        "t_fact_01_wauebersicht",
+        "t_fact_02_projekteinnahmen",
+        "t_fact_03_projektausgaben",
+        "t_fact_05_projektuebersicht",
+        "testnotebook",
+        "v_s_itprogramme"
+      ],
+      "prefixes": {
+        "one_time_t_": 6,
+        "NB_itf_dl_": 3,
+        "NB_landing_to_": 3,
+        "t_dim_36_": 2,
+        "All-layer-logs": 1,
+        "Curated_to_Processed_": 1,
+        "Gold_Layer_Execution": 1,
+        "NB_Datewise_Validation_": 1,
+        "NB_bronze_metadata_": 1,
+        "NB_bronze_to_": 1,
+        "NB_itf_planenbm-itf_": 1,
+        "NB_silver_metadata_": 1,
+        "NB_silver_table_": 1,
+        "NB_silver_validation": 1,
+        "Notebook 1": 1
+      }
+    },
+    "pipelines": {
+      "count": 26,
+      "names": [
+        "PL_Copydata_AD_ITS",
+        "PL_DF_SP_Master_Pipeline",
+        "PL_DL_ITF_raw_to_landing",
+        "PL_DWH_core_SqlSp_ANY",
+        "PL_DWH_reporting_SqlSp_ANY",
+        "PL_Master_Injection",
+        "PL_PauseResume_SQLPool_scaleup",
+        "PL_RVS_To_Landing_ALL",
+        "PL_RVS_To_Landing_ANY",
+        "PL_SQLPool_Scaledown",
+        "PL_SQLPool_Scaleup",
+        "PL_ScaleDown_SQLPool_dw100c",
+        "PL_ScaleUp_SQLPool_dw400c",
+        "PL_dataflow_sharepoint-data_Prod_02",
+        "PL_dataflow_sharepoint-data_Prod_03",
+        "PL_dataflow_sharepoint-data_Prod_04",
+        "PL_dataflow_sharepoint-data_Prod_05",
+        "PL_dataflow_sharepoint-data_Prod_06",
+        "PL_dataflow_sharepoint-data_Prod_07",
+        "PL_dataflow_sharepoint-data_Prod_08",
+        "PL_dataflow_sharepoint_data_Prod_01",
+        "PL_dataflow_sharepoint_data_Prod_05",
+        "PL_load_itf_curated_to_staging",
+        "PL_load_itf_landing_curated",
+        "Pl_itf_masterpipeline_etl",
+        "Test_validation"
+      ],
+      "prefixes": {
+        "PL_dataflow_sharepoint-data_": 7,
+        "PL_RVS_To_": 2,
+        "PL_dataflow_sharepoint_": 2,
+        "PL_load_itf_": 2,
+        "PL_Copydata_AD_": 1,
+        "PL_DF_SP_": 1,
+        "PL_DL_ITF_": 1,
+        "PL_DWH_core_": 1,
+        "PL_DWH_reporting_": 1,
+        "PL_Master_Injection": 1,
+        "PL_PauseResume_SQLPool_": 1,
+        "PL_SQLPool_Scaledown": 1,
+        "PL_SQLPool_Scaleup": 1,
+        "PL_ScaleDown_SQLPool_": 1,
+        "PL_ScaleUp_SQLPool_": 1
+      },
+      "all_any_families": [
+        "PL_RVS_To_Landing"
+      ],
+      "activity_types": {
+        "SqlPoolStoredProcedure": 23,
+        "ExecutePipeline": 19,
+        "ExecuteDataFlow": 9,
+        "SynapseNotebook": 7,
+        "SetVariable": 6,
+        "WebActivity": 5,
+        "ForEach": 4,
+        "Filter": 3,
+        "Copy": 2,
+        "Fail": 2,
+        "GetMetadata": 2,
+        "IfCondition": 2
+      }
+    },
+    "linked_services": {
+      "types": {
+        "AzureBlobFS": 4,
+        "AzureSqlDW": 4,
+        "AzureBlobStorage": 4,
+        "AzureFileStorage": 2,
+        "AzureKeyVault": 1,
+        "PowerBIWorkspace": 1
+      },
+      "names_by_type": {
+        "AzureBlobFS": [
+          "AzureDataLakeStorage_itf_frog_pool",
+          "LS_ADLS_SharePointData",
+          "LS_Destination_ADLS",
+          "vwag-frog-itf-dev-syn-ws-WorkspaceDefaultStorage"
+        ],
+        "AzureKeyVault": [
+          "AzureKeyVault"
+        ],
+        "AzureSqlDW": [
+          "AzureSynapseAnalytics_itf_frog_pool",
+          "LS_SQLPOOL_SharePoint",
+          "QAData",
+          "vwag-frog-itf-dev-syn-ws-WorkspaceDefaultSqlServer"
+        ],
+        "AzureBlobStorage": [
+          "LS_Destination_ITS_Blob",
+          "LS_Landing",
+          "LS_Source_Adstra_1core",
+          "LS_Source_Adstra_planenbm"
+        ],
+        "AzureFileStorage": [
+          "LS_itf_fileshare",
+          "LS_RVS_Fileshare"
+        ],
+        "PowerBIWorkspace": [
+          "PowerBI_FROG_ITS"
+        ]
+      }
+    },
+    "datasets": {
+      "types": {
+        "Binary": 8,
+        "Excel": 1,
+        "AzureSqlDWTable": 1
+      }
+    },
+    "triggers": {
+      "types": {
+        "ScheduleTrigger": 8
+      },
+      "names_by_type": {
+        "ScheduleTrigger": [
+          "Delta_master_Trigger",
+          "Main_Execution_Pipeline",
+          "Master Trigger",
+          "sharepoint-master-pipeline",
+          "sqlpool-performance-scaledown",
+          "sqlpool-performance-scaleup",
+          "Trigger_Copydata_AD_ITS_PL",
+          "Trigger_PL_planenbmitf_datalake"
+        ]
+      }
+    },
+    "spark_pools": {
+      "sparkpoolv35": 45
+    },
+    "layer_name_hints": {
+      "ingest": {
+        "landing": 11,
+        "bronze": 4,
+        "raw": 2
+      },
+      "model": {
+        "dim": 26,
+        "fact": 6,
+        "gold": 2,
+        "core": 1
+      },
+      "serve": {
+        "reporting": 2,
+        "report": 1
+      },
+      "refine": {
+        "curated": 7,
+        "silver": 4,
+        "staging": 1
+      }
+    }
+  }
+}
