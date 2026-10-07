@@ -1,0 +1,79 @@
+# Template: AWS data lake + warehouse (S3, Glue, Step Functions/MWAA, Redshift/Athena), IaC-managed.
+# Copy to .github/project/profiles/<id>/project-profile.yaml (or run /init-project-profile) and replace <placeholders>.
+
+project:
+  id: <project-id>
+  name: <Project Name>
+  jira_project_keys: [<JIRA_KEY>]
+  jira_labels: [<JIRA_LABEL>]       # required when another profile shares the Jira key
+  confluence_spaces: [<SPACE_KEY>]
+  knowledge_file: .github/project/profiles/<project-id>/project-knowledge.md
+
+platform:
+  primary: aws
+  secondary: []
+  compute: [glue, redshift, athena, lambda]
+  storage: s3
+  sql_dialect: redshift              # redshift | athena
+
+repository:
+  artifact_root: .
+  artifact_folders:
+    glue_jobs: glue/jobs
+    sql: sql                          # Redshift / Athena DDL, procedures, views
+    state_machines: stepfunctions     # *.asl.json
+    dags: dags                        # MWAA / Airflow
+    lambda: lambdas
+    iac: infra                        # cdk | terraform | cloudformation
+  index_dir: null
+  work_dir: null
+  commit_scope: ["glue/**", "sql/**", "stepfunctions/**", "dags/**", "lambdas/**", "infra/**"]
+  never_commit: [".github/", "cdk.out/", ".terraform/", "*.tfstate", ".env"]
+  protected_branches: [main, master, develop]
+  default_pr_base: develop
+  pr_tool: gh
+
+tooling:
+  to_editable: null
+  to_artifact: null
+  new_sql_artifact: null
+  build_index: null
+  validate: <terraform validate | cdk synth | cfn-lint infra/**/*.yaml>
+  iac_tool: terraform                # terraform | cdk | cloudformation | sam
+
+architecture:
+  pattern: medallion                 # often named raw / clean / curated zones on S3
+  layers:
+    - name: raw
+      stage: ingest
+      description: s3://<bucket>/raw/ - as-is source data (DMS, AppFlow, Lambda, Glue).
+    - name: clean
+      stage: refine
+      description: s3://<bucket>/clean/ - typed, deduplicated Parquet/Iceberg tables in Glue Catalog.
+    - name: curated
+      stage: model
+      description: Redshift dimensional model or Iceberg gold tables.
+      scd_default: type1
+    - name: consumption
+      stage: serve
+      description: Redshift/Athena views for QuickSight or BI tools.
+
+orchestration:
+  style: dag                         # metadata-driven | code-first | dag
+  engine: step_functions             # step_functions | airflow | glue_workflows
+  control_metadata_schema: null      # e.g. DynamoDB config table or Redshift meta schema
+  reuse_before_create: true
+
+lineage:
+  sources:
+    - type: datazone_or_glue_catalog
+    - type: openlineage
+      path: null
+
+schema_evidence:
+  - Glue Data Catalog table schema
+  - source contract / sample files
+
+approvals:
+  convert_or_publish: required
+  deploy: required

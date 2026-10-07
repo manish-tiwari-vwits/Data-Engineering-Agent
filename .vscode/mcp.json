@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "mcp-atlassian": {
+      "type": "stdio",
+      "command": "${workspaceFolder}\\.verify_env\\Scripts\\python.exe",
+      "args": [
+        "${workspaceFolder}\\scripts\\start-mcp-atlassian.py"
+      ],
+      "envFile": "${workspaceFolder}\\.env"
+    }
+  }
+}

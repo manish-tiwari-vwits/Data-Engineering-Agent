@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GRAVITY-3335 Colibri Staging to Split Core Model</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; color: #172b4d; line-height: 1.35; margin: 24px; }
+    h1, h2, h3 { color: #0c3b5d; margin-top: 28px; }
+    h1 { border-bottom: 3px solid #0c3b5d; padding-bottom: 8px; }
+    .meta { color: #44546f; font-size: 13px; margin-bottom: 20px; }
+    .callout { background: #eef6ff; border-left: 5px solid #1d7afc; padding: 10px 14px; margin: 14px 0; }
+    .warning { background: #fff7e6; border-left: 5px solid #bf6900; padding: 10px 14px; margin: 14px 0; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0 22px; font-size: 12px; }
+    th, td { border: 1px solid #d5d9e2; padding: 6px 8px; vertical-align: top; }
+    th { background: #f1f4f8; color: #172b4d; text-align: left; }
+    tr:nth-child(even) td { background: #fbfcfe; }
+    code { background: #f4f5f7; padding: 1px 4px; border-radius: 3px; }
+    pre { background: #f4f5f7; border: 1px solid #d5d9e2; padding: 12px; overflow-x: auto; white-space: pre; }
+    .small { font-size: 11px; color: #44546f; }
+    .model-diagram { border: 1px solid #b8c7d9; background: #f8fbff; padding: 14px; margin: 12px 0 22px; }
+    .diagram-row { display: table; table-layout: fixed; width: 100%; border-spacing: 8px; margin: 4px 0; }
+    .diagram-cell { display: table-cell; vertical-align: middle; }
+    .diagram-cell.wide { width: 30%; }
+    .diagram-cell.medium { width: 24%; }
+    .diagram-cell.narrow { width: 12%; text-align: center; }
+    .diagram-box { border: 2px solid #49739c; background: #ffffff; padding: 8px; min-height: 88px; }
+    .diagram-box.source { border-color: #6b778c; background: #f4f5f7; }
+    .diagram-box.hub { border-color: #0c66e4; background: #eef6ff; }
+    .diagram-box.subject { border-color: #00875a; background: #effaf3; margin-bottom: 8px; }
+    .diagram-box.dimension { border-color: #bf6900; background: #fff7e6; }
+    .diagram-box.reporting { border-color: #6554c0; background: #f3f0ff; }
+    .diagram-title { font-weight: bold; color: #0c3b5d; margin-bottom: 5px; }
+    .diagram-subtitle { font-size: 11px; color: #44546f; margin-bottom: 5px; }
+    .diagram-box ul { margin: 4px 0 0 18px; padding: 0; }
+    .diagram-box li { margin: 2px 0; }
+    .diagram-arrow { font-weight: bold; color: #0c3b5d; text-align: center; line-height: 1.3; }
+    .diagram-arrow code { font-weight: normal; }
+    .diagram-note { border-left: 4px solid #0c66e4; background: #ffffff; padding: 8px 10px; margin: 8px 0; font-size: 12px; }
+    .mini-table th, .mini-table td { font-size: 11px; }
+    .key-flow { border: 1px solid #b8c7d9; background: #ffffff; padding: 8px 10px; margin-bottom: 12px; }
+    .key-flow-title { font-weight: bold; color: #0c3b5d; margin-bottom: 6px; }
+    .flow-line { font-size: 12px; line-height: 1.5; margin: 3px 0; }
+    .flow-step { display: inline-block; border: 1px solid #d5d9e2; background: #f8fbff; padding: 3px 6px; margin: 2px 0; }
+    .flow-note { color: #44546f; font-size: 11px; }
+    .er-lane-table { table-layout: fixed; border-collapse: separate; border-spacing: 0; background: #ffffff; }
+    .er-lane-table th { text-align: center; border-color: #b8c7d9; font-size: 11px; }
+    .er-lane-table td { border-color: #d5d9e2; font-size: 11px; }
+    .er-lane-table td.source { background: #f4f5f7; }
+    .er-lane-table td.hub { background: #eef6ff; }
+    .er-lane-table td.subject { background: #effaf3; }
+    .er-lane-table td.bridge { background: #fff8db; }
+    .er-lane-table td.dimension { background: #fff7e6; }
+    .er-lane-table td.reporting { background: #f3f0ff; }
+    .er-card-title { font-weight: bold; color: #0c3b5d; margin-bottom: 4px; }
+    .er-card-row { margin: 3px 0; }
+    .er-card-label { color: #44546f; font-weight: bold; }
+    .er-empty { color: #6b778c; text-align: center; background: #fbfcfe; }
+    .column-list { columns: 2; column-gap: 24px; margin-top: 4px; }
+    .column-list li { break-inside: avoid; margin-bottom: 2px; }
+  </style>
+</head>
+<body>
+  <h1>GRAVITY-3335 Colibri Staging to Split Core Model</h1>
+  <p class="meta">Prepared from <code>.synapse_work/Fact_ColibriWorkItems.sql</code>, <code>.synapse_work/Dim_ColibriProducts.sql</code>, <code>.synapse_work/Dim_ColibriUsers.sql</code>, available BIA draft placeholders, and the existing broad model inventory in <code>docs/GRAVITY-3335-colibri-core-data-model.html</code>. Date: 2026-09-27.</p>
+
+  <h2>1. Executive Summary</h2>
+  <p>The current core table <code>dwh_core.Fact_ColibriWorkItems</code> is doing too much: it acts as the work item identity table while also carrying BIA and finance impact, risk, release, budget, hierarchy, user-role, date, and audit attributes. This makes the core model wide, hard to govern, and difficult to extend when different subject areas evolve at different grains.</p>
+  <p>The proposed target is a split core model loaded from <code>dwh_staging.COLIBRI_WORKITEMS</code>. <code>dwh_core.Fact_ColibriWorkItems</code> becomes the work item hub with only identity and common descriptors. Subject-specific facts hold BIA/finance, risk, release, and budget attributes. Bridges hold parent-child hierarchy and user-role relationships. Existing <code>dwh_core.Dim_ColibriProducts</code> and <code>dwh_core.Dim_ColibriUsers</code> remain shared dimensions joined by stable surrogate keys.</p>
+  <p class="warning"><strong>Source caveat:</strong> <code>.synapse_work/Fact_ColibriWorkItemBIA.sql</code> and <code>.synapse_work/p_stg2core_LOAD_Fact_ColibriWorkItemBIA.sql</code> currently contain placeholder-only draft text in this workspace. The BIA placement and visible mapping notes below therefore use the existing broad documentation matrix as reference where executable BIA draft SQL is not available.</p>
+
+  <h2>2. Current Staging Layer</h2>
+  <p><code>dwh_staging.COLIBRI_WORKITEMS</code> is the single current source table for the core work item model. It contains the complete Colibri work item payload that is now consolidated into the wide core fact.</p>
+  <table>
+    <thead><tr><th>Staging column family</th><th>Examples / target meaning</th><th>Recommended core ownership</th></tr></thead>
+    <tbody>
+      <tr><td>Work item identity</td><td><code>WorkItemId</code> and work item key fields.</td><td>Hub: <code>dwh_core.Fact_ColibriWorkItems</code>, with <code>WorkItemId -&gt; COLIBRI_WORKITEM_BK</code>.</td></tr>
+      <tr><td>Project / product</td><td><code>ProjectId</code> and product context.</td><td>Lookup to <code>dwh_core.Dim_ColibriProducts</code> by <code>COLIBRI_PRODUCT_BK</code>, then store <code>COLIBRI_PRODUCT_SK</code>.</td></tr>
+      <tr><td>Parent / hierarchy</td><td>Parent work item relationship fields currently represented by <code>PARENT_COLIBRI_WORKITEM_SK</code> in the wide fact.</td><td><code>dwh_core.Bridge_ColibriWorkItemHierarchy</code>.</td></tr>
+      <tr><td>Generic work item fields</td><td>Type, factsheet type, module, domain, status, title, state, phase, descriptions, PPM ID, lifecycle dates.</td><td>Hub unless a later subject table is approved.</td></tr>
+      <tr><td>Risk</td><td>Risk title, risk score, risk class, security class, risk alternatives and justifications.</td><td><code>dwh_core.Fact_ColibriWorkItemRisk</code>, with BIA-specific risk classes also available to BIA reporting during migration.</td></tr>
+      <tr><td>BIA / finance impact</td><td>BIA score, BIA classification, financial/legal/reputation impact windows, RTO/RPO, product/process/compliance relevance, review fields.</td><td><code>dwh_core.Fact_ColibriWorkItemBIA</code>.</td></tr>
+      <tr><td>Release</td><td>Release type, version, release date, release relevance.</td><td><code>dwh_core.Fact_ColibriWorkItemRelease</code>.</td></tr>
+      <tr><td>Budget</td><td>Previous, current, next, and total budget values.</td><td><code>dwh_core.Fact_ColibriWorkItemBudget</code>.</td></tr>
+      <tr><td>Users / roles</td><td>Responsible person, stand-in, business owner, changed-by, BIA responsible and manager fields.</td><td><code>dwh_core.Bridge_ColibriWorkItemUserRole</code> joined to <code>dwh_core.Dim_ColibriUsers</code>; retain raw name/email fallback.</td></tr>
+      <tr><td>Dates / audit / lineage</td><td>Created, changed, review, release, go-live, end-of-life, <code>_lineage_row_id</code>, <code>_job_run_guid</code>, <code>_ins_datetime</code>, <code>_upd_datetime</code>, <code>_columns_checksum</code>.</td><td>Store in the table that owns the business process, with audit columns repeated per physically loaded table.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>3. Existing Core Issue</h2>
+  <p><code>dwh_core.Fact_ColibriWorkItems</code> currently contains the work item hub plus multiple subject domains in one wide table. It includes identity, product, parent hierarchy, generic descriptors, risk, release, budget, BIA/finance, user-role, lifecycle date, data quality, and ETL audit columns. This causes subject-area coupling: a BIA change can affect the work item hub, release and budget measures sit beside unrelated classification fields, and user-role relationships are compressed into columns instead of modeled as repeatable roles.</p>
+  <p>The split model keeps the current stable keys but assigns each column family to a smaller table with a clear grain and ownership boundary.</p>
+
+  <h2>4. Proposed Split Core Model</h2>
+  <table>
+    <thead><tr><th>Target object</th><th>Purpose</th><th>Key / grain</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><code>dwh_core.Fact_ColibriWorkItems</code></td><td>Hub with only work item identity and common descriptors.</td><td>One row per <code>COLIBRI_WORKITEM_BK</code>; PK <code>COLIBRI_WORKITEM_SK</code>.</td><td>Keep work item type, state, title, status, domain, phase, descriptions, and shared product SK.</td></tr>
+      <tr><td><code>dwh_core.Fact_ColibriWorkItemBIA</code></td><td>BIA, finance, legal, reputation, RTO/RPO, review, and business impact fields.</td><td>One row per work item unless future source grain proves multiple BIA assessments.</td><td>Temporary duplication of key work item fields is acceptable for backward-compatible reporting.</td></tr>
+      <tr><td><code>dwh_core.Fact_ColibriWorkItemRisk</code></td><td>Risk title, score, class, security class, and risk justifications not only BIA-specific.</td><td>One row per work item or one row per risk event if source history is later exposed.</td><td>Risk class values used by BIA may temporarily also exist in BIA during migration.</td></tr>
+      <tr><td><code>dwh_core.Fact_ColibriWorkItemRelease</code></td><td>Release type, release version, release date, and release relevance.</td><td>One row per work item or per release version after grain decision.</td><td>Do not force release attributes into the hub if release history is expected.</td></tr>
+      <tr><td><code>dwh_core.Fact_ColibriWorkItemBudget</code></td><td>Previous, current, next, and total budget measures.</td><td>One row per work item at current visible grain.</td><td>Can be extended later with fiscal year/version if staging exposes budget history.</td></tr>
+      <tr><td><code>dwh_core.Bridge_ColibriWorkItemHierarchy</code></td><td>Parent-child links between work items.</td><td>Child <code>COLIBRI_WORKITEM_SK</code> plus parent <code>PARENT_COLIBRI_WORKITEM_SK</code>.</td><td>Both child and parent resolve to the hub table.</td></tr>
+      <tr><td><code>dwh_core.Bridge_ColibriWorkItemUserRole</code></td><td>Responsible, owner, stand-in, changed-by, and BIA responsible roles.</td><td>One row per work item, role code, and resolved/raw user value.</td><td>Join to <code>Dim_ColibriUsers</code> where possible; retain raw name/email fallback.</td></tr>
+      <tr><td><code>dwh_core.Dim_ColibriProducts</code></td><td>Existing product dimension.</td><td>PK <code>COLIBRI_PRODUCT_SK</code>; BK <code>COLIBRI_PRODUCT_BK</code>.</td><td><code>staging.ProjectId -&gt; COLIBRI_PRODUCT_BK -&gt; COLIBRI_PRODUCT_SK</code>.</td></tr>
+      <tr><td><code>dwh_core.Dim_ColibriUsers</code></td><td>Existing user dimension.</td><td>PK <code>COLIBRI_USER_SK</code>; BK <code>COLIBRI_USER_BK</code>.</td><td>Used by role bridge after user-key standardization.</td></tr>
+      <tr><td>Optional future <code>dwh_core.Dim_ColibriDomain</code></td><td>Only if <code>DOMAIN</code> needs normalization.</td><td>Domain BK/SK if approved.</td><td>Until then keep <code>DOMAIN</code> in the hub.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>5. ER Diagram</h2>
+  <p>The diagram is HTML/CSS rather than Mermaid so it remains visible when pasted into Confluence. The lanes show the source-to-core flow from left to right and keep each table on one compact row.</p>
+  <div class="model-diagram">
+    <div class="key-flow">
+      <div class="key-flow-title">Key Flow</div>
+      <div class="flow-line"><span class="flow-step"><code>dwh_staging.COLIBRI_WORKITEMS.WorkItemId</code></span> -&gt; <span class="flow-step"><code>Fact_ColibriWorkItems.COLIBRI_WORKITEM_BK</code></span> -&gt; <span class="flow-step"><code>Fact_ColibriWorkItems.COLIBRI_WORKITEM_SK</code></span> -&gt; <span class="flow-step">subject tables / bridges</span> <span class="flow-note">same work item</span></div>
+      <div class="flow-line"><span class="flow-step"><code>dwh_staging.COLIBRI_WORKITEMS.ProjectId</code></span> -&gt; <span class="flow-step"><code>Dim_ColibriProducts.COLIBRI_PRODUCT_BK</code></span> -&gt; <span class="flow-step"><code>COLIBRI_PRODUCT_SK</code></span> <span class="flow-note">adds product labels</span></div>
+    </div>
+    <table class="er-lane-table">
+      <thead>
+        <tr>
+          <th>Lane 1<br>Staging Source</th>
+          <th>Lane 2<br>Core Hub</th>
+          <th>Lane 3<br>Subject Facts</th>
+          <th>Lane 4<br>Bridges</th>
+          <th>Lane 5<br>Dimensions</th>
+          <th>Lane 6<br>Reporting Views</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="source">
+            <div class="er-card-title"><code>dwh_staging.COLIBRI_WORKITEMS</code></div>
+            <div class="er-card-row"><span class="er-card-label">Main keys:</span> <code>WorkItemId</code>, <code>ProjectId</code></div>
+            <div class="er-card-row"><span class="er-card-label">Joins:</span> <code>WorkItemId</code> -&gt; hub BK; <code>ProjectId</code> -&gt; product BK</div>
+            <div class="er-card-row"><span class="er-card-label">Columns:</span> raw Colibri payload for identity, product, BIA, risk, release, budget, hierarchy, users, dates, and audit</div>
+          </td>
+          <td class="hub">
+            <div class="er-card-title"><code>dwh_core.Fact_ColibriWorkItems</code></div>
+            <div class="er-card-row"><span class="er-card-label">Main keys:</span> PK <code>COLIBRI_WORKITEM_SK</code>; BK <code>COLIBRI_WORKITEM_BK</code>; FK <code>COLIBRI_PRODUCT_SK</code></div>
+            <div class="er-card-row"><span class="er-card-label">Joins:</span> from staging <code>WorkItemId</code>; to product dimension; to every subject fact and bridge by SK</div>
+            <div class="er-card-row"><span class="er-card-label">Columns:</span> common work item descriptors, lifecycle dates, source ID, validity, and audit</div>
+          </td>
+          <td class="subject">
+            <div class="er-card-title"><code>dwh_core.Fact_ColibriWorkItemBIA</code></div>
+            <div class="er-card-row"><span class="er-card-label">Main keys:</span> <code>COLIBRI_WORKITEM_SK</code>; optional <code>COLIBRI_PRODUCT_SK</code></div>
+            <div class="er-card-row"><span class="er-card-label">Joins:</span> to hub for same work item; to product for labels where copied</div>
+            <div class="er-card-row"><span class="er-card-label">Columns:</span> BIA score, classification, impact windows, RTO/RPO, relevance, review, finance/legal/reputation fields</div>
+          </td>
+          <td class="bridge">
+            <div class="er-card-title"><code>dwh_core.Bridge_ColibriWorkItemHierarchy</code></div>
+            <div class="er-card-row"><span class="er-card-label">Main keys:</span> child <code>COLIBRI_WORKITEM_SK</code>; parent <code>PARENT_COLIBRI_WORKITEM_SK</code></div>
+            <div class="er-card-row"><span class="er-card-label">Joins:</span> both keys join back to hub as same work item model</div>
+            <div class="er-card-row"><span class="er-card-label">Columns:</span> parent-child relationship and raw validation keys</div>
+          </td>
+          <td class="dimension">
+            <div class="er-card-title"><code>dwh_core.Dim_ColibriProducts</code></div>
+            <div class="er-card-row"><span class="er-card-label">Main keys:</span> PK <code>COLIBRI_PRODUCT_SK</code>; BK <code>COLIBRI_PRODUCT_BK</code></div>
+            <div class="er-card-row"><span class="er-card-label">Joins:</span> from staging <code>ProjectId</code>; from hub and subject facts by product SK</div>
+            <div class="er-card-row"><span class="er-card-label">Columns:</span> product name, visibility, type, status, and analytics update date; adds product labels</div>
+          </td>
+          <td class="reporting">
+            <div class="er-card-title">Reporting views / consumption</div>
+            <div class="er-card-row"><span class="er-card-label">Main keys:</span> consume hub SK plus subject, product, user, and bridge keys</div>
+            <div class="er-card-row"><span class="er-card-label">Joins:</span> start from hub, add only needed subject facts and labels</div>
+            <div class="er-card-row"><span class="er-card-label">Columns:</span> business-facing measures, descriptors, readable product/user labels, hierarchy and role outputs</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="er-empty">Source row reused by all downstream loads</td>
+          <td class="er-empty">Hub row reused by all subject areas</td>
+          <td class="subject">
+            <div class="er-card-title"><code>dwh_core.Fact_ColibriWorkItemRisk</code></div>
+            <div class="er-card-row"><span class="er-card-label">Main keys:</span> <code>COLIBRI_WORKITEM_SK</code></div>
+            <div class="er-card-row"><span class="er-card-label">Joins:</span> to hub for same work item</div>
+            <div class="er-card-row"><span class="er-card-label">Columns:</span> risk title, risk score, risk class, security class, alternatives, justifications</div>
+          </td>
+          <td class="bridge">
+            <div class="er-card-title"><code>dwh_core.Bridge_ColibriWorkItemUserRole</code></div>
+            <div class="er-card-row"><span class="er-card-label">Main keys:</span> <code>COLIBRI_WORKITEM_SK</code>, <code>ROLE_CODE</code>, <code>COLIBRI_USER_SK</code> or raw user value</div>
+            <div class="er-card-row"><span class="er-card-label">Joins:</span> to hub for same work item; to user dimension for people/role labels</div>
+            <div class="er-card-row"><span class="er-card-label">Columns:</span> owner, responsible, stand-in, changed-by, BIA roles, raw name/email fallback; adds people/role labels</div>
+          </td>
+          <td class="dimension">
+            <div class="er-card-title"><code>dwh_core.Dim_ColibriUsers</code></div>
+            <div class="er-card-row"><span class="er-card-label">Main keys:</span> PK <code>COLIBRI_USER_SK</code>; BK <code>COLIBRI_USER_BK</code></div>
+            <div class="er-card-row"><span class="er-card-label">Joins:</span> from user role bridge by user SK</div>
+            <div class="er-card-row"><span class="er-card-label">Columns:</span> name, email, user type, GitHub attributes, user labels</div>
+          </td>
+          <td class="er-empty">Views can flatten role rows when a report needs named owner/responsible fields</td>
+        </tr>
+        <tr>
+          <td class="er-empty">Original IDs remain traceable</td>
+          <td class="er-empty">Surrogate key controls downstream joins</td>
+          <td class="subject">
+            <div class="er-card-title"><code>dwh_core.Fact_ColibriWorkItemRelease</code></div>
+            <div class="er-card-row"><span class="er-card-label">Main keys:</span> <code>COLIBRI_WORKITEM_SK</code></div>
+            <div class="er-card-row"><span class="er-card-label">Joins:</span> to hub for same work item; to product through hub</div>
+            <div class="er-card-row"><span class="er-card-label">Columns:</span> release type, version, date, relevance, and release context</div>
+          </td>
+          <td class="er-empty">Bridge tables handle repeating relationships</td>
+          <td class="er-empty">Dimension rows provide readable labels</td>
+          <td class="er-empty">Views can join BIA, risk, release, and budget only when needed</td>
+        </tr>
+        <tr>
+          <td class="er-empty">Staging keeps the complete payload</td>
+          <td class="er-empty">Hub keeps common descriptors only</td>
+          <td class="subject">
+            <div class="er-card-title"><code>dwh_core.Fact_ColibriWorkItemBudget</code></div>
+            <div class="er-card-row"><span class="er-card-label">Main keys:</span> <code>COLIBRI_WORKITEM_SK</code></div>
+            <div class="er-card-row"><span class="er-card-label">Joins:</span> to hub for same work item; to product through hub</div>
+            <div class="er-card-row"><span class="er-card-label">Columns:</span> previous, current, next, and total budget values</div>
+          </td>
+          <td class="er-empty">Use bridges instead of repeating role and hierarchy columns</td>
+          <td class="er-empty">Product and user dimensions are shared by multiple views</td>
+          <td class="er-empty">Consumption layer presents denormalized report shapes</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="diagram-note"><strong>How to read the diagram:</strong> staging supplies original IDs; the hub turns the original work item ID into the warehouse work item key; subject facts and bridges hang from that same work item key; dimensions add product labels and people/role labels for reporting views.</div>
+  </div>
+
+  <h2>6. Detailed Table Column Design</h2>
+  <p>This section expands the split design into table-level column lists. The first table names every current column in the existing wide fact and groups each one by the recommended future owner. The following tables show the exact recommended columns for each target object.</p>
+
+  <h3>Current wide table: <code>dwh_core.Fact_ColibriWorkItems</code> column inventory grouped by target assignment</h3>
+  <table class="mini-table">
+    <thead><tr><th>Recommended target assignment</th><th>Columns from the current wide fact</th></tr></thead>
+    <tbody>
+      <tr><td>Hub identity, product link, descriptors, lifecycle dates, data quality, and audit</td><td><ul class="column-list"><li><code>COLIBRI_WORKITEM_SK</code></li><li><code>COLIBRI_WORKITEM_BK</code></li><li><code>COLIBRI_PRODUCT_SK</code></li><li><code>COLIBRI_WORKITEM_TYPE</code></li><li><code>COLIBRI_FACTSHEET_TYPE</code></li><li><code>COLIBRI_PRODUCT_TYPE</code></li><li><code>APP_SK</code></li><li><code>MODULE_TYPE</code></li><li><code>DOMAIN</code></li><li><code>COLIBRI_STATUS</code></li><li><code>COLIBRI_WORKITEM_TITLE</code></li><li><code>COLIBRI_WORKITEM_STATE</code></li><li><code>PRODUCT_STATUS_DESCRIPTION</code></li><li><code>COLIBRI_MODUS_OPERANDI</code></li><li><code>COLIBRI_CATEGORY_SHORT</code></li><li><code>COLIBRI_PHASE</code></li><li><code>COLIBRI_GERMAN_DESCRIPTION</code></li><li><code>COLIBRI_CHANGED_DateTime</code></li><li><code>COLIBRI_CHANGED_Date</code></li><li><code>COLIBRI_CHANGED_DateID</code></li><li><code>COLIBRI_START_OF_DAY_DateTime</code></li><li><code>COLIBRI_START_OF_DAY_Date</code></li><li><code>COLIBRI_START_OF_DAY_DateID</code></li><li><code>COLIBRI_END_OF_DAY_DateTime</code></li><li><code>COLIBRI_END_OF_DAY_Date</code></li><li><code>COLIBRI_END_OF_DAY_DateID</code></li><li><code>COLIBRI_END_OF_LIFE_DateTime</code></li><li><code>COLIBRI_END_OF_LIFE_Date</code></li><li><code>COLIBRI_END_OF_LIFE_DateID</code></li><li><code>COLIBRI_FIRST_GO_LIVE_DateTime</code></li><li><code>COLIBRI_FIRST_GO_LIVE_Date</code></li><li><code>COLIBRI_FIRST_GO_LIVE_DateID</code></li><li><code>COLIBRI_PPM_ID</code></li><li><code>COLIBRI_DESCRIPTION_EN_CLEARED</code></li><li><code>COLIBRI_CREATED_DateTime</code></li><li><code>COLIBRI_CREATED_Date</code></li><li><code>COLIBRI_CREATED_DateID</code></li><li><code>COLIBRI_SOURCE_ID</code></li><li><code>COLIBRI_TYPE</code></li><li><code>IS_VALID_PRODUCT</code></li><li><code>_lineage_row_id</code></li><li><code>_job_run_guid</code></li><li><code>_ins_datetime</code></li><li><code>_upd_datetime</code></li><li><code>_columns_checksum</code></li></ul></td></tr>
+      <tr><td>BIA / finance / business impact subject fact</td><td><ul class="column-list"><li><code>COLIBRI_CLASSIFICATION_TYPE</code></li><li><code>COLIBRI_BIAIT_SCORE</code></li><li><code>COLIBRI_RISK_CLASS</code></li><li><code>COLIBRI_SECURITY_CLASS</code></li><li><code>COLIBRI_LAST_REVIEW_DateTime</code></li><li><code>COLIBRI_LAST_REVIEW_Date</code></li><li><code>COLIBRI_LAST_REVIEW_DateID</code></li><li><code>COLIBRI_ACCOUNTING_RELEVANCE</code></li><li><code>COLIBRI_COMPLIANCE_RELEVANCE</code></li><li><code>COLIBRI_ICS_RELEVANCE</code></li><li><code>COLIBRI_PROCESS_RELEVANCE</code></li><li><code>COLIBRI_PRODUCT_RELEVANCE</code></li><li><code>COLIBRI_PRODUCT_RELEVANCE_REASON</code></li><li><code>COLIBRI_SYSTEM_FAILURE_24H</code></li><li><code>COLIBRI_REVIEW_CYCLE</code></li><li><code>COLIBRI_CALCULATED_BUSINESS_IMPACT</code></li><li><code>COLIBRI_COMPLETE_BIAIT_NECESSARY</code></li><li><code>COLIBRI_FINANCIAL_IMPACT_14D</code></li><li><code>COLIBRI_FINANCIAL_IMPACT_1H</code></li><li><code>COLIBRI_FINANCIAL_IMPACT_24H</code></li><li><code>COLIBRI_FINANCIAL_IMPACT_24H_RISK_CLASS</code></li><li><code>COLIBRI_FINANCIAL_IMPACT_30D</code></li><li><code>COLIBRI_FINANCIAL_IMPACT_4H</code></li><li><code>COLIBRI_FINANCIAL_IMPACT_72H</code></li><li><code>COLIBRI_FINANCIAL_IMPACT_7D</code></li><li><code>COLIBRI_LEGAL_IMPACT_14D</code></li><li><code>COLIBRI_LEGAL_IMPACT_1H</code></li><li><code>COLIBRI_LEGAL_IMPACT_24H</code></li><li><code>COLIBRI_LEGAL_IMPACT_24H_RISK_CLASS</code></li><li><code>COLIBRI_LEGAL_IMPACT_30D</code></li><li><code>COLIBRI_LEGAL_IMPACT_4H</code></li><li><code>COLIBRI_LEGAL_IMPACT_72H</code></li><li><code>COLIBRI_LEGAL_IMPACT_7D</code></li><li><code>COLIBRI_POINT_CRITICAL_FINANCIAL_LOSS_10M_EUR</code></li><li><code>COLIBRI_RPO</code></li><li><code>COLIBRI_RTO</code></li><li><code>COLIBRI_RECOMMENDED_INFRASTRUCTURE</code></li><li><code>COLIBRI_REPUTATION_LOSS_14D</code></li><li><code>COLIBRI_REPUTATION_LOSS_1H</code></li><li><code>COLIBRI_REPUTATION_LOSS_24H</code></li><li><code>COLIBRI_REPUTATION_LOSS_24H_RISK_CLASS</code></li><li><code>COLIBRI_REPUTATION_LOSS_30D</code></li><li><code>COLIBRI_REPUTATION_LOSS_4H</code></li><li><code>COLIBRI_REPUTATION_LOSS_72H</code></li><li><code>COLIBRI_REPUTATION_LOSS_7D</code></li></ul></td></tr>
+      <tr><td>Risk subject fact</td><td><ul class="column-list"><li><code>COLIBRI_RISK_TITLE</code></li><li><code>COLIBRI_RISK_SCORE</code></li><li><code>COLIBRI_RISK_CLASS</code></li><li><code>COLIBRI_SECURITY_CLASS</code></li><li><code>COLIBRI_RISK_CLASS_ALTERNATIVE</code></li><li><code>COLIBRI_RISK_CLASS_ALTERNATIVE_NEW</code></li><li><code>COLIBRI_SYSTEM_FAILURE_24H</code></li></ul></td></tr>
+      <tr><td>Release subject fact</td><td><ul class="column-list"><li><code>COLIBRI_RELEASE_TYPE</code></li><li><code>COLIBRI_RELEASE_VERSION</code></li><li><code>COLIBRI_RELEASE_DateTime</code></li><li><code>COLIBRI_RELEASE_Date</code></li><li><code>COLIBRI_RELEASE_DateID</code></li><li><code>COLIBRI_RELEASE_RELEVANCE</code></li></ul></td></tr>
+      <tr><td>Budget subject fact</td><td><ul class="column-list"><li><code>PREVIOUS_YEAR_BUDGET</code></li><li><code>CURRENT_YEAR_BUDGET</code></li><li><code>NEXT_YEAR_BUDGET</code></li><li><code>TOTAL_BUDGET</code></li></ul></td></tr>
+      <tr><td>Hierarchy bridge</td><td><ul class="column-list"><li><code>PARENT_COLIBRI_WORKITEM_SK</code></li></ul></td></tr>
+      <tr><td>User role bridge</td><td><ul class="column-list"><li><code>COLIBRI_USER_SK</code></li><li><code>COLIBRI_BUSINESS_PRODUCT_OWNER</code></li><li><code>COLIBRI_RESPONSIBLE_IT_DEPT</code></li><li><code>COLIBRI_TMK_BUSINESS</code></li><li><code>COLIBRI_OMK_IT</code></li><li><code>COLIBRI_DATA_CHANGED_BY_NAME</code></li><li><code>COLIBRI_DATA_CHANGED_BY_EMAIL</code></li><li><code>COLIBRI_STANDIN_PERSON</code></li><li><code>COLIBRI_STANDIN_EMAIL</code></li><li><code>COLIBRI_RESPONSIBLE_PERSON</code></li><li><code>COLIBRI_RESPONSIBLE_EMAIL</code></li><li><code>COLIBRI_MANAGER_BUSINESS_SK</code></li><li><code>COLIBRI_RESPONSIBLE_BUSINESS_SK</code></li><li><code>COLIBRI_RESPONSIBLE_IT_SK</code></li><li><code>COLIBRI_BIA_RESPONSIBLE_BUSINESS_ENTRA_ID</code></li><li><code>COLIBRI_BIA_RESPONSIBLE_BUSINESS_ENTRA_NAME</code></li><li><code>COLIBRI_BIA_RESPONSIBLE_IT_ENTRA_ID</code></li><li><code>COLIBRI_BIA_RESPONSIBLE_IT_ENTRA_NAME</code></li><li><code>COLIBRI_BIA_MANAGER_BUSINESS_ENTRA_ID</code></li><li><code>COLIBRI_BIA_MANAGER_BUSINESS_ENTRA_NAME</code></li><li><code>COLIBRI_CHANGED_BY_USER_SK</code></li></ul></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Hub: <code>dwh_core.Fact_ColibriWorkItems</code></h3>
+  <table class="mini-table"><thead><tr><th>Column group</th><th>Recommended columns</th><th>Plain-language purpose</th></tr></thead><tbody>
+    <tr><td>Keys</td><td><code>COLIBRI_WORKITEM_SK</code>, <code>COLIBRI_WORKITEM_BK</code>, <code>COLIBRI_PRODUCT_SK</code></td><td>The warehouse work item ID, the original source work item ID, and the product key used for product joins.</td></tr>
+    <tr><td>Common descriptors</td><td><code>COLIBRI_WORKITEM_TYPE</code>, <code>COLIBRI_FACTSHEET_TYPE</code>, <code>COLIBRI_PRODUCT_TYPE</code>, <code>APP_SK</code>, <code>MODULE_TYPE</code>, <code>DOMAIN</code>, <code>COLIBRI_STATUS</code>, <code>COLIBRI_WORKITEM_TITLE</code>, <code>COLIBRI_WORKITEM_STATE</code>, <code>PRODUCT_STATUS_DESCRIPTION</code>, <code>COLIBRI_MODUS_OPERANDI</code>, <code>COLIBRI_CATEGORY_SHORT</code>, <code>COLIBRI_PHASE</code>, <code>COLIBRI_GERMAN_DESCRIPTION</code>, <code>COLIBRI_PPM_ID</code>, <code>COLIBRI_DESCRIPTION_EN_CLEARED</code>, <code>COLIBRI_SOURCE_ID</code>, <code>COLIBRI_TYPE</code>, <code>IS_VALID_PRODUCT</code></td><td>Fields that describe the work item itself and are broadly useful across reports.</td></tr>
+    <tr><td>Hub dates</td><td><code>COLIBRI_CHANGED_DateTime</code>, <code>COLIBRI_CHANGED_Date</code>, <code>COLIBRI_CHANGED_DateID</code>, <code>COLIBRI_START_OF_DAY_DateTime</code>, <code>COLIBRI_START_OF_DAY_Date</code>, <code>COLIBRI_START_OF_DAY_DateID</code>, <code>COLIBRI_END_OF_DAY_DateTime</code>, <code>COLIBRI_END_OF_DAY_Date</code>, <code>COLIBRI_END_OF_DAY_DateID</code>, <code>COLIBRI_END_OF_LIFE_DateTime</code>, <code>COLIBRI_END_OF_LIFE_Date</code>, <code>COLIBRI_END_OF_LIFE_DateID</code>, <code>COLIBRI_FIRST_GO_LIVE_DateTime</code>, <code>COLIBRI_FIRST_GO_LIVE_Date</code>, <code>COLIBRI_FIRST_GO_LIVE_DateID</code>, <code>COLIBRI_CREATED_DateTime</code>, <code>COLIBRI_CREATED_Date</code>, <code>COLIBRI_CREATED_DateID</code></td><td>General work item timeline fields. Release-owned dates stay in the release fact; BIA review dates stay in the BIA fact.</td></tr>
+    <tr><td>Audit</td><td><code>_lineage_row_id</code>, <code>_job_run_guid</code>, <code>_ins_datetime</code>, <code>_upd_datetime</code>, <code>_columns_checksum</code></td><td>Warehouse load traceability and change detection.</td></tr>
+  </tbody></table>
+
+  <h3>Subject fact: <code>dwh_core.Fact_ColibriWorkItemBIA</code></h3>
+  <table class="mini-table"><thead><tr><th>Column group</th><th>Recommended columns</th><th>Notes</th></tr></thead><tbody>
+    <tr><td>Keys and audit</td><td><code>COLIBRI_WORKITEM_SK</code>, optional <code>COLIBRI_WORKITEM_BK</code>, optional <code>COLIBRI_PRODUCT_SK</code>, <code>_lineage_row_id</code>, <code>_job_run_guid</code>, <code>_ins_datetime</code>, <code>_upd_datetime</code>, <code>_columns_checksum</code></td><td>The work item SK is the required join back to the hub. BK/product copies help reconciliation and reporting migration.</td></tr>
+    <tr><td>BIA classification and review</td><td><code>COLIBRI_CLASSIFICATION_TYPE</code>, <code>COLIBRI_BIAIT_SCORE</code>, <code>COLIBRI_RISK_CLASS</code>, <code>COLIBRI_SECURITY_CLASS</code>, <code>COLIBRI_LAST_REVIEW_DateTime</code>, <code>COLIBRI_LAST_REVIEW_Date</code>, <code>COLIBRI_LAST_REVIEW_DateID</code>, <code>COLIBRI_REVIEW_CYCLE</code>, <code>COLIBRI_CALCULATED_BUSINESS_IMPACT</code>, <code>COLIBRI_COMPLETE_BIAIT_NECESSARY</code></td><td>Risk/security class can temporarily also exist in the risk fact while BIA reports still expect it.</td></tr>
+    <tr><td>Relevance and recovery</td><td><code>COLIBRI_ACCOUNTING_RELEVANCE</code>, <code>COLIBRI_COMPLIANCE_RELEVANCE</code>, <code>COLIBRI_ICS_RELEVANCE</code>, <code>COLIBRI_PROCESS_RELEVANCE</code>, <code>COLIBRI_PRODUCT_RELEVANCE</code>, <code>COLIBRI_PRODUCT_RELEVANCE_REASON</code>, <code>COLIBRI_SYSTEM_FAILURE_24H</code>, <code>COLIBRI_RPO</code>, <code>COLIBRI_RTO</code>, <code>COLIBRI_RECOMMENDED_INFRASTRUCTURE</code></td><td><code>COLIBRI_SYSTEM_FAILURE_24H</code> can be temporarily duplicated with risk if it is used as both BIA impact and risk explanation.</td></tr>
+    <tr><td>Financial, legal, and reputation impact</td><td><code>COLIBRI_FINANCIAL_IMPACT_14D</code>, <code>COLIBRI_FINANCIAL_IMPACT_1H</code>, <code>COLIBRI_FINANCIAL_IMPACT_24H</code>, <code>COLIBRI_FINANCIAL_IMPACT_24H_RISK_CLASS</code>, <code>COLIBRI_FINANCIAL_IMPACT_30D</code>, <code>COLIBRI_FINANCIAL_IMPACT_4H</code>, <code>COLIBRI_FINANCIAL_IMPACT_72H</code>, <code>COLIBRI_FINANCIAL_IMPACT_7D</code>, <code>COLIBRI_LEGAL_IMPACT_14D</code>, <code>COLIBRI_LEGAL_IMPACT_1H</code>, <code>COLIBRI_LEGAL_IMPACT_24H</code>, <code>COLIBRI_LEGAL_IMPACT_24H_RISK_CLASS</code>, <code>COLIBRI_LEGAL_IMPACT_30D</code>, <code>COLIBRI_LEGAL_IMPACT_4H</code>, <code>COLIBRI_LEGAL_IMPACT_72H</code>, <code>COLIBRI_LEGAL_IMPACT_7D</code>, <code>COLIBRI_POINT_CRITICAL_FINANCIAL_LOSS_10M_EUR</code>, <code>COLIBRI_REPUTATION_LOSS_14D</code>, <code>COLIBRI_REPUTATION_LOSS_1H</code>, <code>COLIBRI_REPUTATION_LOSS_24H</code>, <code>COLIBRI_REPUTATION_LOSS_24H_RISK_CLASS</code>, <code>COLIBRI_REPUTATION_LOSS_30D</code>, <code>COLIBRI_REPUTATION_LOSS_4H</code>, <code>COLIBRI_REPUTATION_LOSS_72H</code>, <code>COLIBRI_REPUTATION_LOSS_7D</code></td><td>These are business-impact measures or classifications and should move out of the hub.</td></tr>
+  </tbody></table>
+
+  <h3>Subject fact: <code>dwh_core.Fact_ColibriWorkItemRisk</code></h3>
+  <table class="mini-table"><thead><tr><th>Column group</th><th>Recommended columns</th><th>Notes</th></tr></thead><tbody>
+    <tr><td>Keys and audit</td><td><code>COLIBRI_WORKITEM_SK</code>, optional <code>COLIBRI_WORKITEM_BK</code>, <code>_lineage_row_id</code>, <code>_job_run_guid</code>, <code>_ins_datetime</code>, <code>_upd_datetime</code>, <code>_columns_checksum</code></td><td>Required join is back to the hub by <code>COLIBRI_WORKITEM_SK</code>.</td></tr>
+    <tr><td>Risk values</td><td><code>COLIBRI_RISK_TITLE</code>, <code>COLIBRI_RISK_SCORE</code>, <code>COLIBRI_RISK_CLASS</code>, <code>COLIBRI_SECURITY_CLASS</code>, <code>COLIBRI_RISK_CLASS_ALTERNATIVE</code>, <code>COLIBRI_RISK_CLASS_ALTERNATIVE_NEW</code>, <code>COLIBRI_SYSTEM_FAILURE_24H</code></td><td><code>COLIBRI_RISK_CLASS</code>, <code>COLIBRI_SECURITY_CLASS</code>, and <code>COLIBRI_SYSTEM_FAILURE_24H</code> may also be kept in BIA during migration because they can read as both risk and impact information.</td></tr>
+  </tbody></table>
+
+  <h3>Subject fact: <code>dwh_core.Fact_ColibriWorkItemRelease</code></h3>
+  <table class="mini-table"><thead><tr><th>Column group</th><th>Recommended columns</th><th>Notes</th></tr></thead><tbody>
+    <tr><td>Keys and audit</td><td><code>COLIBRI_WORKITEM_SK</code>, optional <code>COLIBRI_WORKITEM_BK</code>, <code>_lineage_row_id</code>, <code>_job_run_guid</code>, <code>_ins_datetime</code>, <code>_upd_datetime</code>, <code>_columns_checksum</code></td><td>One row per work item unless the source later exposes multiple releases per work item.</td></tr>
+    <tr><td>Release fields</td><td><code>COLIBRI_RELEASE_TYPE</code>, <code>COLIBRI_RELEASE_VERSION</code>, <code>COLIBRI_RELEASE_DateTime</code>, <code>COLIBRI_RELEASE_Date</code>, <code>COLIBRI_RELEASE_DateID</code>, <code>COLIBRI_RELEASE_RELEVANCE</code></td><td>Release relevance belongs here unless a specific BIA report requires a temporary copy.</td></tr>
+  </tbody></table>
+
+  <h3>Subject fact: <code>dwh_core.Fact_ColibriWorkItemBudget</code></h3>
+  <table class="mini-table"><thead><tr><th>Column group</th><th>Recommended columns</th><th>Notes</th></tr></thead><tbody>
+    <tr><td>Keys and audit</td><td><code>COLIBRI_WORKITEM_SK</code>, optional <code>COLIBRI_WORKITEM_BK</code>, <code>_lineage_row_id</code>, <code>_job_run_guid</code>, <code>_ins_datetime</code>, <code>_upd_datetime</code>, <code>_columns_checksum</code></td><td>Budget facts join to the hub by work item SK.</td></tr>
+    <tr><td>Budget measures</td><td><code>PREVIOUS_YEAR_BUDGET</code>, <code>CURRENT_YEAR_BUDGET</code>, <code>NEXT_YEAR_BUDGET</code>, <code>TOTAL_BUDGET</code></td><td>Keep together because they are the same business subject and can be reconciled as a small table.</td></tr>
+  </tbody></table>
+
+  <h3>Bridge: <code>dwh_core.Bridge_ColibriWorkItemHierarchy</code></h3>
+  <table class="mini-table"><thead><tr><th>Column group</th><th>Recommended columns</th><th>Notes</th></tr></thead><tbody>
+    <tr><td>Relationship keys</td><td><code>COLIBRI_WORKITEM_SK</code>, <code>PARENT_COLIBRI_WORKITEM_SK</code>, recommended validation columns <code>COLIBRI_WORKITEM_BK</code>, <code>PARENT_COLIBRI_WORKITEM_BK</code>, and optional raw parent source ID when available from staging</td><td>Both child and parent SK values join back to <code>dwh_core.Fact_ColibriWorkItems.COLIBRI_WORKITEM_SK</code>.</td></tr>
+    <tr><td>Audit</td><td><code>_lineage_row_id</code>, <code>_job_run_guid</code>, <code>_ins_datetime</code>, <code>_upd_datetime</code>, <code>_columns_checksum</code></td><td>Allows validation that every parent-child link came from a known staging row.</td></tr>
+  </tbody></table>
+
+  <h3>Bridge: <code>dwh_core.Bridge_ColibriWorkItemUserRole</code></h3>
+  <table class="mini-table"><thead><tr><th>Column group</th><th>Recommended columns</th><th>Notes</th></tr></thead><tbody>
+    <tr><td>Relationship keys</td><td><code>COLIBRI_WORKITEM_SK</code>, <code>COLIBRI_USER_SK</code>, recommended <code>ROLE_CODE</code>, optional <code>COLIBRI_WORKITEM_BK</code></td><td><code>ROLE_CODE</code> lets one work item have many role rows instead of many fixed columns.</td></tr>
+    <tr><td>Current wide fact role sources</td><td><code>COLIBRI_BUSINESS_PRODUCT_OWNER</code>, <code>COLIBRI_RESPONSIBLE_IT_DEPT</code>, <code>COLIBRI_TMK_BUSINESS</code>, <code>COLIBRI_OMK_IT</code>, <code>COLIBRI_DATA_CHANGED_BY_NAME</code>, <code>COLIBRI_DATA_CHANGED_BY_EMAIL</code>, <code>COLIBRI_STANDIN_PERSON</code>, <code>COLIBRI_STANDIN_EMAIL</code>, <code>COLIBRI_RESPONSIBLE_PERSON</code>, <code>COLIBRI_RESPONSIBLE_EMAIL</code>, <code>COLIBRI_MANAGER_BUSINESS_SK</code>, <code>COLIBRI_RESPONSIBLE_BUSINESS_SK</code>, <code>COLIBRI_RESPONSIBLE_IT_SK</code>, <code>COLIBRI_BIA_RESPONSIBLE_BUSINESS_ENTRA_ID</code>, <code>COLIBRI_BIA_RESPONSIBLE_BUSINESS_ENTRA_NAME</code>, <code>COLIBRI_BIA_RESPONSIBLE_IT_ENTRA_ID</code>, <code>COLIBRI_BIA_RESPONSIBLE_IT_ENTRA_NAME</code>, <code>COLIBRI_BIA_MANAGER_BUSINESS_ENTRA_ID</code>, <code>COLIBRI_BIA_MANAGER_BUSINESS_ENTRA_NAME</code>, <code>COLIBRI_CHANGED_BY_USER_SK</code></td><td>Store raw role name/email/ID values alongside resolved user SK so business users can still see source values even when a dimension match is missing.</td></tr>
+    <tr><td>Audit</td><td><code>_lineage_row_id</code>, <code>_job_run_guid</code>, <code>_ins_datetime</code>, <code>_upd_datetime</code>, <code>_columns_checksum</code></td><td>Each bridge row should be traceable to the source record and load execution.</td></tr>
+  </tbody></table>
+
+  <h3>Dimension: <code>dwh_core.Dim_ColibriProducts</code></h3>
+  <table class="mini-table"><thead><tr><th>Column group</th><th>Columns from <code>.synapse_work/Dim_ColibriProducts.sql</code></th><th>Purpose</th></tr></thead><tbody>
+    <tr><td>Product keys</td><td><code>COLIBRI_PRODUCT_SK</code>, <code>COLIBRI_PRODUCT_BK</code></td><td>The warehouse product ID and the source product/project ID used for lookup from staging <code>ProjectId</code>.</td></tr>
+    <tr><td>Product attributes</td><td><code>COLIBRI_PRODUCT_NAME</code>, <code>COLIBRI_PRODUCT_VISIBILITY</code>, <code>ANALYTICS_UPDATE_DateTime</code>, <code>ANALYTICS_UPDATE_Date</code>, <code>ANALYTICS_UPDATE_DateID</code></td><td>Readable product labels and product update dates.</td></tr>
+    <tr><td>Audit</td><td><code>_lineage_row_id</code>, <code>_job_run_guid</code>, <code>_ins_datetime</code>, <code>_upd_datetime</code>, <code>_columns_checksum</code></td><td>Dimension load traceability and change detection.</td></tr>
+  </tbody></table>
+
+  <h3>Dimension: <code>dwh_core.Dim_ColibriUsers</code></h3>
+  <table class="mini-table"><thead><tr><th>Column group</th><th>Columns from <code>.synapse_work/Dim_ColibriUsers.sql</code></th><th>Purpose</th></tr></thead><tbody>
+    <tr><td>User keys</td><td><code>COLIBRI_USER_SK</code>, <code>COLIBRI_USER_BK</code>, <code>COLIBRI_USER_ID</code></td><td>The warehouse user ID, source/user business key, and source user identifier.</td></tr>
+    <tr><td>User attributes</td><td><code>COLIBRI_USER_NAME</code>, <code>COLIBRI_USER_EMAIL</code>, <code>COLIBRI_USER_TYPE</code>, <code>COLIBRI_GITHUB_USER_ID</code>, <code>ANALYTICS_UPDATE_DateTime</code>, <code>ANALYTICS_UPDATE_Date</code>, <code>ANALYTICS_UPDATE_DateID</code></td><td>Readable user labels and matching attributes for bridge reporting.</td></tr>
+    <tr><td>Audit</td><td><code>_lineage_row_id</code>, <code>_job_run_guid</code>, <code>_ins_datetime</code>, <code>_upd_datetime</code>, <code>_columns_checksum</code></td><td>Dimension load traceability and change detection.</td></tr>
+  </tbody></table>
+
+  <h2>7. Plain-Language Join Explanation</h2>
+  <p><code>WorkItemId</code> is the original source ID from Colibri. It is the ID business users may recognize from the operational system. In core, that same value is stored as <code>COLIBRI_WORKITEM_BK</code>, where BK means business key: the source-facing identifier.</p>
+  <p><code>COLIBRI_WORKITEM_SK</code> is the internal warehouse ID. It is created so the warehouse can join tables reliably, even when source IDs are long, inconsistent, or need historical handling. Most core joins should use <code>COLIBRI_WORKITEM_SK</code>, not the source <code>WorkItemId</code>.</p>
+  <p>Products follow a similar two-step path. The staging table provides <code>ProjectId</code>. That value matches <code>Dim_ColibriProducts.COLIBRI_PRODUCT_BK</code>. The product dimension then gives the internal <code>COLIBRI_PRODUCT_SK</code>, which is stored on the hub and can also be copied to subject facts where it makes reporting simpler.</p>
+  <p>The subject facts are like topic folders for the same work item. The hub says, "this is the work item." The BIA fact says, "these are the BIA and impact details for that work item." The risk fact says, "these are the risk details for that work item." Release and budget work the same way. All of them tie back to the same work item by <code>COLIBRI_WORKITEM_SK</code>.</p>
+  <p>Bridges are used when a work item can have relationships rather than just one fixed value. A parent-child relationship needs a hierarchy bridge because one work item can point to another work item. User roles need a user-role bridge because one work item can have many different people or organizations attached to it, such as responsible person, stand-in, changed-by user, BIA responsible IT, or BIA manager business.</p>
+
+  <h2>8. Table-by-Table Join Cheat Sheet</h2>
+  <table class="mini-table">
+    <thead><tr><th>From table</th><th>To table</th><th>Join condition</th><th>Why this join exists</th><th>Expected cardinality</th><th>What columns you usually select after joining</th></tr></thead>
+    <tbody>
+      <tr><td><code>dwh_staging.COLIBRI_WORKITEMS</code></td><td><code>dwh_core.Fact_ColibriWorkItems</code></td><td><code>staging.WorkItemId = hub.COLIBRI_WORKITEM_BK</code></td><td>Connects the original source work item to the core hub row.</td><td>Many staging rows over time to one current hub row per work item BK.</td><td>Hub SK, work item title, type, state, status, domain, phase, created/changed dates.</td></tr>
+      <tr><td><code>dwh_staging.COLIBRI_WORKITEMS</code></td><td><code>dwh_core.Dim_ColibriProducts</code></td><td><code>staging.ProjectId = product.COLIBRI_PRODUCT_BK</code></td><td>Translates the source project/product ID into the warehouse product row.</td><td>Many staging work items to one product dimension row.</td><td><code>COLIBRI_PRODUCT_SK</code>, product name, product visibility.</td></tr>
+      <tr><td><code>dwh_core.Fact_ColibriWorkItems</code></td><td><code>dwh_core.Dim_ColibriProducts</code></td><td><code>hub.COLIBRI_PRODUCT_SK = product.COLIBRI_PRODUCT_SK</code></td><td>Adds readable product context to work item reports.</td><td>Many work items to one product.</td><td>Product name, visibility, product BK, product update dates.</td></tr>
+      <tr><td><code>dwh_core.Fact_ColibriWorkItems</code></td><td><code>dwh_core.Fact_ColibriWorkItemBIA</code></td><td><code>hub.COLIBRI_WORKITEM_SK = bia.COLIBRI_WORKITEM_SK</code></td><td>Adds BIA, finance, legal, reputation, recovery, review, and impact fields for the same work item.</td><td>Expected one hub row to zero or one BIA row unless future BIA history is modeled.</td><td>BIA score, classification type, impact windows, RTO/RPO, relevance flags, review dates.</td></tr>
+      <tr><td><code>dwh_core.Fact_ColibriWorkItems</code></td><td><code>dwh_core.Fact_ColibriWorkItemRisk</code></td><td><code>hub.COLIBRI_WORKITEM_SK = risk.COLIBRI_WORKITEM_SK</code></td><td>Adds risk-specific values without widening the hub.</td><td>Expected one hub row to zero or one risk row unless risk events/history are modeled.</td><td>Risk title, risk score, risk class, security class, risk alternatives.</td></tr>
+      <tr><td><code>dwh_core.Fact_ColibriWorkItems</code></td><td><code>dwh_core.Fact_ColibriWorkItemRelease</code></td><td><code>hub.COLIBRI_WORKITEM_SK = rel.COLIBRI_WORKITEM_SK</code></td><td>Adds release details for the same work item.</td><td>Expected one hub row to zero or one release row unless release version history is modeled.</td><td>Release type, release version, release date, release relevance.</td></tr>
+      <tr><td><code>dwh_core.Fact_ColibriWorkItems</code></td><td><code>dwh_core.Fact_ColibriWorkItemBudget</code></td><td><code>hub.COLIBRI_WORKITEM_SK = budget.COLIBRI_WORKITEM_SK</code></td><td>Adds budget measures while keeping financial measures separate from identity fields.</td><td>Expected one hub row to zero or one budget row until budget versions exist.</td><td>Previous, current, next, and total budget.</td></tr>
+      <tr><td><code>dwh_core.Bridge_ColibriWorkItemHierarchy</code></td><td><code>dwh_core.Fact_ColibriWorkItems</code> as child</td><td><code>bridge.COLIBRI_WORKITEM_SK = child.COLIBRI_WORKITEM_SK</code></td><td>Finds the child work item in a parent-child relationship.</td><td>One bridge row to one child hub row; one child can have multiple bridge rows if multiple parents are allowed.</td><td>Child title, child BK, child type/state/status.</td></tr>
+      <tr><td><code>dwh_core.Bridge_ColibriWorkItemHierarchy</code></td><td><code>dwh_core.Fact_ColibriWorkItems</code> as parent</td><td><code>bridge.PARENT_COLIBRI_WORKITEM_SK = parent.COLIBRI_WORKITEM_SK</code></td><td>Finds the parent work item in the same hub table.</td><td>One bridge row to zero or one parent hub row, depending on parent availability.</td><td>Parent title, parent BK, parent type/state/status.</td></tr>
+      <tr><td><code>dwh_core.Fact_ColibriWorkItems</code></td><td><code>dwh_core.Bridge_ColibriWorkItemUserRole</code></td><td><code>hub.COLIBRI_WORKITEM_SK = role_bridge.COLIBRI_WORKITEM_SK</code></td><td>Adds all people/role relationships for the work item without adding many fixed role columns to the hub.</td><td>One hub row to zero, one, or many role bridge rows.</td><td>Role code, raw role name/email/ID, resolved user SK.</td></tr>
+      <tr><td><code>dwh_core.Bridge_ColibriWorkItemUserRole</code></td><td><code>dwh_core.Dim_ColibriUsers</code></td><td><code>role_bridge.COLIBRI_USER_SK = user_dim.COLIBRI_USER_SK</code></td><td>Adds standardized user name, email, type, and other user attributes when a role can be resolved.</td><td>Many role bridge rows to zero or one user dimension row.</td><td>User name, user email, user type, user BK, GitHub user ID.</td></tr>
+      <tr><td>Reporting views / consumption</td><td>Hub, subject facts, bridges, dimensions</td><td>Start with hub; join subject facts by <code>COLIBRI_WORKITEM_SK</code>; join product/user dimensions by their SKs.</td><td>Creates business-friendly views without forcing every report to read one very wide fact table.</td><td>Depends on selected subject: usually one hub row with optional subject rows; bridge joins can multiply rows.</td><td>Business labels and only the topic fields needed for the report.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>9. Staging-to-Target Split Table</h2>
+  <table class="mini-table">
+    <thead><tr><th>Source / staging family</th><th>Target table</th><th>Key / join</th><th>Load rule</th><th>Reporting join path</th></tr></thead>
+    <tbody>
+      <tr><td>Work item identity and common fields</td><td><code>dwh_core.Fact_ColibriWorkItems</code></td><td><code>staging.WorkItemId -&gt; hub.COLIBRI_WORKITEM_BK</code></td><td>Deduplicate by latest staging row; maintain one current hub row per work item BK.</td><td>Base hub row joined to subject facts by <code>COLIBRI_WORKITEM_SK</code>.</td></tr>
+      <tr><td>Project/product</td><td><code>dwh_core.Dim_ColibriProducts</code>, then hub and BIA product FK</td><td><code>staging.ProjectId -&gt; Dim_ColibriProducts.COLIBRI_PRODUCT_BK -&gt; COLIBRI_PRODUCT_SK</code></td><td>Lookup product SK during hub/subject loads; set valid-product flag or orphan count where lookup fails.</td><td>Join product labels by <code>COLIBRI_PRODUCT_SK</code>.</td></tr>
+      <tr><td>BIA / finance impact</td><td><code>dwh_core.Fact_ColibriWorkItemBIA</code></td><td><code>hub.COLIBRI_WORKITEM_SK -&gt; bia.COLIBRI_WORKITEM_SK</code></td><td>Load BIA classification, relevance, impact windows, RTO/RPO, review, and BIA responsible fields.</td><td>BIA view joins <code>bia</code> to hub and product dimension.</td></tr>
+      <tr><td>Risk</td><td><code>dwh_core.Fact_ColibriWorkItemRisk</code></td><td><code>hub.COLIBRI_WORKITEM_SK -&gt; risk.COLIBRI_WORKITEM_SK</code></td><td>Load risk title, score, class, security class, alternative/justification fields at approved grain.</td><td>Risk view joins <code>risk</code> to hub, product, and optional user roles.</td></tr>
+      <tr><td>Release</td><td><code>dwh_core.Fact_ColibriWorkItemRelease</code></td><td><code>hub.COLIBRI_WORKITEM_SK -&gt; release.COLIBRI_WORKITEM_SK</code></td><td>Load release type, version, date, and relevance; decide whether multiple releases per work item are possible.</td><td>Release reporting joins <code>release</code> to hub and product.</td></tr>
+      <tr><td>Budget</td><td><code>dwh_core.Fact_ColibriWorkItemBudget</code></td><td><code>hub.COLIBRI_WORKITEM_SK -&gt; budget.COLIBRI_WORKITEM_SK</code></td><td>Cast numeric budget measures; one row per work item unless budget versioning is approved.</td><td>Budget view joins <code>budget</code> to hub and product.</td></tr>
+      <tr><td>Parent / hierarchy</td><td><code>dwh_core.Bridge_ColibriWorkItemHierarchy</code></td><td>Child and parent both join to hub <code>COLIBRI_WORKITEM_SK</code>.</td><td>Resolve child and parent BKs after the hub load is complete.</td><td>Hierarchy reporting joins bridge to hub twice: child alias and parent alias.</td></tr>
+      <tr><td>Users / roles</td><td><code>dwh_core.Bridge_ColibriWorkItemUserRole</code> plus <code>dwh_core.Dim_ColibriUsers</code></td><td><code>bridge.COLIBRI_WORKITEM_SK</code> to hub; <code>bridge.COLIBRI_USER_SK</code> to user dimension.</td><td>Create one bridge row per role; keep <code>ROLE_CODE</code>, resolved user SK, raw name, and raw email.</td><td>User-role reporting filters by <code>ROLE_CODE</code> and joins to <code>Dim_ColibriUsers</code>.</td></tr>
+      <tr><td>Dates / audit / lineage</td><td>Owning hub or subject table</td><td>Audit columns remain local to each loaded table.</td><td>Common create/change fields stay in hub; BIA review fields stay in BIA; release dates stay in release; lineage copied for traceability.</td><td>Views select dates from the table that owns the business process.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>10. Complete Column Placement Matrix</h2>
+  <p class="callout">Inventory result: all 126 current columns from <code>.synapse_work/Fact_ColibriWorkItems.sql</code> are listed below. The matrix assigns each column to the recommended target, category, reason, and join/link behavior. Where a column should temporarily exist in both the hub and a subject table for migration compatibility, the notes say so explicitly.</p>
+  <table>
+    <thead><tr><th>#</th><th>Column</th><th>Recommended target table</th><th>Category</th><th>Reason</th><th>Join/link behavior</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><code>COLIBRI_WORKITEM_SK</code></td><td>Hub PK; copied to subject tables as FK</td><td>Surrogate key</td><td>Primary technical key for the work item hub.</td><td>Join hub to every subject table by <code>COLIBRI_WORKITEM_SK</code>.</td></tr>
+      <tr><td>2</td><td><code>COLIBRI_WORKITEM_BK</code></td><td>Hub UK; retained in subject tables for reconciliation</td><td>Business key</td><td>Loaded from staging <code>WorkItemId</code>.</td><td><code>staging.WorkItemId -&gt; hub.COLIBRI_WORKITEM_BK</code>; temporary duplication in subject facts is allowed.</td></tr>
+      <tr><td>3</td><td><code>PARENT_COLIBRI_WORKITEM_SK</code></td><td><code>Bridge_ColibriWorkItemHierarchy</code></td><td>Hierarchy</td><td>Parent-child is a relationship, not a hub attribute.</td><td>Parent and child both join to hub SK.</td></tr>
+      <tr><td>4</td><td><code>COLIBRI_PRODUCT_SK</code></td><td>Hub FK; copied to BIA if useful for reporting</td><td>Product link</td><td>Shared product context for a work item.</td><td><code>staging.ProjectId -&gt; Dim_ColibriProducts.COLIBRI_PRODUCT_BK -&gt; COLIBRI_PRODUCT_SK</code>.</td></tr>
+      <tr><td>5</td><td><code>COLIBRI_WORKITEM_TYPE</code></td><td>Hub; temporary BIA copy for reporting parity</td><td>Work item descriptor</td><td>Common classification/filter field.</td><td>No dimension join; BIA copy may be retained during migration.</td></tr>
+      <tr><td>6</td><td><code>COLIBRI_FACTSHEET_TYPE</code></td><td>Hub</td><td>Generic descriptor</td><td>Describes the work item/factsheet context.</td><td>No subject join required.</td></tr>
+      <tr><td>7</td><td><code>COLIBRI_CLASSIFICATION_TYPE</code></td><td><code>Fact_ColibriWorkItemBIA</code>; temporary hub copy</td><td>BIA classification</td><td>BIA view filter and BIA-owned classification.</td><td>BIA joins to hub by work item SK.</td></tr>
+      <tr><td>8</td><td><code>COLIBRI_PRODUCT_TYPE</code></td><td>Hub or product dimension extension</td><td>Product descriptor</td><td>Looks product-related but currently stored with work item.</td><td>If normalized, join through <code>COLIBRI_PRODUCT_SK</code>.</td></tr>
+      <tr><td>9</td><td><code>APP_SK</code></td><td>Hub and BIA subject reference</td><td>Application link</td><td>External application/LeanIX reference used by BIA reporting.</td><td>Temporary duplication for backward compatibility.</td></tr>
+      <tr><td>10</td><td><code>COLIBRI_USER_SK</code></td><td><code>Bridge_ColibriWorkItemUserRole</code></td><td>User link</td><td>A single user column cannot represent multiple roles.</td><td>Bridge joins to <code>Dim_ColibriUsers</code> by <code>COLIBRI_USER_SK</code>.</td></tr>
+      <tr><td>11</td><td><code>MODULE_TYPE</code></td><td>Hub</td><td>Generic descriptor</td><td>Common work item/module context.</td><td>No special join.</td></tr>
+      <tr><td>12</td><td><code>DOMAIN</code></td><td>Hub; optional future <code>Dim_ColibriDomain</code></td><td>Domain descriptor</td><td>Keep local unless normalization is required.</td><td>No join now; future domain dimension only by decision.</td></tr>
+      <tr><td>13</td><td><code>COLIBRI_STATUS</code></td><td>Hub</td><td>Status</td><td>Common work item lifecycle/status value.</td><td>No special join.</td></tr>
+      <tr><td>14</td><td><code>COLIBRI_WORKITEM_TITLE</code></td><td>Hub</td><td>Title</td><td>Core descriptive identity of the work item.</td><td>No special join.</td></tr>
+      <tr><td>15</td><td><code>COLIBRI_WORKITEM_STATE</code></td><td>Hub; temporary BIA copy for reporting parity</td><td>State</td><td>Common work item state and BIA filter support.</td><td>No dimension join; temporary duplication in BIA is acceptable.</td></tr>
+      <tr><td>16</td><td><code>COLIBRI_RISK_TITLE</code></td><td><code>Fact_ColibriWorkItemRisk</code></td><td>Risk</td><td>Risk-specific descriptor.</td><td>Risk fact joins to hub by work item SK.</td></tr>
+      <tr><td>17</td><td><code>COLIBRI_RISK_SCORE</code></td><td><code>Fact_ColibriWorkItemRisk</code></td><td>Risk measure</td><td>Risk-specific numeric measure.</td><td>Risk fact joins to hub by work item SK.</td></tr>
+      <tr><td>18</td><td><code>COLIBRI_RELEASE_TYPE</code></td><td><code>Fact_ColibriWorkItemRelease</code></td><td>Release</td><td>Release-specific classification.</td><td>Release fact joins to hub by work item SK.</td></tr>
+      <tr><td>19</td><td><code>COLIBRI_RELEASE_VERSION</code></td><td><code>Fact_ColibriWorkItemRelease</code></td><td>Release</td><td>Release-specific version value.</td><td>Release fact joins to hub by work item SK.</td></tr>
+      <tr><td>20</td><td><code>PRODUCT_STATUS_DESCRIPTION</code></td><td>Hub or product dimension extension</td><td>Product status descriptor</td><td>Needs ownership confirmation between product and work item.</td><td>If product-owned, join through product SK.</td></tr>
+      <tr><td>21</td><td><code>COLIBRI_MODUS_OPERANDI</code></td><td>Hub</td><td>Generic descriptor</td><td>Common operating-mode descriptor.</td><td>No special join.</td></tr>
+      <tr><td>22</td><td><code>COLIBRI_CATEGORY_SHORT</code></td><td>Hub</td><td>Category</td><td>Common work item category.</td><td>No special join.</td></tr>
+      <tr><td>23</td><td><code>COLIBRI_BUSINESS_PRODUCT_OWNER</code></td><td><code>Bridge_ColibriWorkItemUserRole</code></td><td>User role</td><td>Owner is a role relationship.</td><td>Resolve to user dimension where possible; keep raw value fallback.</td></tr>
+      <tr><td>24</td><td><code>COLIBRI_PHASE</code></td><td>Hub</td><td>Lifecycle phase</td><td>Common lifecycle descriptor.</td><td>No special join.</td></tr>
+      <tr><td>25</td><td><code>COLIBRI_RESPONSIBLE_IT_DEPT</code></td><td><code>Bridge_ColibriWorkItemUserRole</code> or hub organization attribute</td><td>Responsible organization</td><td>Role-like organizational ownership.</td><td>Attach to role bridge when role grain is approved.</td></tr>
+      <tr><td>26</td><td><code>COLIBRI_GERMAN_DESCRIPTION</code></td><td>Hub</td><td>Description</td><td>Common work item text.</td><td>No special join.</td></tr>
+      <tr><td>27</td><td><code>PREVIOUS_YEAR_BUDGET</code></td><td><code>Fact_ColibriWorkItemBudget</code></td><td>Budget measure</td><td>Budget-specific numeric measure.</td><td>Budget fact joins to hub by work item SK.</td></tr>
+      <tr><td>28</td><td><code>CURRENT_YEAR_BUDGET</code></td><td><code>Fact_ColibriWorkItemBudget</code></td><td>Budget measure</td><td>Budget-specific numeric measure.</td><td>Budget fact joins to hub by work item SK.</td></tr>
+      <tr><td>29</td><td><code>NEXT_YEAR_BUDGET</code></td><td><code>Fact_ColibriWorkItemBudget</code></td><td>Budget measure</td><td>Budget-specific numeric measure.</td><td>Budget fact joins to hub by work item SK.</td></tr>
+      <tr><td>30</td><td><code>TOTAL_BUDGET</code></td><td><code>Fact_ColibriWorkItemBudget</code></td><td>Budget measure</td><td>Budget-specific numeric measure.</td><td>Budget fact joins to hub by work item SK.</td></tr>
+      <tr><td>31</td><td><code>COLIBRI_BIAIT_SCORE</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA score</td><td>BIA-owned score.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>32</td><td><code>COLIBRI_RISK_CLASS</code></td><td><code>Fact_ColibriWorkItemBIA</code>; evaluate risk reuse</td><td>BIA risk class</td><td>Used in BIA impact classification.</td><td>Temporary duplication with risk subject can be used if risk reporting needs the same value.</td></tr>
+      <tr><td>33</td><td><code>COLIBRI_SECURITY_CLASS</code></td><td><code>Fact_ColibriWorkItemBIA</code> or risk subject by ownership</td><td>Security class</td><td>Security/risk classification associated with BIA.</td><td>Join through BIA or risk subject by work item SK.</td></tr>
+      <tr><td>34</td><td><code>COLIBRI_CHANGED_DateTime</code></td><td>Hub and loaded subject audit copy</td><td>Change timestamp</td><td>Source change date is useful for hub and subject reconciliation.</td><td>Temporary duplication in subject tables is acceptable.</td></tr>
+      <tr><td>35</td><td><code>COLIBRI_CHANGED_Date</code></td><td>Owning table date helper</td><td>Date helper</td><td>Derived helper for changed datetime.</td><td>Keep with owning changed datetime.</td></tr>
+      <tr><td>36</td><td><code>COLIBRI_CHANGED_DateID</code></td><td>Owning table date helper</td><td>Date helper</td><td>Derived date ID for changed datetime.</td><td>Keep with owning changed datetime.</td></tr>
+      <tr><td>37</td><td><code>COLIBRI_RELEASE_DateTime</code></td><td><code>Fact_ColibriWorkItemRelease</code></td><td>Release date</td><td>Release-owned timestamp.</td><td>Release fact joins to hub by work item SK.</td></tr>
+      <tr><td>38</td><td><code>COLIBRI_RELEASE_Date</code></td><td><code>Fact_ColibriWorkItemRelease</code></td><td>Release date helper</td><td>Derived helper for release datetime.</td><td>Keep with release datetime.</td></tr>
+      <tr><td>39</td><td><code>COLIBRI_RELEASE_DateID</code></td><td><code>Fact_ColibriWorkItemRelease</code></td><td>Release date helper</td><td>Derived date ID for release datetime.</td><td>Keep with release datetime.</td></tr>
+      <tr><td>40</td><td><code>COLIBRI_LAST_REVIEW_DateTime</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA review date</td><td>BIA-owned review timestamp.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>41</td><td><code>COLIBRI_LAST_REVIEW_Date</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA review date helper</td><td>Derived helper for BIA review datetime.</td><td>Keep with BIA review datetime.</td></tr>
+      <tr><td>42</td><td><code>COLIBRI_LAST_REVIEW_DateID</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA review date helper</td><td>Derived date ID for BIA review datetime.</td><td>Keep with BIA review datetime.</td></tr>
+      <tr><td>43</td><td><code>COLIBRI_START_OF_DAY_DateTime</code></td><td>Hub</td><td>Generic schedule date</td><td>Common schedule/lifecycle attribute.</td><td>No special join.</td></tr>
+      <tr><td>44</td><td><code>COLIBRI_START_OF_DAY_Date</code></td><td>Hub</td><td>Date helper</td><td>Derived helper for start datetime.</td><td>Keep with start datetime.</td></tr>
+      <tr><td>45</td><td><code>COLIBRI_START_OF_DAY_DateID</code></td><td>Hub</td><td>Date helper</td><td>Derived date ID for start datetime.</td><td>Keep with start datetime.</td></tr>
+      <tr><td>46</td><td><code>COLIBRI_END_OF_DAY_DateTime</code></td><td>Hub</td><td>Generic schedule date</td><td>Common schedule/lifecycle attribute.</td><td>No special join.</td></tr>
+      <tr><td>47</td><td><code>COLIBRI_END_OF_DAY_Date</code></td><td>Hub</td><td>Date helper</td><td>Derived helper for end datetime.</td><td>Keep with end datetime.</td></tr>
+      <tr><td>48</td><td><code>COLIBRI_END_OF_DAY_DateID</code></td><td>Hub</td><td>Date helper</td><td>Derived date ID for end datetime.</td><td>Keep with end datetime.</td></tr>
+      <tr><td>49</td><td><code>COLIBRI_END_OF_LIFE_DateTime</code></td><td>Hub or release subject by ownership decision</td><td>Lifecycle date</td><td>Could describe product/work item lifecycle or release lifecycle.</td><td>Open decision; join through hub or release subject after ownership is confirmed.</td></tr>
+      <tr><td>50</td><td><code>COLIBRI_END_OF_LIFE_Date</code></td><td>Same owner as end-of-life datetime</td><td>Date helper</td><td>Derived helper for end-of-life datetime.</td><td>Keep with owning datetime.</td></tr>
+      <tr><td>51</td><td><code>COLIBRI_END_OF_LIFE_DateID</code></td><td>Same owner as end-of-life datetime</td><td>Date helper</td><td>Derived date ID for end-of-life datetime.</td><td>Keep with owning datetime.</td></tr>
+      <tr><td>52</td><td><code>COLIBRI_FIRST_GO_LIVE_DateTime</code></td><td>Hub or release subject by ownership decision</td><td>Lifecycle date</td><td>Could describe first go-live or release milestone.</td><td>Open decision; join through hub or release subject after ownership is confirmed.</td></tr>
+      <tr><td>53</td><td><code>COLIBRI_FIRST_GO_LIVE_Date</code></td><td>Same owner as first-go-live datetime</td><td>Date helper</td><td>Derived helper for first-go-live datetime.</td><td>Keep with owning datetime.</td></tr>
+      <tr><td>54</td><td><code>COLIBRI_FIRST_GO_LIVE_DateID</code></td><td>Same owner as first-go-live datetime</td><td>Date helper</td><td>Derived date ID for first-go-live datetime.</td><td>Keep with owning datetime.</td></tr>
+      <tr><td>55</td><td><code>COLIBRI_PPM_ID</code></td><td>Hub</td><td>External reference</td><td>Common identifier/reference.</td><td>No special join.</td></tr>
+      <tr><td>56</td><td><code>COLIBRI_TMK_BUSINESS</code></td><td>Role bridge or hub organization attribute</td><td>Business ownership</td><td>Looks role/org related; ownership needs confirmation.</td><td>Use role bridge if a user/org key can be standardized.</td></tr>
+      <tr><td>57</td><td><code>COLIBRI_OMK_IT</code></td><td>Role bridge or hub organization attribute</td><td>IT ownership</td><td>Looks role/org related; ownership needs confirmation.</td><td>Use role bridge if a user/org key can be standardized.</td></tr>
+      <tr><td>58</td><td><code>COLIBRI_DESCRIPTION_EN_CLEARED</code></td><td>Hub</td><td>Description</td><td>Common work item text.</td><td>No special join.</td></tr>
+      <tr><td>59</td><td><code>COLIBRI_CREATED_DateTime</code></td><td>Hub</td><td>Create timestamp</td><td>Common creation timestamp.</td><td>No special join.</td></tr>
+      <tr><td>60</td><td><code>COLIBRI_CREATED_Date</code></td><td>Hub</td><td>Date helper</td><td>Derived helper for created datetime.</td><td>Keep with created datetime.</td></tr>
+      <tr><td>61</td><td><code>COLIBRI_CREATED_DateID</code></td><td>Hub</td><td>Date helper</td><td>Derived date ID for created datetime.</td><td>Keep with created datetime.</td></tr>
+      <tr><td>62</td><td><code>COLIBRI_DATA_CHANGED_BY_NAME</code></td><td><code>Bridge_ColibriWorkItemUserRole</code></td><td>Changed-by role</td><td>User relationship/audit actor.</td><td>Join to user dimension where possible; keep raw name fallback.</td></tr>
+      <tr><td>63</td><td><code>COLIBRI_DATA_CHANGED_BY_EMAIL</code></td><td><code>Bridge_ColibriWorkItemUserRole</code></td><td>Changed-by role</td><td>User relationship/audit actor.</td><td>Use email for lookup if governed; retain raw email fallback.</td></tr>
+      <tr><td>64</td><td><code>COLIBRI_ACCOUNTING_RELEVANCE</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA relevance flag</td><td>BIA/finance relevance.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>65</td><td><code>COLIBRI_COMPLIANCE_RELEVANCE</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA relevance flag</td><td>BIA/compliance relevance.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>66</td><td><code>COLIBRI_ICS_RELEVANCE</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA relevance flag</td><td>BIA internal-control relevance.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>67</td><td><code>COLIBRI_PROCESS_RELEVANCE</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA relevance flag</td><td>BIA process relevance.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>68</td><td><code>COLIBRI_STANDIN_PERSON</code></td><td><code>Bridge_ColibriWorkItemUserRole</code></td><td>User role</td><td>Stand-in is a role relationship.</td><td>Resolve to user dimension where possible; keep raw value fallback.</td></tr>
+      <tr><td>69</td><td><code>COLIBRI_STANDIN_EMAIL</code></td><td><code>Bridge_ColibriWorkItemUserRole</code></td><td>User role email</td><td>Stand-in is a role relationship.</td><td>Use email lookup if governed; keep raw email fallback.</td></tr>
+      <tr><td>70</td><td><code>COLIBRI_PRODUCT_RELEVANCE</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA product relevance</td><td>BIA-specific product relevance.</td><td>BIA fact joins to hub/product by SK.</td></tr>
+      <tr><td>71</td><td><code>COLIBRI_PRODUCT_RELEVANCE_REASON</code></td><td><code>Fact_ColibriWorkItemBIA</code> or hub</td><td>BIA/product rationale</td><td>Rationale for product relevance; BIA ownership likely.</td><td>Join to hub by work item SK if split.</td></tr>
+      <tr><td>72</td><td><code>COLIBRI_RISK_CLASS_ALTERNATIVE</code></td><td><code>Fact_ColibriWorkItemRisk</code> and temporary BIA copy if reports depend on it</td><td>Risk justification</td><td>Risk alternative/justification is risk-owned.</td><td>Risk fact joins to hub by work item SK.</td></tr>
+      <tr><td>73</td><td><code>COLIBRI_SYSTEM_FAILURE_24H</code></td><td><code>Fact_ColibriWorkItemBIA</code> or risk by ownership</td><td>BIA failure impact</td><td>Impact statement for failure window.</td><td>Join through owning subject fact by work item SK.</td></tr>
+      <tr><td>74</td><td><code>COLIBRI_RELEASE_RELEVANCE</code></td><td><code>Fact_ColibriWorkItemRelease</code>; temporary BIA copy if BIA reports depend on it</td><td>Release relevance</td><td>Release-owned relevance flag/descriptor.</td><td>Release fact joins to hub by work item SK.</td></tr>
+      <tr><td>75</td><td><code>COLIBRI_SOURCE_ID</code></td><td>Owning subject fact</td><td>Source reference</td><td>Source-specific identifier useful for reconciliation.</td><td>Keep where the sourced attribute group is loaded; BIA copy may be temporary.</td></tr>
+      <tr><td>76</td><td><code>COLIBRI_TYPE</code></td><td>Hub</td><td>Generic type</td><td>Common type descriptor.</td><td>No special join.</td></tr>
+      <tr><td>77</td><td><code>COLIBRI_RESPONSIBLE_PERSON</code></td><td><code>Bridge_ColibriWorkItemUserRole</code></td><td>User role</td><td>Responsible person is a repeatable role concept.</td><td>Resolve to user dimension where possible; keep raw value fallback.</td></tr>
+      <tr><td>78</td><td><code>COLIBRI_RESPONSIBLE_EMAIL</code></td><td><code>Bridge_ColibriWorkItemUserRole</code></td><td>User role email</td><td>Responsible person contact value.</td><td>Use email lookup if governed; keep raw email fallback.</td></tr>
+      <tr><td>79</td><td><code>COLIBRI_REVIEW_CYCLE</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA review</td><td>BIA review cadence.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>80</td><td><code>COLIBRI_CALCULATED_BUSINESS_IMPACT</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA impact</td><td>BIA calculated impact result.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>81</td><td><code>COLIBRI_COMPLETE_BIAIT_NECESSARY</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA completion</td><td>BIA completion/necessity indicator.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>82</td><td><code>COLIBRI_FINANCIAL_IMPACT_14D</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA financial impact</td><td>BIA financial impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>83</td><td><code>COLIBRI_FINANCIAL_IMPACT_1H</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA financial impact</td><td>BIA financial impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>84</td><td><code>COLIBRI_FINANCIAL_IMPACT_24H</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA financial impact</td><td>BIA financial impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>85</td><td><code>COLIBRI_FINANCIAL_IMPACT_24H_RISK_CLASS</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA financial risk class</td><td>Risk class tied to BIA financial impact.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>86</td><td><code>COLIBRI_FINANCIAL_IMPACT_30D</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA financial impact</td><td>BIA financial impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>87</td><td><code>COLIBRI_FINANCIAL_IMPACT_4H</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA financial impact</td><td>BIA financial impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>88</td><td><code>COLIBRI_FINANCIAL_IMPACT_72H</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA financial impact</td><td>BIA financial impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>89</td><td><code>COLIBRI_FINANCIAL_IMPACT_7D</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA financial impact</td><td>BIA financial impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>90</td><td><code>COLIBRI_LEGAL_IMPACT_14D</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA legal impact</td><td>BIA legal impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>91</td><td><code>COLIBRI_LEGAL_IMPACT_1H</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA legal impact</td><td>BIA legal impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>92</td><td><code>COLIBRI_LEGAL_IMPACT_24H</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA legal impact</td><td>BIA legal impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>93</td><td><code>COLIBRI_LEGAL_IMPACT_24H_RISK_CLASS</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA legal risk class</td><td>Risk class tied to BIA legal impact.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>94</td><td><code>COLIBRI_LEGAL_IMPACT_30D</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA legal impact</td><td>BIA legal impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>95</td><td><code>COLIBRI_LEGAL_IMPACT_4H</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA legal impact</td><td>BIA legal impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>96</td><td><code>COLIBRI_LEGAL_IMPACT_72H</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA legal impact</td><td>BIA legal impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>97</td><td><code>COLIBRI_LEGAL_IMPACT_7D</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA legal impact</td><td>BIA legal impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>98</td><td><code>COLIBRI_POINT_CRITICAL_FINANCIAL_LOSS_10M_EUR</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA threshold</td><td>BIA financial loss threshold.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>99</td><td><code>COLIBRI_RPO</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA recovery objective</td><td>BIA recovery point objective.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>100</td><td><code>COLIBRI_RTO</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA recovery objective</td><td>BIA recovery time objective.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>101</td><td><code>COLIBRI_RECOMMENDED_INFRASTRUCTURE</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA recommendation</td><td>BIA infrastructure recommendation.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>102</td><td><code>COLIBRI_REPUTATION_LOSS_14D</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA reputation impact</td><td>BIA reputation impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>103</td><td><code>COLIBRI_REPUTATION_LOSS_1H</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA reputation impact</td><td>BIA reputation impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>104</td><td><code>COLIBRI_REPUTATION_LOSS_24H</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA reputation impact</td><td>BIA reputation impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>105</td><td><code>COLIBRI_REPUTATION_LOSS_24H_RISK_CLASS</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA reputation risk class</td><td>Risk class tied to BIA reputation impact.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>106</td><td><code>COLIBRI_REPUTATION_LOSS_30D</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA reputation impact</td><td>BIA reputation impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>107</td><td><code>COLIBRI_REPUTATION_LOSS_4H</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA reputation impact</td><td>BIA reputation impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>108</td><td><code>COLIBRI_REPUTATION_LOSS_72H</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA reputation impact</td><td>BIA reputation impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>109</td><td><code>COLIBRI_REPUTATION_LOSS_7D</code></td><td><code>Fact_ColibriWorkItemBIA</code></td><td>BIA reputation impact</td><td>BIA reputation impact window.</td><td>BIA fact joins to hub by work item SK.</td></tr>
+      <tr><td>110</td><td><code>COLIBRI_MANAGER_BUSINESS_SK</code></td><td><code>Bridge_ColibriWorkItemUserRole</code>; temporary BIA copy</td><td>BIA user role</td><td>BIA manager business role.</td><td>Bridge to user dimension after key standardization; keep raw/SK-like value fallback.</td></tr>
+      <tr><td>111</td><td><code>COLIBRI_RESPONSIBLE_BUSINESS_SK</code></td><td><code>Bridge_ColibriWorkItemUserRole</code>; temporary BIA copy</td><td>BIA user role</td><td>BIA responsible business role.</td><td>Bridge to user dimension after key standardization; keep raw/SK-like value fallback.</td></tr>
+      <tr><td>112</td><td><code>COLIBRI_RESPONSIBLE_IT_SK</code></td><td><code>Bridge_ColibriWorkItemUserRole</code>; temporary BIA copy</td><td>BIA user role</td><td>BIA responsible IT role.</td><td>Bridge to user dimension after key standardization; keep raw/SK-like value fallback.</td></tr>
+      <tr><td>113</td><td><code>COLIBRI_BIA_RESPONSIBLE_BUSINESS_ENTRA_ID</code></td><td><code>Bridge_ColibriWorkItemUserRole</code>; temporary BIA copy</td><td>BIA user role</td><td>BIA responsible business Entra ID.</td><td>Resolve to user dimension where possible; keep raw ID fallback.</td></tr>
+      <tr><td>114</td><td><code>COLIBRI_BIA_RESPONSIBLE_BUSINESS_ENTRA_NAME</code></td><td><code>Bridge_ColibriWorkItemUserRole</code>; temporary BIA copy</td><td>BIA user role label</td><td>BIA responsible business display name.</td><td>Resolve to user dimension where possible; keep raw name fallback.</td></tr>
+      <tr><td>115</td><td><code>COLIBRI_BIA_RESPONSIBLE_IT_ENTRA_ID</code></td><td><code>Bridge_ColibriWorkItemUserRole</code>; temporary BIA copy</td><td>BIA user role</td><td>BIA responsible IT Entra ID.</td><td>Resolve to user dimension where possible; keep raw ID fallback.</td></tr>
+      <tr><td>116</td><td><code>COLIBRI_BIA_RESPONSIBLE_IT_ENTRA_NAME</code></td><td><code>Bridge_ColibriWorkItemUserRole</code>; temporary BIA copy</td><td>BIA user role label</td><td>BIA responsible IT display name.</td><td>Resolve to user dimension where possible; keep raw name fallback.</td></tr>
+      <tr><td>117</td><td><code>COLIBRI_BIA_MANAGER_BUSINESS_ENTRA_ID</code></td><td><code>Bridge_ColibriWorkItemUserRole</code>; temporary BIA copy</td><td>BIA user role</td><td>BIA manager business Entra ID.</td><td>Resolve to user dimension where possible; keep raw ID fallback.</td></tr>
+      <tr><td>118</td><td><code>COLIBRI_BIA_MANAGER_BUSINESS_ENTRA_NAME</code></td><td><code>Bridge_ColibriWorkItemUserRole</code>; temporary BIA copy</td><td>BIA user role label</td><td>BIA manager business display name.</td><td>Resolve to user dimension where possible; keep raw name fallback.</td></tr>
+      <tr><td>119</td><td><code>COLIBRI_RISK_CLASS_ALTERNATIVE_NEW</code></td><td><code>Fact_ColibriWorkItemRisk</code>; temporary BIA copy</td><td>Risk override</td><td>Risk class alternative/new value.</td><td>Risk fact joins to hub by work item SK; BIA copy supports migration.</td></tr>
+      <tr><td>120</td><td><code>COLIBRI_CHANGED_BY_USER_SK</code></td><td><code>Bridge_ColibriWorkItemUserRole</code>; temporary subject audit copy</td><td>Changed-by user key</td><td>User actor for source changes.</td><td>Resolve to user dimension where possible; keep raw key fallback.</td></tr>
+      <tr><td>121</td><td><code>IS_VALID_PRODUCT</code></td><td>Hub data quality flag</td><td>Data quality</td><td>Indicates whether product lookup is valid.</td><td>Derived from product dimension lookup; can be recomputed in validation.</td></tr>
+      <tr><td>122</td><td><code>_lineage_row_id</code></td><td>Each physically loaded target table</td><td>Lineage</td><td>Traceability to selected staging row.</td><td>Used for dedupe/reconciliation; do not omit.</td></tr>
+      <tr><td>123</td><td><code>_job_run_guid</code></td><td>Each physically loaded target table</td><td>ETL audit</td><td>Identifies the load execution.</td><td>Local audit field, not a reporting join.</td></tr>
+      <tr><td>124</td><td><code>_ins_datetime</code></td><td>Each physically loaded target table</td><td>ETL audit</td><td>Insert timestamp.</td><td>Local audit field, not a reporting join.</td></tr>
+      <tr><td>125</td><td><code>_upd_datetime</code></td><td>Each physically loaded target table</td><td>ETL audit</td><td>Update timestamp.</td><td>Local audit field, not a reporting join.</td></tr>
+      <tr><td>126</td><td><code>_columns_checksum</code></td><td>Each physically loaded target table, adjusted per target column set</td><td>Change detection</td><td>Checksum for change detection and reconciliation.</td><td>Each subject should calculate its own checksum over its owned columns.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>11. Join / Link Rules</h2>
+  <table>
+    <thead><tr><th>Rule</th><th>Exact key path</th><th>Behavior</th></tr></thead>
+    <tbody>
+      <tr><td>Staging to hub</td><td><code>dwh_staging.COLIBRI_WORKITEMS.WorkItemId -&gt; dwh_core.Fact_ColibriWorkItems.COLIBRI_WORKITEM_BK</code></td><td>Resolve or create one hub row per work item business key.</td></tr>
+      <tr><td>Hub to subject tables</td><td><code>hub.COLIBRI_WORKITEM_SK -&gt; subject.COLIBRI_WORKITEM_SK</code></td><td>BIA, risk, release, and budget facts are joined through the hub surrogate key.</td></tr>
+      <tr><td>Product dimension</td><td><code>staging.ProjectId -&gt; Dim_ColibriProducts.COLIBRI_PRODUCT_BK -&gt; COLIBRI_PRODUCT_SK</code></td><td>Use product SK in hub and BIA; report product labels from the dimension.</td></tr>
+      <tr><td>Hierarchy</td><td><code>bridge.COLIBRI_WORKITEM_SK -&gt; child hub.COLIBRI_WORKITEM_SK</code>; <code>bridge.PARENT_COLIBRI_WORKITEM_SK -&gt; parent hub.COLIBRI_WORKITEM_SK</code></td><td>Both child and parent join to the same hub table by surrogate key.</td></tr>
+      <tr><td>User roles</td><td><code>bridge.COLIBRI_WORKITEM_SK -&gt; hub.COLIBRI_WORKITEM_SK</code>; <code>bridge.COLIBRI_USER_SK -&gt; Dim_ColibriUsers.COLIBRI_USER_SK</code></td><td>Retain raw role name/email/ID in the bridge when no dimension match exists.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>12. Example Reporting Joins</h2>
+  <h3>BIA View Join</h3>
+  <pre>FROM dwh_core.Fact_ColibriWorkItemBIA bia
+JOIN dwh_core.Fact_ColibriWorkItems hub
+  ON hub.COLIBRI_WORKITEM_SK = bia.COLIBRI_WORKITEM_SK
+LEFT JOIN dwh_core.Dim_ColibriProducts prd
+  ON prd.COLIBRI_PRODUCT_SK = COALESCE(bia.COLIBRI_PRODUCT_SK, hub.COLIBRI_PRODUCT_SK)
+WHERE bia.COLIBRI_WORKITEM_TYPE = 'Classification'
+  AND bia.COLIBRI_CLASSIFICATION_TYPE = 'BIA-IT'</pre>
+
+  <h3>Risk View Join</h3>
+  <pre>FROM dwh_core.Fact_ColibriWorkItemRisk risk
+JOIN dwh_core.Fact_ColibriWorkItems hub
+  ON hub.COLIBRI_WORKITEM_SK = risk.COLIBRI_WORKITEM_SK
+LEFT JOIN dwh_core.Dim_ColibriProducts prd
+  ON prd.COLIBRI_PRODUCT_SK = hub.COLIBRI_PRODUCT_SK</pre>
+
+  <h3>Budget View Join</h3>
+  <pre>FROM dwh_core.Fact_ColibriWorkItemBudget budget
+JOIN dwh_core.Fact_ColibriWorkItems hub
+  ON hub.COLIBRI_WORKITEM_SK = budget.COLIBRI_WORKITEM_SK
+LEFT JOIN dwh_core.Dim_ColibriProducts prd
+  ON prd.COLIBRI_PRODUCT_SK = hub.COLIBRI_PRODUCT_SK</pre>
+
+  <h3>Parent-Child Join</h3>
+  <pre>FROM dwh_core.Bridge_ColibriWorkItemHierarchy h
+JOIN dwh_core.Fact_ColibriWorkItems child
+  ON child.COLIBRI_WORKITEM_SK = h.COLIBRI_WORKITEM_SK
+LEFT JOIN dwh_core.Fact_ColibriWorkItems parent
+  ON parent.COLIBRI_WORKITEM_SK = h.PARENT_COLIBRI_WORKITEM_SK</pre>
+
+  <h3>User Role Join</h3>
+  <pre>FROM dwh_core.Bridge_ColibriWorkItemUserRole role_bridge
+JOIN dwh_core.Fact_ColibriWorkItems hub
+  ON hub.COLIBRI_WORKITEM_SK = role_bridge.COLIBRI_WORKITEM_SK
+LEFT JOIN dwh_core.Dim_ColibriUsers usr
+  ON usr.COLIBRI_USER_SK = role_bridge.COLIBRI_USER_SK
+WHERE role_bridge.ROLE_CODE IN ('RESPONSIBLE', 'OWNER', 'STANDIN', 'CHANGED_BY', 'BIA_RESPONSIBLE_IT', 'BIA_RESPONSIBLE_BUSINESS')</pre>
+
+  <h2>13. Implementation Sequence</h2>
+  <ol>
+    <li>Freeze the current wide-fact inventory and confirm that all 126 columns have an approved target owner.</li>
+    <li>Confirm physical grain for BIA, risk, release, and budget subject facts.</li>
+    <li>Create additive subject/bridge tables without removing columns from the current wide fact.</li>
+    <li>Load the hub first from <code>dwh_staging.COLIBRI_WORKITEMS</code>, resolving <code>WorkItemId</code> and <code>ProjectId</code>.</li>
+    <li>Load BIA, risk, release, budget, hierarchy, and user-role structures from the same staging source, resolving hub/product/user keys.</li>
+    <li>Build reporting views on the split model and reconcile against existing wide-fact reporting.</li>
+    <li>Keep the old wide fact during migration until all consumers are moved and validation is stable.</li>
+  </ol>
+
+  <h2>14. Validation Checklist</h2>
+  <ul>
+    <li>Column coverage: verify every current <code>Fact_ColibriWorkItems</code> column appears exactly once in the placement matrix, except documented temporary migration duplication.</li>
+    <li>Hub uniqueness: one current hub row per <code>COLIBRI_WORKITEM_BK</code>.</li>
+    <li>Product lookup: count staging rows where <code>ProjectId</code> does not resolve to <code>Dim_ColibriProducts.COLIBRI_PRODUCT_BK</code>.</li>
+    <li>Subject orphan checks: count BIA/risk/release/budget rows without a matching hub SK.</li>
+    <li>Hierarchy checks: count hierarchy rows where child or parent SK does not resolve to hub.</li>
+    <li>User bridge checks: count unresolved users by role code and verify raw fallback fields are populated.</li>
+    <li>Reporting reconciliation: compare old wide-fact BIA/risk/budget reporting values to new split-model views at work item BK level.</li>
+    <li>Audit coverage: ensure <code>_lineage_row_id</code>, <code>_job_run_guid</code>, <code>_ins_datetime</code>, <code>_upd_datetime</code>, and <code>_columns_checksum</code> are not skipped for physically loaded target tables.</li>
+  </ul>
+
+  <h2>15. Notes And Open Decisions</h2>
+  <ul>
+    <li>Risk grain: decide whether risk is one row per work item or one row per risk event/history record.</li>
+    <li>Release grain: decide whether release is one row per work item or one row per release version/date.</li>
+    <li>Domain normalization: keep <code>DOMAIN</code> in the hub unless reporting needs a governed <code>Dim_ColibriDomain</code>.</li>
+    <li>User key standardization: confirm whether Entra ID, email, or current <code>COLIBRI_USER_BK</code> is the preferred matching key into <code>Dim_ColibriUsers</code>.</li>
+    <li>Migration strategy: keep the old wide fact during transition, then deprecate only after reporting parity and consumer migration are complete.</li>
+    <li>BIA draft availability: the local BIA fact/procedure files are placeholders, so final BIA source mappings should be revalidated when those drafts contain executable SQL.</li>
+  </ul>
+
+  <p class="small">Documentation-only deliverable. No Synapse JSON artifacts and no <code>.synapse_work</code> SQL files were edited.</p>
+</body>
+</html>
