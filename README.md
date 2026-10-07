@@ -1,4 +1,4 @@
-# Gravity O&S Agents Workspace
+# Gravity Data Engineering Agents Workspace
 
 This workspace standardizes the local setup for Gravity O&S data engineering agents, Jira and Confluence MCP access, and Synapse artifact development workflows.
 
