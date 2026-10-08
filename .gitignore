@@ -1,21 +1,30 @@
-# Local secrets
-.env
+# Allow-list: only the shipped agent package is tracked. Cloned project repos,
+# secrets (.env), venvs, and generated folders at the root are ignored automatically.
+/*
+!/.github/
+!/.vscode/
+!/tools/
+!/scripts/
+!/docs/
+!/.gitignore
+!/.env.example
+!/README.md
+!/SETUP_GUIDE.md
+!/requirements.txt
 
-# Python virtual environments
-.verify_env/
-.venv/
-venv/
+# Per-user state written by /init-project-profile; only curated profiles are shipped
+/.github/project/active-profile.yaml
+/.github/project/profiles/*/
+!/.github/project/profiles/finance/
+!/.github/project/profiles/gravity-os/
+/.github/instructions/project-*.instructions.md
+!/.github/instructions/project-finance.instructions.md
+!/.github/instructions/project-gravity-os.instructions.md
 
 # Python caches
 __pycache__/
 *.py[cod]
 .pytest_cache/
-
-# Synapse local working/generated files
-.synapse_work/
-.synapse_index/
-.project_scan/
-.lineage/
 
 # Local editor and OS noise
 .DS_Store
