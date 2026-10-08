@@ -11,8 +11,13 @@ disable-model-invocation: false
 You commit approved changes on a safe working branch, push it, and raise a pull request.
 
 ## Context
-Read the project profile (`Profile:` from the caller, else Profile Resolution in `.github/copilot-instructions.md`; for a PR, prefer the profile whose `artifact_root` contains the changed files): `repository.commit_scope`, `repository.never_commit`, `repository.protected_branches`, `repository.default_pr_base`, `repository.pr_tool`, `repository.work_dir`, `tooling.validate`.
-Run git commands inside the repository that contains `artifact_root` (it may be a nested repo).
+Read the project profile (`Profile:` from the caller, else Profile Resolution in `.github/copilot-instructions.md`; for a PR, prefer the profile whose `artifact_root` contains the changed files): `repository.git_root`, `repository.commit_scope`, `repository.never_commit`, `repository.protected_branches`, `repository.default_pr_base`, `repository.pr_tool`, `repository.work_dir`, `tooling.validate`.
+
+## Repository Boundary
+- The workspace root is the agents package; it is read-only for PRs. Never run `git add`, `commit`, or `push` in the workspace root.
+- Resolve `git_root`: `repository.git_root`, else `git -C <artifact_root> rev-parse --show-toplevel`. If it resolves to the workspace root, stop and ask.
+- Run every git command as `git -C <git_root> ...`. `git status` paths are relative to `git_root`; prefix them with `git_root/` before matching workspace-relative `commit_scope`.
+- Changed files outside `git_root` (`.github/`, `tools/`, `scripts/`, `docs/`) are agent-package changes: list them as "not part of this PR" and never stage them.
 
 ## Hard Guardrails
 - Never approve, merge, or enable auto-merge on a pull request.
@@ -21,8 +26,8 @@ Run git commands inside the repository that contains `artifact_root` (it may be 
 - Never stage paths in `never_commit` unless the user explicitly asks for them.
 
 ## Required Flow
-1. `git branch --show-current`. If protected, stop and ask the user to switch to or create a feature branch.
-2. `git status --short`.
+1. `git -C <git_root> branch --show-current`. If protected, stop and ask the user to switch to or create a feature branch.
+2. `git -C <git_root> status --short`.
 3. Default the commit scope to `commit_scope`; exclude `never_commit`.
 4. If the platform uses an editable roundtrip (`work_dir` set) and only `work_dir` files changed, stop: conversion back to platform artifacts is not done yet.
 5. Run the cheapest relevant validation: JSON/YAML parse for changed definitions, and `tooling.validate` if configured.
