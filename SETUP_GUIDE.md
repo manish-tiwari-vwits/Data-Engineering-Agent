@@ -75,6 +75,8 @@ python tools/build_synapse_index.py --root synapse_artifacts --out .synapse_inde
 ## 7. Reload and enable tools
 1. `Ctrl+Shift+P` -> **Developer: Reload Window**.
 2. In Copilot Chat, open **Configure Tools** and enable file read/edit and the terminal tool.
+3. Go to specific root example cd Synapse-itf-Dev
+4. git branch <branch_name>
 
 ## 8. Verify
 - **Jira** agent: `Fetch GRAVITY-1234 read-only and show the description`
