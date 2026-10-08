@@ -17,6 +17,7 @@ platform:
   sql_dialect: tsql_fabric_warehouse   # or spark_sql when gold is lakehouse-only
 
 repository:
+  git_root: <cloned_repo_folder>       # folder containing the project's .git; all PR git commands run here
   artifact_root: <fabric_workspace_folder>
   artifact_folders:
     notebook: "<fabric_workspace_folder>/**/*.Notebook"
