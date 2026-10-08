@@ -17,6 +17,7 @@ platform:
   sql_dialect: spark_sql
 
 repository:
+  git_root: <cloned_repo_folder>       # folder containing the project's .git; all PR git commands run here
   artifact_root: .
   artifact_folders:
     bundle_config: databricks.yml
