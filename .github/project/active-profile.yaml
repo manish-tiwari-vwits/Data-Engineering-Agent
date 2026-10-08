@@ -1,4 +1,4 @@
+# Copy to active-profile.yaml (local, not committed) and set your default profile id.
 # Default profile when a request gives no artifact path or Jira key that matches a profile.
 # Profiles live in .github/project/profiles/<id>/project-profile.yaml. Resolution order is in .github/copilot-instructions.md.
-# active: gravity-os
-active: finance
+active: <profile-id>
