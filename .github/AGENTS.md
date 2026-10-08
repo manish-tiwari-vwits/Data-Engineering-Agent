@@ -1,6 +1,6 @@
 # Workspace Agent Map
 
-Project configuration: one folder per project in `.github/project/profiles/<id>/` (profile + `knowledge_file`); default in `.github/project/active-profile.yaml`; selection rules in `.github/copilot-instructions.md`. Onboard a cloned repo with `/init-project-profile`; rescan with `/refresh-project-profile`.
+Project configuration: one folder per project in `.github/project/profiles/<id>/` (profile + `knowledge_file`); default in `.github/project/active-profile.yaml` (local copy of `active-profile.example.yaml`); selection rules in `.github/copilot-instructions.md`. Onboard a cloned repo with `/init-project-profile`; rescan with `/refresh-project-profile`.
 
 | Tier | Agent | Role |
 |---|---|---|
