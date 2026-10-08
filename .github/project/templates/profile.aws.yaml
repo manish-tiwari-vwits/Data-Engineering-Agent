@@ -17,6 +17,7 @@ platform:
   sql_dialect: redshift              # redshift | athena
 
 repository:
+  git_root: <cloned_repo_folder>       # folder containing the project's .git; all PR git commands run here
   artifact_root: .
   artifact_folders:
     glue_jobs: glue/jobs
