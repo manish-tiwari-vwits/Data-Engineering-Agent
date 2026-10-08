@@ -31,12 +31,20 @@ notepad .env
 Fill `JIRA_URL`, `JIRA_TOKEN`, `CONFLUENCE_URL`, `CONFLUENCE_TOKEN`. Never commit or share `.env`.
 
 ## 5. Clone your project repo(s) into the workspace
+The agents repo is read-only for you: clone each project repo inside it (each keeps its own `.git`). `.gitignore` allow-lists only the agent package, so clones, `.env`, and generated files never show up as agent-repo changes. PRs are raised only from the project repo.
+
 Use exactly these folder names; the profiles in `.github/project/profiles/` depend on them.
 ```powershell
 # Gravity O&S
 git clone https://Volkswagen-AG@dev.azure.com/Volkswagen-AG/IT-RA/_git/synapse_artifacts synapse_artifacts
 # Finance (ITF FROG)
 git clone https://Volkswagen-AG@dev.azure.com/Volkswagen-AG/gravity-development/_git/Synapse-itf-Dev Synapse-itf-Dev
+```
+
+Set your default profile (local file, not committed):
+```powershell
+Copy-Item .github/project/active-profile.example.yaml .github/project/active-profile.yaml
+notepad .github/project/active-profile.yaml
 ```
 
 ## 6. Build local index and lineage (once per project)
@@ -123,7 +131,7 @@ Pick the agent in the Copilot Chat agent picker, then type the prompt. Mentionin
 - Clone it into the workspace, then prompt: `/init-project-profile` with name `Controlling` -> answer the questions -> approve.
 
 ## Never commit
-`.env`, `.verify_env/`, `.synapse_work/`, `.synapse_index/`, `.project_scan/`, `.lineage/`
+Nothing in the agents repo. `.env`, `.verify_env/`, `.synapse_work/`, `.synapse_index/`, `.project_scan/`, `.lineage/`, your project clones, `active-profile.yaml`, and profiles you onboard yourself are all ignored. To share a new profile with the team, ask a maintainer to add it to the `.gitignore` allow-list.
 
 ## Troubleshooting
 | Problem | Fix |
