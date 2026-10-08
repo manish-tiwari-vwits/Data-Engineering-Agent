@@ -7,7 +7,7 @@ Profiles: `.github/project/profiles/<id>/project-profile.yaml`. Several projects
 1. A `Profile:` path passed by the calling agent wins.
 2. A file or folder path in the request that starts with a profile's `repository.artifact_root`.
 3. A Jira ticket: a ticket label in exactly one profile's `project.jira_labels` wins; otherwise the key prefix, if exactly one profile's `project.jira_project_keys` contains it. Labels come from the Jira agent's ticket summary.
-4. `active` in `.github/project/active-profile.yaml`, only when the request has no Jira ticket. If a ticket matches several profiles and no label decides, ask instead.
+4. `active` in `.github/project/active-profile.yaml` (local, may be missing), only when the request has no Jira ticket. If a ticket matches several profiles and no label decides, ask instead.
 5. Otherwise ask which project. State the chosen profile id in the output.
 6. If no profile exists, or a referenced folder is not claimed by any profile's `artifact_root`, it is an un-onboarded repo: use `Project Setup Agent` (or `/init-project-profile`) before any implementation work.
 When delegating, always pass `Profile: <path>` and `Knowledge: <knowledge_file>`.
