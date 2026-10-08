@@ -21,6 +21,7 @@ You onboard one project at a time. Agents and generic instructions are never cha
 - Workspace-level docs in `docs.shared_workspace_docs_unconfirmed` may belong to another project: use them only after the user confirms.
 - Never modify another project's files or `active-profile.yaml` without approval. Never edit files inside the scanned repo.
 - If the terminal is unavailable, ask the user to run the exact scan command (or the VS Code task `Onboard: scan project root`) and continue with its output.
+- Generated profile, rules, instruction, and `active-profile.yaml` are local to the user (gitignored in the agents package). Never commit them or any other file in the workspace root repo; sharing a profile is a maintainer change to `.gitignore`.
 
 ## Onboard
 1. **Candidates.** Run `python tools/scan_project.py`. Pick the root: the folder named by the user or caller; else the only candidate; else list candidates (platforms, markers, owning profile id if claimed) and ask. If the root is already claimed by a profile, switch to Refresh for that profile.
@@ -42,6 +43,7 @@ You onboard one project at a time. Agents and generic instructions are never cha
    |---|---|
    | `platform.primary/secondary` | `platforms` (most markers = primary) |
    | `platform.sql_pool`, `compute` | `synapse.sql.pools`, `synapse.spark_pools` |
+   | `repository.git_root` | folder of `git.evidence` (the cloned repo's `.git`) |
    | `repository.artifact_root`, `artifact_folders` | `root`, `synapse.folders` (existing only) |
    | `index_dir` / `work_dir` (Synapse) | `.synapse_index/<id>` / `.synapse_work/<id>` |
    | `commit_scope` | `["<root>/**"]` |
@@ -61,7 +63,7 @@ You onboard one project at a time. Agents and generic instructions are never cha
 7. **Project rules.** Fill `.github/project/templates/project-knowledge.template.md` with facts from steps 2-4: scope, team rules (cited), source systems (`linked_services`), pipeline families and parameter contracts, control tables and writer scripts, naming prefixes, reference implementations and their conventions, DDL folder conventions, serve schemas, deployment order. Mark name-only inferences `CONFIRM`. Delete sections without facts.
 8. **Project instruction.** Fill `.github/project/templates/project-instructions.template.md` into `.github/instructions/project-<id>.instructions.md` with `applyTo: "<root>/**"` and the 5-10 most important rules from step 7, each with evidence.
 9. **Review.** Show a summary (root, platforms, layer -> stage table, orchestration style, top conventions) and the open placeholders as short questions. Write the three files after approval; if files for `<id>` exist, show a diff first.
-10. **Finish.** For Synapse run `tooling.build_index`. If the project has no lineage document, add `tooling.build_lineage` (layers from step 6, schemas as `name=schema,...`) and a `type: generated` lineage source, then run it to produce `.lineage/<id>/lineage.pdf`. Ask whether to set `active: <id>` in `.github/project/active-profile.yaml`. Tell the user to reload VS Code.
+10. **Finish.** For Synapse run `tooling.build_index`. If the project has no lineage document, add `tooling.build_lineage` (layers from step 6, schemas as `name=schema,...`) and a `type: generated` lineage source, then run it to produce `.lineage/<id>/lineage.pdf`. Ask whether to set `active: <id>` in `.github/project/active-profile.yaml` (create it from `active-profile.example.yaml` if missing). Tell the user to reload VS Code.
 
 ## Refresh `<id>`
 1. Read that profile's `artifact_root`; run the scan for it.
