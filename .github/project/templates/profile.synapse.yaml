@@ -18,6 +18,7 @@ platform:
   sql_pool: <sql_pool_name>
 
 repository:
+  git_root: <cloned_repo_folder>       # folder containing the project's .git; all PR git commands run here
   artifact_root: <synapse_repo_folder>
   artifact_folders:
     sql: <synapse_repo_folder>/sqlscript
