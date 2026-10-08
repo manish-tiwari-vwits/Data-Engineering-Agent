@@ -41,11 +41,25 @@ git clone https://Volkswagen-AG@dev.azure.com/Volkswagen-AG/IT-RA/_git/synapse_a
 git clone https://Volkswagen-AG@dev.azure.com/Volkswagen-AG/gravity-development/_git/Synapse-itf-Dev Synapse-itf-Dev
 ```
 
-Set your default profile (local file, not committed):
+### Set your default project (optional, recommended)
+Each cloned repo has a **project profile** (`.github/project/profiles/<id>/`) that tells the agents its folder, layers, branches, and rules. The agents choose the profile per request in this order:
+1. A file or folder path in your prompt (e.g. `Synapse-itf-Dev/...`, `dp-lxvwap/...`).
+2. The Jira ticket's label or key (e.g. `GIE` -> `finance`, `Gravity_Platform` -> `gravity-os`).
+3. Your **default project** from `.github/project/active-profile.yaml`, used only when 1 and 2 give no answer.
+4. Otherwise the agent asks you which project.
+
+`active-profile.yaml` is your personal default. It is ignored by Git, so each developer can pick a different one. Create it once from the shipped example:
 ```powershell
+# Create your local copy of the default-project file
 Copy-Item .github/project/active-profile.example.yaml .github/project/active-profile.yaml
+# Open it and replace <profile-id> with the project you work on most
 notepad .github/project/active-profile.yaml
 ```
+The file must contain one line with a profile id that exists under `.github/project/profiles/`:
+```yaml
+active: finance        # or: gravity-os, or the id you created with /init-project-profile
+```
+Change it whenever you switch your main project, then reload VS Code. If you skip this step, the agents still work, but they ask "which project?" when your prompt has no path or Jira ticket.
 
 ## 6. Build local index and lineage (once per project)
 Commands are also listed under `tooling:` in each profile and as VS Code tasks (**Terminal -> Run Task**).
