@@ -11,7 +11,7 @@ One-time setup for developers using the data engineering agents (Synapse, Fabric
 ```powershell
 git clone <agents-workspace-repo-url> Data-Engineering-Agent
 cd Data-Engineering-Agent
-code .
+open this folder in vs code then
 ```
 
 ## 3. Python environment
